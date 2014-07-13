@@ -1,0 +1,25 @@
+
+// Opacity
+.blur(@blur) {
+  -webkit-filter: blur(@blur);
+  -moz-filter: blur(@blur);
+  -o-filter: blur(@blur);
+  -ms-filter: blur(@blur);
+  filter: blur(@blur);
+}
+
+.brightness(@brightness) {
+  -webkit-filter: brightness(@brightness);
+  -moz-filter: brightness(@brightness);
+  -o-filter: brightness(@brightness);
+  -ms-filter: brightness(@brightness);
+  filter: brightness(@brightness);
+}
+
+.blurBrightness(@blur, @brightness) {
+  -webkit-filter: blur(@blur) brightness(@brightness);
+  -moz-filter: blur(@blur) brightness(@brightness);
+  -o-filter: blur(@blur) brightness(@brightness);
+  -ms-filter: blur(@blur) brightness(@brightness);
+  filter: blur(@blur) brightness(@brightness);
+}
