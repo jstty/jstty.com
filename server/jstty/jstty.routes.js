@@ -7,5 +7,12 @@ module.exports = [
         method: {
             get: "index" // defined in controller module"
         }
+    },
+    {
+        api: "/api/projects",
+        controller: "projects",
+        method: {
+            get: "index"
+        }
     }
 ];

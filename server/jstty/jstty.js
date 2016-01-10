@@ -1,6 +1,8 @@
 
-module.exports = Service1;
+module.exports = Jstty;
 
-function Service1($logger){
-    $logger.log('Service 1 - Init');
+function Jstty($logger, $resource){
+    $logger.log('Jstty - Init');
+
+    $resource.add('db', require('./jstty.datastore.js'));
 }

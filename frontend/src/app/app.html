@@ -1,10 +1,23 @@
 <template>
   <require from="nav-bar.html"></require>
   <require from="bootstrap/css/bootstrap.css"></require>
+  <require from="app.css"></require>
 
-  <nav-bar router.bind="router"></nav-bar>
-
-  <div class="page-host">
-    <router-view></router-view>
+  <div class="links">
+    <a href="https://github.com/jstty" target="_blank"><i class="fa fa-github-square fa-2x"></i></a>
+    <a href="https://www.linkedin.com/in/joseph-sutton-5195677" target="_blank"><i class="fa fa-linkedin-square fa-2x"></i></a>
   </div>
+
+  <div class="bkg vignette">
+    <img class="img1" src="backgrounds/descent2.jpg" />
+  </div>
+
+  <section class="page-container">
+    <nav-bar router.bind="router"></nav-bar>
+
+    <div class="page-host">
+      <router-view></router-view>
+    </div>
+  </section>
+
 </template>
