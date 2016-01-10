@@ -1,0 +1,44 @@
+
+<script language="Javascript" src="js/menu.js"></script>
+
+<ul class="menu_item">   
+   <li><a href="#" onClick="MenuShowHide('portfolio');"><img border="0" id="menu_img_portfolio" src="pics/arrow_d.png" /> Portfolio</a>
+      <ul id="menu_portfolio"> 
+         <li>
+            <img border="0" src="pics/circle.png" />
+            <a href="#" onClick="return ShowPage('portfolio', 'company', selectPortfolio);">by Company</a>
+         </li>
+         <li>
+            <img border="0" src="pics/circle.png" />
+            <a href="#" onClick="return ShowPage('portfolio', 'category', selectPortfolio);">by Category</a>
+         </li>
+         <!--         
+         <li>
+            <img border="0" src="pics/circle.png" />
+            <a href="javascript:void();" onClick="ShowPage('portfolio', 'project', selectPortfolio);">by Project</a>
+         </li>
+         <li>
+            <img border="0" src="pics/circle.png" />
+            <a href="javascript:void();" onClick="ShowPage('portfolio', 'tag', selectPortfolio);">by Tags</a>
+         </li>
+         -->
+      </ul>
+   </li>
+   
+   <li><a href="#" onClick="MenuShowHide('resume');"><img border="0" id="menu_img_resume" src="pics/arrow_d.png" /> Resume</a>
+      <ul id="menu_resume"> 
+         <li>
+            <img border="0" src="pics/circle.png" />
+            <a href="pdf/jsutton_resume.pdf">Download</a>
+         </li>
+      </ul>
+   </li>
+   
+   %photo_menu%
+</ul>
+
+<script language="Javascript">
+   MenuInitItem('portfolio', 1);
+   MenuInitItem('resume', 1);
+   MenuInitItem('files', 1);
+</script>

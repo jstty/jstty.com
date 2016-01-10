@@ -1,0 +1,739 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<script type="text/javascript" src="js/jquery-1.8.1.js"></script>
+<script type="text/javascript" src="js/jsrender.js"></script>
+
+<body topmargin="0" leftmargin="0" marginwidth="0" marginheight="0">
+
+<style>
+@font-face
+{  
+  font-family: ArcadeClassic;  
+  src: url( fonts/arcade_classic_pizz/ARCADECLASSIC.TTF ) format("truetype");  
+}
+
+@font-face
+{
+  font-family: WellButrin;  
+  src: url( fonts/wellbutrin/Welbut__.ttf ) format("truetype");  
+}
+
+@font-face
+{
+  font-family: zx81;  
+  src: url( fonts/zx81/zx81.ttf ) format("truetype");  
+}
+
+@font-face
+{
+  font-family: zxspectr;  
+  src: url( fonts/zx81/zxspectr.ttf ) format("truetype");  
+}
+
+@font-face
+{
+  font-family: PixelSplitter;  
+  src: url( fonts/pixelsplitter/PixelSplitter-Bold.ttf ) format("truetype");  
+}
+
+@font-face
+{
+  font-family: FixSys300;  
+  src: url( fonts/fixsys300/fixsys300.ttf ) format("truetype");  
+}
+
+/*
+-webkit-filter: blur(2px);
+-webkit-filter: url(#f1);
+*/
+
+.fx
+{
+   -webkit-filter: grayscale(80%) brightness(-5%);
+   -webkit-transition: -webkit-filter ease-in-out 300ms;
+}
+
+.fx:hover
+{
+   -webkit-filter: grayscale(0%) brightness(0%);
+}
+
+.shader
+{
+   -webkit-filter: custom(none url(shaders/grayscale.fs), amount 1);
+   -webkit-transition: -webkit-filter linear 1s;
+}
+
+.shader:hover
+{
+   -webkit-filter: custom(none url(shaders/grayscale.fs), amount 0);
+}
+
+body
+{
+}
+
+div, td
+{
+   font-family: FixSys300;
+   font-size: 17px;
+   color: #3aea88;
+   
+   font-style:  normal;
+   font-weight: normal;
+   letter-spacing: 1px;
+   line-height: 120%;
+}
+
+.main
+{
+   width: 100%;
+   height: 100%;
+   
+   position: relative;
+   top:  0px;
+   left: 0px;
+   
+   background: black;
+}
+
+.bkg
+{
+   opacity: 0.7;
+   
+   position: absolute;
+   top:  0px;
+   left: 0px;
+}
+
+.bkg-img
+{
+   width: 100%;
+   height:auto;
+}
+
+.bkg-overlay1
+{  
+   position: absolute;
+   left: 0px;
+   top: 0px;
+   
+   width:  100%;
+   height: 100%;
+   
+   opacity: 0.7;
+   background: #0a1c10;
+   -webkit-filter: blur(2.00px);
+}
+
+.bkg-overlay2
+{  
+   position: absolute;
+   left: 0px;
+   top: 0px;
+   
+   width:  100%;
+   height: 100%;
+   
+   background-repeat: no-repeat;
+   background-image: -webkit-gradient(linear, 
+                        left top, left bottom,
+                        color-stop(0.50, rgba(0,0,0,0.0)),
+                        color-stop(1.00, rgba(0,0,0,1.0))),
+                     -webkit-gradient(linear, 
+                        left top, right top,
+                        color-stop(0.50, rgba(0,0,0,0.0)),
+                        color-stop(1.00, rgba(0,0,0,1.0)));
+}
+
+.bkg-img-txt
+{   
+   opacity: 0.65;
+   
+   position: fixed;
+   bottom: 10px;
+   left: 10px;
+   
+   color: #83eab1;
+   
+   -webkit-filter: blur(0.10px) brightness(30%);
+   text-shadow: 0 0 7px #149c5a,
+                0 0 12px #146031,
+                0 0 15px #005c24,
+                0 0 25px #0a1c10;
+}
+
+
+/*
+   background: #0a1c10;
+   background: -webkit-gradient(linear, left top, left bottom, from(#003471), to(#448CCB));
+*/
+
+.menu
+{
+   width: 180px;
+      
+   border-right: 1px solid #3aea88;
+   padding-top: 10px;
+   padding-left: 10px;
+}
+
+.menu a
+{
+   text-decoration: none;
+   color: #3aea88;
+}
+
+.menu a:hover
+{
+   opacity: 1.00;
+   text-decoration: none;
+   color: #83eab1;
+   -webkit-filter: blur(0.10px) brightness(30%);
+}
+
+.terminal
+{     
+   padding-top: 10px;
+   padding-left: 10px;
+   padding-bottom: 10px;
+
+   border-bottom: 1px solid #3aea88;
+}
+
+.term-txt
+{
+   display: inline;
+   font-size: 14px;
+}
+
+td
+{
+   -webkit-filter: blur(0.10px) brightness(1%);
+   text-shadow: 0 0 7px #149c5a,
+                0 0 12px #146031,
+                0 0 15px #005c24,
+                0 0 25px #0a1c10;
+}
+
+.cursor
+{
+   font-size: 14px;
+   display: inline;
+   position: relative;
+   top:  0px;
+   left: 0px;
+}
+
+.cursor .bar
+{  
+   position: absolute;
+   top:  1px;
+   left: 1px;
+   
+   display: none;
+}
+
+.cursor .block
+{
+   font-size: 14px;
+   position: absolute;
+   top:  0px;
+   left: -1px;
+}
+
+.img-body
+{
+   float: left;
+   
+   padding-top: 0px;
+   padding-bottom: 12px;
+   margin: 2px;
+   
+   width:  125px;
+   height: 125px;
+   
+   border: 0px solid red;
+   
+   vertical-align: middle;
+}
+
+/*
+   -webkit-filter: blur(0.10px) brightness(1%);
+   -webkit-filter: blur(0.10px) brightness(15%);
+*/
+.img-file
+{
+   margin: auto;
+   vertical-align: middle;
+   
+   padding: 7px;
+   
+   width:  105px;
+   height: 95px;
+   
+   border: 1px solid #3aea88;
+   border-radius: 9px;
+   
+   background: rgba(128,128,128,0.7);
+
+   box-shadow: 0 0 7px #149c5a,
+               0 0 12px #146031,
+               0 0 15px #005c24,
+               0 0 25px #0a1c10;
+   
+   -webkit-filter: grayscale(30%) brightness(-5%);
+}
+
+.img-file .img-file-inner
+{
+   display: table-cell;
+   width:  105px;
+   height: 95px;
+   
+   vertical-align: middle;
+   
+   -webkit-filter: grayscale(30%) brightness(-5%);
+}
+
+.img-file:active, .img-file:hover
+{
+   border: 1px solid #a8ffdb;
+   background: rgba(196,196,196,0.5);
+   
+   -webkit-filter: grayscale(0%) brightness(5%);
+}
+
+.img-link:hover
+{
+   opacity: 1.00;
+   text-decoration: none;
+   color: #83eab1;
+}
+
+.img-file img
+{
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   vertical-align: middle;
+   
+   border: 1px solid black;
+}
+
+.img-txt
+{
+   padding-top: 5px;
+   border: 0px solid yellow;
+   
+   text-align: center;
+   font-size: 12px;
+   line-height: 100%;
+}
+
+.img-link .img-txt
+{
+   text-decoration: none;
+   color: #3aea88;
+}
+
+.img-link .img-txt:hover
+{
+   opacity: 1.00;
+   text-decoration: none;
+   color: #83eab1;
+   -webkit-filter: blur(0.10px) brightness(30%);
+}
+
+/*
+   background: rgba(0,0,0,0.8);
+*/
+
+.list
+{
+   padding: 10px;  
+   height: 100%;
+   
+   overflow: auto;
+   
+   color: white;
+
+}
+
+.list a
+{
+   color: #3aea88;
+}
+
+.list a:hover
+{
+   opacity: 1.00;
+   color: #83eab1;
+   -webkit-filter: blur(0.10px) brightness(30%);
+}
+
+
+
+.company .header
+{
+   border: 3px solid #83eab1;
+   padding: 5px;
+   margin-bottom: 10px;
+}
+
+.company .name
+{
+   text-shadow: none;
+   float: left;
+   font-weight: bold;
+   font-size: 120%;
+}
+
+.company .startEndDate
+{
+   text-shadow: none;
+   float: right;
+}
+
+.company .location
+{
+   text-shadow: none;
+   float: left;
+}
+
+.company .position
+{
+   text-shadow: none;
+   float: left;
+
+}
+
+.company .projects
+{
+   text-shadow: none;
+   margin-left: 20px;
+   padding-bottom: 15px;
+}
+
+.company .projects:not(:last-child)
+{
+   border-bottom: 2px solid #83eab1;
+}
+
+ul
+{
+   padding-top: 0px;
+   padding-bottom: 0px;
+   margin-top: 0px;
+   margin-bottom: 0px;
+}
+
+</style>
+
+<table cellpadding="0" cellspacing="0" width="100%" height="100%">
+<tr><td class="main">
+
+<table cellpadding="0" cellspacing="0">
+<tr><td class="bkg">
+   <img class="bkg-img" src="bkgs/gateway.jpg" />
+   <div class="bkg-overlay1"></div>
+   <div class="bkg-overlay2"></div>
+   <div class="bkg-img-txt">gateway</div>
+</td></tr></table>
+
+<table cellpadding="0" cellspacing="0" width="100%" height="100%">
+   <tr>
+      <td valign="top" class="menu">
+         <a href="#">[Portfolio]</a>
+         &nbsp;<a class="company" href="#">Company</a><br/>
+         &nbsp;<a class="category" href="#">Category</a><br/>
+         &nbsp;<a class="project" href="#">Project</a><br/>
+         &nbsp;<a class="tag" href="#">Tag</a><br/>
+         &nbsp;<a class="position" href="#">Position</a><br/>
+         <br/>
+         <div>[Resume]</div>
+         &nbsp;<a href="#">Client</a><br/>
+         &nbsp;<a href="#">Web</a><br/>
+         &nbsp;<a href="#">Server</a><br/>
+         &nbsp;<a href="#">Games</a><br/>
+         &nbsp;<a href="#">All of the Above</a><br/>
+         &nbsp;<a href="#">Create custom</a><br/>
+         <br/>
+         <div>[Hobby]</div>
+         &nbsp;<a href="#">Photography</a><br/>
+      </td>
+      <td>
+         <table cellpadding="0" cellspacing="0" width="100%" height="100%">
+         <tr height="100">
+            <td class="terminal">
+               <div class="term-txt">
+                  #---------------------------------<br/>
+                  # Another visitor...<br/>
+                  # Stay Awhile<br/>
+                  # Stay FOREVER!!!<br/>
+                  #---------------------------------<br/>
+                  <br/>
+                  ~ jsutton$
+               </div>
+               <a class="cursor" href="#">&nbsp;
+                  <div class="bar">&#x25AC;</div>
+                  <div class="block">&#x25A0;</div>
+               </a>
+               
+            </td>
+         </tr>
+         <tr valign="top">         
+            <td class="list" height="100%"></td>
+         </tr>
+         </table>
+      </td>
+   </tr>
+</table>
+
+<!-- end main -->
+</td></tr></table>
+
+
+<script id="imageTemplate" type="text/x-jsrender">
+   <a class="img-link" href="#">
+   <div class="img-body">
+      <div class="img-file">
+         <div class="img-file-inner">
+         <img height="90px" src="My%20Files/Photos/_backgrounds/_._cache/t_basic_hard.jpg.jpg" />
+         </div>
+      </div>
+      <div class="img-txt">
+         basic_hard.jpg<br/>(381 KB)
+      </div>
+   </div>
+   </a>
+
+   <a class="img-link" href="#">
+   <div class="img-body">
+      <div class="img-file">
+         <div class="img-file-inner">
+         <img width="100px" src="My%20Files/Photos/_backgrounds/_._cache/t_breeders.jpg.jpg" />
+         </div>
+      </div>
+      <div class="img-txt">
+         breeders.jpg<br/>(235 KB)
+      </div>
+   </div>
+   </a>
+</script>
+
+<script id="companyTemplate" type="text/x-jsrender">
+   <div class="company">
+      <table cellpadding="0" cellspacing="0" width="100%" height="100%" class="header">
+      <tr><td valign="middle">
+         <div class="name">{{>Company}}</div><div class="startEndDate">{{>StartDate}} - {{>EndDate}}</div>
+      </td></tr>
+      <tr><td>
+      <div class="location">{{>Location}}</div>
+      </td></tr>
+      <tr><td>
+      <div class="position">{{>Position}}</div>
+      </td></tr>
+      </table>
+      {{for Projects}}
+      <div class="projects">
+         <div>{{>Title}} - Version: {{>Version}}</div>
+         {{if Link}}
+            Download: <a href="{{>Link}}">Sample</a><br/>
+         {{/if}}
+         Using: 
+         {{for Labels}}
+   			<span>"{{>#data}}"</span>,
+      	  {{/for}}
+         <ul>
+         {{for Points}}
+   			<li>{{>#data}}</li>
+      	  {{/for}}
+      	  {{for Images}}
+   			<img src="{{>#data}}" width="50"/>
+      	  {{/for}}
+      	</ul>
+      </div>
+   	{{/for}}
+   </div><br/>
+</script>
+
+<script>
+fadeTime = 50;
+waitTime = 500;
+blinkCursor = false;
+
+
+$(".menu .company").click(selectCompany);
+
+function selectCompany()
+{
+   term = $(".term-txt");
+   out = "";
+   list = companyList;
+   
+   for(i in list)
+   {
+      out += "<div>\""+list[i].Company+"\"</div>";
+   }
+   out += "<div>\"ALL\"</div>";
+   
+   term.html(out);
+   
+   fillBodyList_ALL();
+}
+
+function fillBodyList_ALL()
+{
+   term = $(".list");
+   list = companyList;
+   
+   out = $( "#companyTemplate" ).render( companyList );
+   
+   term.html(out);
+}
+
+/*
+function printProjects(projectList)
+{
+   out = "";
+   for(i in projectList)
+   {
+      out += "<br/>";
+      for(j in projectList[i])
+      {
+         out += "<div>"+j+" : "+projectList[i][j]+"</div>";
+         if(j == "Points")
+         {
+            out += "<ol>";
+            for(k in projectList[i][j])
+            {
+               out += "<li>"+projectList[i][j][k]+"</li>";
+            }
+            out += "</ol>";
+         }
+      }
+   }
+   
+   return out;
+}
+
+function fillBodyList_ALL()
+{
+   term = $(".list");
+   out = "";
+   list = companyList;
+   
+   for(name in list)
+   {
+      for(item in list[name])
+      {
+         if((item == "Courses") ||
+            (item == "Projects") ||
+            (item == "Publications"))
+         {
+            out += printProjects(list[name][item]);
+         } else {
+            out += "<div>"+item+" : "+list[name][item]+"</div>";
+         }
+      }
+      out += "<br/>";
+   }
+   
+   term.html(out);
+}
+*/
+
+
+$(".cursor").click(
+   function()
+   {
+      if( !blinkCursor )
+      {
+         blinkCursor = true;
+         animBlinkCursor(fadeTime, waitTime);
+      } else {
+         blinkCursor = false;
+      }
+      
+      return false;
+   }
+);
+
+function animBlinkCursor(fadeTime, waitTime)
+{
+   if(! blinkCursor ) return;
+   
+   $(".cursor").delay(waitTime).animate(
+   // fade out
+   {opacity:0}, fadeTime, "linear",
+      function()
+      {
+         $(this).delay(waitTime).animate(
+            // fade in
+            {opacity:1}, fadeTime, "linear",
+            function () { animBlinkCursor(fadeTime, waitTime); }
+         );
+      }
+   );
+}
+
+
+function buildListOfCompanies(list)
+{
+   clist = [];
+   for(i = 0; i < list.length; i++)
+   {
+      if( list[i]["Company"] )
+      {
+         cname = list[i]["Company"];
+         clist.push(list[i]);
+      }      
+   }
+   
+   return clist;
+}
+
+function buildListOfCategories(list)
+{
+   clist = {};
+   for(i = 0; i < list.length; i++)
+   {
+      if( list[i]["Category"] )
+      {
+         cname = list[i]["Category"];         
+         if(clist[cname])
+         {
+            clist[cname].push(list[i]);
+         } else {
+            clist[cname] = [list[i]];
+         }
+      }      
+   }
+   
+   return clist;
+}
+
+companyList = {};
+categoryList = {};
+
+$.getJSON('json/projects.json',
+   function(data)
+   {
+      companyList  = buildListOfCompanies(data.List);
+      categoryList = buildListOfCategories(data.List);
+      
+      console.log(companyList);
+      console.log(categoryList);
+      
+      selectCompany();
+   }
+);
+
+
+
+
+</script>
+
+</body>
+</html>

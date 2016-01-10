@@ -1,0 +1,27 @@
+<photos>
+
+<dirs>
+   <li>
+      <a href="javascript:void('%name_id%');" onClick="MenuShowHide('%name_id%');">
+         <img border="0" id="menu_img_%name_id%" src="pics/arrow_d.png"/>
+      </a>
+      <a href="javascript:void('%uname%');" onClick="ShowDirPage('%uname%');">
+         %dir_name% (%num_subdir%:%num_files%)
+      </a>
+      <ul id="menu_%name_id%">
+         <files></files>
+      </ul>
+   </li>
+
+<script language="Javascript">
+   MenuInitItem('%name_id%', 0);
+</script>
+
+</dirs>
+<dirs_no_sub>
+   <li><a href="javascript:void('%uname%');" onClick="ShowDirPage('%uname%');">
+      <img border="0" src="pics/circle.png" />
+      %dir_name%  (%num_subdir%:%num_files%)</a></li>
+</dirs_no_sub>
+
+</photos>

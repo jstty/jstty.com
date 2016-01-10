@@ -1,0 +1,507 @@
+{
+"List":[
+
+   {"__COMMENT__": "EA"},
+   {
+      "StartDate": "8/2011",
+      "EndDate": "Present",
+      "Category": "Industry",
+      "Company": "Electronic Arts",
+      "Location": "Redwood City, Ca - OCCO",
+      "Position": "Game Service Engineer",
+      "Projects":[
+      {
+         "Title": "R\&D HTML5 Game (Strike Fortress)",
+         "Labels": ["HTML5", "WebSockets", "Node.js", "JSON", "Javascript", "Perforce"],
+         "Version": "Alpha 0.3",
+         "Points": [
+            "Lead Server Developer",
+            "Client and server side Network system for multi-browser using WebSockets.",
+            "Load tested mobile servers to handling thousands of concurrent WebSocket connection to a single game session.",
+            "Command and control system to monitor, manage and configure server processes in realtime.",
+            "Polished game server developed by a team of CMU students, for presenting at Google I/O 2012.",
+            "Documented development process and Network system."
+         ],
+         "Link":"",
+         "Images":[""]
+      },
+      {
+         "Title": "Researched NoSQL solutions",
+         "Labels": ["Cassandra", "Riak", "Mongo"],
+         "Points": [
+            "MapReduce: Hive, Pig, Riak (Javascript)",
+            "Reviewed technology, created basic cluster, tested performance, stability and map reduction."
+         ]
+      },
+      {
+         "Title": "Web/Mobile SecondScreen", 
+         "Labels": ["Java", "HTML", "CSS", "Javascript", "XMPP", "Jabberd", "Maven", "Perforce"],
+         "Version": "pre Alpha",
+         "Points": [
+            "Lead Developer",
+            "Dynamic widget system",
+            "XMPP based chat"
+         ],
+         "Link":"",
+         "Images":[""]
+      },
+      {
+         "Title": "Monitoring Tool", 
+         "Labels": ["PHP", "Bash", "Javascript", "JSON", "JQuary", "API", "Oracle 11", "Drupal 7", "LDAP", "Perforce"],
+         "Version": "Release 1.0",
+         "Points": [
+            "Lead Developer",
+            "Server setup, pack and deploy scripts.",
+            "Developed API, backend PHP scripts, client side Javascript and some HTML/CSS."
+         ],
+         "Link":"",
+         "Images":[""]
+      }
+      ]
+   },
+   
+   {"__COMMENT__": "DIVR Systems Inc."},
+   {
+      "StartDate": "6/2005",
+      "EndDate": "10/2005",
+      "Category": "Industry",
+      "Company": "DIVR Systems Inc.",
+      "Location": "Bakersfield, Ca",
+      "Position": "Software Engineer",
+      "Projects":[
+      {
+         "Title": "DIVR Advanced Playback Software",
+         "Labels": ["C/C++", "FFMPEG", "MS VS 2003", "CVS", "wxWidgets", "Windows XP", "MPEG4", "MJPEG", "AVI"],
+         "Version": "Release 3.1",
+         "Points": [
+            "Sole Developer",
+            "Developed simultaneous multiple digital video playback software",
+            "Play each video at defined playback rate, forwards and backwards.",
+            "Supported a dozen video formats, OpenGL/DirectX hardware acceleration, and various image export formats.",
+            "Created user instruction manual, installer application and CD"
+         ],
+         "Link":"",
+         "Images":[""]
+      },
+      {
+         "Title": "DIVR Web Client and Server",
+         "Labels": ["PHP4", "C/C++", "FFMPEG", "libJPEG", "POSIX", "CVS", "MPEG4", "MJPEG", "AVI", "Red Hat Linux"],
+         "Version": "Release 3.1",
+         "Points": [
+            "Sole Developer",
+            "Improved server-side software.", 
+            "Updated and maintained code base.",
+            "Created live encoding/decoding video daemon.",
+            "Created MPEG4 to AVI converter.",
+            "Improved client side COM object and Java applet.",
+            "Tested/debugged server-side and client-side software"
+         ],
+         "Link":"",
+         "Images":[""]
+      }
+   ]
+   },
+   
+   {"__COMMENT__": "CiSMS"},
+   {
+      "StartDate": "9/1999",
+      "EndDate": "7/2004",
+      "Category": "Industry",
+      "Company": "CiSMS",
+      "Location": "Fresno, Ca",
+      "Position": "Co-Owner - President and Sole Software developer",
+      "Projects":[
+      {
+         "Title": "CMP Composer",
+         "Labels": ["C/C++", "MS VS v6.0", "Win32", "MFC", "Windows 95/XP", "Drag n' Drop", "Javascript", "HTML", "CSS"],
+         "Version": "Release 2.5",
+         "Points": [
+            "Sole Developer",
+            "Created a user friendly e-learning/presentation development and customized presentation viewing software",
+            "Drag n' Drop content into compose window.",
+            "Gather, organize, and validate user content.",
+            "Multi target Export: browser and Windows application.",
+            "Multi video payback: Windows Media or Real Media."
+         ],
+         "Link":"",
+         "Images":[""]
+      },
+      {
+         "Title": "CMP Player",
+         "Labels": ["C/C++", "MS VS v6.0", "Win32", "MFC", "Windows 95/XP", "Javascript", "HTML", "CSS"],
+         "Version": "Release 2.5",
+         "Points": [
+            "Sole Developer",
+            "Multi platforms: browser and Windows application.",
+            "Windows version used IE browsers integration for theme-able user developed content."
+         ],
+         "Link":"",
+         "Images":[""]
+      },
+      {
+         "Title": "Website Demo CD",
+         "Labels": ["Apache", "MySQL", "PHP", "Windows 95/XP"],
+         "Version": "Beta 1.0",
+         "Points": [
+            "Sole Developer",
+            "Auto start Apache, MySQL and open an embedded browser in an application to showcase a Website on a local machine"
+         ],
+         "Link":"",
+         "Images":[""]
+      },
+      {
+         "Title": "Florestone.com",
+         "Labels": ["PHP 4", "MySQL 3", "Javascript", "HTML", "CSS"],
+         "Version": "Release",
+         "Points": [
+            "Sole Developer",
+            "Database driven product site with thousands of products.",
+            "Partial text product search.",
+            "Simple admin system."
+         ],
+         "Link":"",
+         "Images":[""]
+      }
+   ]
+   },
+   
+   {"__COMMENT__": "Goliath Software"},
+   {
+      "StartDate": "9/1999",
+      "EndDate": "7/2004",
+      "Category": "Industry",
+      "Company": "Goliath Software",
+      "Location": "Fresno, Ca",
+      "Position": "Co-Owner - VP and Sole Software developer",
+      "Projects":[
+      {
+         "Title": "CMS",
+         "Labels": ["PHP", "MySQL", "Javascript", "HTML", "CSS"],
+         "Points": [
+            "Sole Developer"
+         ]
+      }
+      ]
+   },
+   
+   {"__COMMENT__": "Education"},
+   {
+      "StartDate": "9/2009",
+      "EndDate": "5/2011",
+      "Category": "Education",
+      "University": "University of Southern California",
+      "Location": "Los Angeles, Ca",
+      "Degree": "M.S. in Computer Science - General",
+      "Honors": "Cum Laude",
+      "GPA": "3.6/4.0"
+   },
+   {
+      "StartDate": "9/2004",
+      "EndDate": "9/2007",
+      "Category": "Education",
+      "University": "California State University of Bakersfield",
+      "Location": "Bakersfield, Ca",
+      "Degree": "B.S. in Computer Science",
+      "Honors": "Magna Cum Laude",
+      "Award": "Computer Science - Outstanding Graduating Senior of 2007",
+      "Major GPA": "4.0/4.0",
+      "Overall GPA": "3.6/4.0"
+   },
+   
+   {"__COMMENT__": "Research"},
+   {
+      "StartDate": "3/2010",
+      "EndDate": "7/2011",
+      "Category": "Research",
+      "University": "ISI-USC",
+      "Location": "Los Angeles, Ca",
+      "Position": "Research Assistant",
+      "Projects":[
+      {
+         "Title": "Intelligent Agents for Large Scale Security Simulation",
+         "Labels": ["Java", "C/C++", "Python", "Bash", "Eclipse", "XML-RPC", "MySQL", "SVN", "ANT", "Linux", "OS X", "Windows", "API"],
+         "Version": "Release 1.0",
+         "Points": [
+            "Sole Server Developer",
+            "Assisted with development of the National Cyber Range, part of DARPA’s contribution to the Comprehensive National Cyber Initiative.",
+            "System APIs for Agents",
+            "Virtual communication and workplace tools (online websheet, phone, email, webpage)",
+            "Command and control system to manage Agents and services", 
+            "Integrated source from vendor",
+            "Nightly builds, server unit tests, end to end system tests",
+            "Maintained documentation"
+         ],
+         "Link":"",
+         "Images":[""]
+      }],
+      "Publications":[
+      {
+         "Desc":"Jim Blythe and Aaron Botello and Joseph Sutton and David Mazzocco and Jerry Lin and Marc Spraragen and Mike Zyda, \"Testing Cyber Security with Simulated Humans that Plan,\" 23rd Innovative Applications of Artificial Intelligence, (IAAI ’11).",
+         "Link":""
+      }]
+   },
+   {
+      "StartDate": "9/2004",
+      "EndDate": "9/2007",
+      "Category": "Research",
+      "University": "California State University of Bakersfield",
+      "Location": "Bakersfield, Ca",
+      "Position": "Research Assistant",
+      "Projects":[
+      {
+         "Title": "Digital Video Watermarking and Attacks",
+         "Labels": ["C/C++", "FFTW", "libPNG", "GSL", "R", "LaTeX", "Eclipse", "Xcode", "Eclipse", "OS X", "Linux"],
+         "Points": [
+            "Lead Developer",
+            "Batch processes PNG images, converts discrete pixel values to continuous coefficient values (DCT using FFT)",
+            "Converts continuous coefficient values to discrete pixel values (CDT using FFT), writes PNG image",
+            "Adds watermarks to a series of images using various methods (Gaussian, Uniform, or Orthogonal normal)",
+            "Attacks watermarks in a series of images using various methods (Bootstrap, Time-Series Intra-Video Collusion)",
+            "Calculates the similarity values of the watermark and attacked images.",
+            "Creates difference images of attacked and watermarked from original, for visualization."
+         ],
+         "Link":"",
+         "Images":[""]
+      }],
+      "Publications":
+      [
+         {
+            "Desc":"S. Behseta, C. Lam, J. Sutton, R.L. Webb, \"A Time-Series Intra-Video Collusion Attack on Frame-by-Frame Video Watermarking,\" 7th International Workshop, (IWDW ’08), LNCS 5450, pp. 31-44, 2008.",
+            "Link":""
+         }
+      ]
+   },
+   {
+      "StartDate": "1/2007",
+      "EndDate": "9/2009",
+      "Category": "Research",
+      "University": "California State University of Bakersfield",
+      "Location": "Bakersfield, Ca",
+      "Position": "Research Assistant",
+      "Projects":[
+      {
+         "Title": "Chemical Plume Tracing System",
+         "Labels": ["C/C++", "OpenGL", "Win32", "Webots", "MS VS v6", "Xcode", "OS X", "Windows"],
+         "Points": [
+            "Sole Developer",
+            "Converted simulation system from Win32 2D to OpenGL 3D",
+            "Supports multi-platforms (OS X and Windows tested)",
+            "Redesigned application to be dynamic and scalable",
+            "Allow for multiple plume, vehicle, and different exec modes (sim or controller)"
+         ],
+         "Link":"",
+         "Images":[""]
+      }],
+      "Publications":
+      [
+         {
+            "Desc":"J. Sutton and W. Li, \"Development of CPT M3D for Multiple Chemical Plume Tracing and Source Identification,\" Proc of the 2008 IEEE International Conference on Machine Learning and Applications (ICMLA’08), pp. 470-475, 2008.",
+            "Link":""
+         },
+         {
+            "Desc":"W. Li, J. Sutton, and Y. Li, \"Integration of Chemical and Visual Sensors for Identifying an Odor Source in Near Shore Ocean Conditions ,\" Proc of the 2008 IEEE Interna- tional Conference on Machine Learning and Applications (ICMLA’08), pp. 444-449, 2008.",
+            "Link":""
+         },
+         {
+            "Desc":"W. Li, and J. Sutton, \"Optimization of Source Identification Algorithm Derived from Moth-Inspired Plume Tracing Strategies,\" Proc of the 2007 IEEE International Symposium on Computational Intelligence in Robotics and Automation (CIRA’07), pp. 79-84, 2007.",
+            "Link":""
+         },
+         {
+            "Desc":"Wei Li, MM Elgassier, T Rutledge, J Sutton, \"Design of Source Identification Zones for Declaring an Odor Source in Turbulent Fluid-Advected Environments,\" Proc of 2006 IEEE International Conference on Information Reuse and Integration (IRI’06), pp. 466-471, 2006.",
+            "Link":""
+         }
+      ]
+   },
+   
+   {"__COMMENT__": "Teaching"},
+   {
+      "StartDate": "1/2008",
+      "EndDate": "9/2008",
+      "Category": "Teaching",
+      "University": "California State University of Bakersfield",
+      "Location": "Bakersfield, Ca",
+      "Position": "Lecturer",
+      "Courses":[
+      {
+         "Title": "Science 350B: Computers and Society",
+         "Points": ["Edited course content"],
+         "Link":"",
+         "Images":[""]
+      },
+      {
+         "Title": "Computer Science 277 (Special Topic): Publishing Mathematics and Scientific Research",
+         "Labels": ["LaTeX"],
+         "Points": ["Developed course and content"],
+         "Link":"",
+         "Images":[""]
+      },
+      {
+         "Title": "Computer Science 277 (Special Topic): Advanced Internet Application Development",
+         "Labels": ["PHP", "MySQL", "Javascript", "HTML", "CSS"],
+         "Points": ["Developed course and content"],
+         "Link":"",
+         "Images":[""]
+      },
+      {
+         "Title": "Computer Science 211: Internet Programming and Web Design",
+         "Labels": ["Javascript", "HTML", "CSS"],
+         "Points": ["Redesigned course content"],
+         "Link":"",
+         "Images":[""]
+      },
+      {
+         "Title": "Computer Science 120: Computer Skills and Concepts I",
+         "Points": ["Edited and redesigned course lab manual"],
+         "Link":"",
+         "Images":[""]
+      },
+      {
+         "Title": "General Studies 104a: Introduction to PC’s",
+         "Points": ["Edited and redesigned course and content"],
+         "Link":"",
+         "Images":[""]
+      },
+      {
+         "Title": "General Studies 104b: Intermediate Intro. to PC’s",
+         "Points": ["Edited and redesigned course and content"],
+         "Link":"",
+         "Images":[""]
+      }
+      ]
+   },
+   
+   {"__COMMENT__": "Misc Projects"},
+   {
+      "StartDate": "1/2008",
+      "EndDate": "9/2008",
+      "Category": "Misc Projects",
+      "University": "California State University of Bakersfield",
+      "Location": "Bakersfield, Ca",
+      "Position": "Lecturer",
+      "Projects":[
+      {
+         "Title": "Instructor Management System",
+         "Labels": ["PHP 5", "HTML", "CSS", "Javascript", "MySQL 5", "Linux", "Zip"],
+         "Points": [
+            "Sole Developer",
+            "Web based student and admin front-end",
+            "Database driven homework/grade management",
+            "Created a single zip file, containing all the work from each student’s zip file uploaded for a particular homework.",
+            "Used by hundreds of students over the sites lifecycle"
+         ],
+         "Link":"",
+         "Images":[""]
+      }]
+   },
+   {
+      "StartDate": "1/2008",
+      "EndDate": "9/2008",
+      "Category": "Misc Projects",
+      "University": "California State University of Bakersfield",
+      "Location": "Bakersfield, Ca",
+      "Position": "Student",
+      "Projects":[
+      {
+         "Title": "Instructor Assistant Grading System",
+         "Labels": ["C#", "MS VS 2005", ".NET", "Oracle 9", "MySQL 5", "Windows"],
+         "Version": "Release 1.0",
+         "Points": [
+            "Sole Developer",
+            "Windows GUI client Application",
+            "Student and grade management system",
+            "Created user instructional manual",
+            "Tested and debugged application",
+            "Multi-Threaded and Multi-Database support"
+         ],
+         "Link":"",
+         "Images":[""]
+      }]
+   },
+   
+   {"__COMMENT__": "Fun!"},
+   {
+      "Category": "Games",
+      "Projects":[
+      {
+         "Title": "SuperStars Wrestling",
+         "Labels": ["C/C++", "SpiderMonkey", "Javascript", "SDL", "Windows"],
+         "Points": [
+            "Sole Developer",
+            "Game Engine written in C/C++ with game logic ran in Javascript using SpiderMonkey engine."
+         ],
+         "Link":"",
+         "Images":[""]
+      },
+      {
+         "Title": "Alien Mansion",
+         "Labels": ["C/C++", "Windows"],
+         "Points": [
+            "Sole Developer"
+         ],
+         "Link":"",
+         "Images":[""]
+      },
+      
+      {
+         "Title": "Kung Fu Willy",
+         "Labels": ["C/C++", "Windows"],
+         "Points": [
+            "Sole Developer"
+         ],
+         "Link":"",
+         "Images":[""]
+      },
+      
+      {
+         "Title": "Young George VS Lost Island",
+         "Labels": ["C/C++", "Windows"],
+         "Points": [
+            "Sole Developer"
+         ],
+         "Link":"",
+         "Images":[""]
+      },
+      
+      {
+         "Title": "SuperShooter",
+         "Labels": ["C/C++", "Windows"],
+         "Points": [
+            "Sole Developer"
+         ],
+         "Link":"",
+         "Images":[""]
+      },
+      
+      {
+         "Title": "Tankwars2005",
+         "Labels": ["C/C++", "Windows"],
+         "Points": [
+            "Sole Developer"
+         ],
+         "Link":"",
+         "Images":[""]
+      },
+      
+      {
+         "Title": "Warpscape",
+         "Labels": ["C/C++", "OpenGL", "OS X", "Windows"],
+         "Points": [
+            "Sole Developer",
+            "Used Lighting and Pixel Shader"
+         ],
+         "Link":"",
+         "Images":[""]
+      },
+      
+      {
+         "Title": "A*",
+         "Labels": ["C/C++", "C#", "OS X", "Windows"],
+         "Points": [
+            "Sole Developer"
+         ],
+         "Link":"",
+         "Images":[""]
+      }
+   ]}
+   
+]}

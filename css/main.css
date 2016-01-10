@@ -1,0 +1,502 @@
+/*jstty Styles*/
+
+a:link, a:visited 
+{
+   color: #0000FF;
+   outline: none;
+}
+
+a:active, a:hover
+{
+   color: #EE2B33;
+   outline: none;
+}
+
+body
+{
+   font-family: Arial, Helvetica, sans-serif;
+   font-weight: normal;
+   font-size: 9pt;
+   text-decoration: none;
+   
+   color: #FFFFFF;
+   background-color: #000000;
+   
+   overflow: hidden;
+}
+
+#main-body
+{
+   position: relative;
+   z-index: 2;
+}
+
+/*
+background-color: #8c8e91;
+*/
+.body-header
+{
+   background-color: rgba(72, 91, 111, 0.65);
+   
+   padding-top: 3px;
+   padding-left: 3px;
+}
+
+/*
+   border-right: 2px solid rgba(177, 20, 20, 0.65);
+*/
+.body-header #logo
+{
+   border-bottom: 1px solid #959DB1;
+   padding: 5px;
+}
+
+/*
+   border-left: 1px solid rgba(120, 14, 14, 0.65);
+*/
+.body-header #text
+{
+   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+   font-size: 14pt;
+   font-weight: normal;
+   
+   border-bottom: 1px solid #959DB1;
+   padding: 7px;
+}
+
+/*
+.body-header #text .shadow
+{
+   top: 2px;
+   
+   position: relative;
+   display: block;
+}
+*/
+
+.shadow
+{
+   position: relative;
+   top: 0px;
+   left: 0px;
+   padding: 2px;
+} 
+
+.shadow b
+{
+   font-weight: normal;
+   
+   position: relative;
+   top: 0px;
+   left: 0px;
+   z-index: 11;
+} 
+
+.shadow b a:link, .shadow b a:visited
+{
+   color: #F1F1F1;
+   text-decoration: none;
+}
+
+.shadow b a:active, .shadow b a:hover
+{
+   color: #EE2B33;
+   text-decoration: none;
+}
+
+
+.shadow i
+{
+   font-style: normal;
+   color: black;
+      
+   position: absolute;
+   top: 4px;
+   left: 4px;
+   z-index: 10;
+   
+   opacity: 0.55;
+}
+
+#body-bkg
+{
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: 0;
+      
+   width: 100%;
+   overflow: hidden;
+}
+
+
+/*  LAYER 0 */
+#body-bkg #body-bkg-layer0
+{
+   position: relative;
+   top: 0;
+   left: 0;
+   z-index: 4;
+   
+   background: black;
+}
+
+#body-bkg #body-bkg-img0
+{
+   position: relative;
+   top: 0;
+   left: 0;
+   z-index: 5;
+}
+
+#body-bkg #body-bkg-overlay0
+{
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: 6;
+   
+   overflow: hidden;
+}
+
+#body-page-footer0
+{      
+   padding-right: 20px;
+   padding-bottom: 10px;
+   
+   width: 100%;
+   height: 100%;
+   
+   text-transform: lowercase;
+   
+   opacity: 0.60;
+}
+
+
+/*  LAYER 1 */
+#body-bkg #body-bkg-layer1
+{
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: 1;
+   
+   background: black;
+   
+   overflow: hidden;
+}
+
+#body-bkg #body-bkg-img1
+{
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: 2;
+   
+   overflow: hidden;
+}
+
+#body-bkg #body-bkg-overlay1
+{
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: 3;
+   
+   overflow: hidden;
+}
+
+#body-page-footer1
+{      
+   padding-right: 20px;
+   padding-bottom: 10px;
+   
+   width: 100%;
+   height: 100%;
+   
+   text-transform: lowercase;
+   
+   opacity: 0.60;
+}
+
+.body
+{   
+}
+
+/*
+background-color: #1c366a;
+
+border-right: 2px solid rgba(177, 20, 20, 0.65);
+
+*/
+#body-menu
+{
+   padding: 5px;
+   border-top: 1px solid #6c7982;
+   
+   background-color: transparent;
+}
+
+#body-menu-content
+{
+   overflow: auto;
+}
+
+/*
+background-color: #555e6a;
+
+border-left: 1px solid rgba(120, 14, 14, 0.65);
+*/
+
+.body-page
+{
+   color: #FFFFFF;
+   border-top: 1px solid #6c7982;
+   
+   background-color: rgba(0, 0, 0, 0.65);
+}
+
+#body-width
+{
+}
+
+
+/*
+Slider
+*/
+.slider
+{
+   border: 0;
+   height: 100%;
+}
+
+.slider #left
+{
+   background-color: rgba(177, 20, 20, 0.65);
+}
+
+.slider #right
+{
+   background-color: rgba(120, 14, 14, 0.65);
+}
+
+.slider a
+{
+   height: 100%;
+   
+   cursor: e-resize;
+}
+
+.slider img
+{
+   height: 100%;
+   border: 0;
+}
+
+
+
+#body-page-frame
+{
+   position: relative;
+   height: 100%;
+}
+
+/*
+display: table;
+*/
+#medium-view
+{
+   display: none;
+   
+   position: relative;
+   top: 0;
+   left: 0;
+   z-index: 21;
+   
+   display: none;
+   
+   width: 100%;
+   height: 100%;
+}
+
+#medium-view1
+{
+   display: table-cell;
+   
+   vertical-align: middle;
+   
+   width: 100%;
+   height: 100%;
+}
+
+#medium-view2
+{
+   position: relative;
+   top: 0;
+   left: 0;
+   z-index: 23;
+   
+   margin-left: auto;
+   margin-right: auto;
+   
+   width: 700px;
+   background-color: transparent;
+}
+
+#medium-view-bkg
+{
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: 22;
+   
+   width: 100%;
+   height: 100%;
+   
+   background-color: rgba(0, 0, 0, 0.65);
+}
+
+#medium-view-bkg a
+{
+   width: 100%;
+   height: 100%;
+   
+   display: block;
+}
+
+#medium-view .header
+{
+}
+
+#medium-view .header .rbox b b.L2, #medium-view .header .rbox b b.L3
+{   
+   background-color: rgba(31, 41, 48, 0.90);
+}
+
+#medium-view .header .rbox .content
+{
+   background-color: rgba(31, 41, 48, 0.90);
+}
+
+#medium-view .header .button:link, #medium-view .header .button:visited
+{
+   color: #EEEEEE;
+}
+
+#medium-view .header .button:active, #medium-view .header .button:hover
+{
+   color: #E70002;
+}
+
+#medium-view .body
+{
+   text-align: center;
+}
+
+#medium-view .body .rbox b b.L2,
+#medium-view .body .rbox b b.L3
+{
+   background-color: rgba(111, 122, 133, 0.70);
+}
+
+#medium-view .body .rbox .content
+{
+   background-color: rgba(111, 122, 133, 0.70);
+}
+
+
+
+#medium-view .button
+{
+   width: 55px;
+   text-align: center;
+   display: table-cell;
+   
+   font-weight: normal;
+   font-size: 9pt;
+   text-decoration: none;
+}
+
+#medium-view .button:link, #medium-view .button:visited
+{
+   color: #000000;
+}
+
+#medium-view .button:active, #medium-view .button:hover
+{
+   color: #EEEEEE;
+}
+
+
+#medium-view .button .rbox .content
+{
+   padding: 0px;
+}
+
+#medium-view-title
+{
+   width: 645px;
+   
+   padding-left: 5px;
+   
+   display: table-cell;
+}
+
+
+#medium-view-img
+{ 
+   margin-left: auto;
+   margin-right: auto;
+   
+   border: 0px;
+}
+
+#medium-view .body .control
+{  
+   width: 170px;
+   
+   margin-left: auto;
+   margin-right: auto;
+   border: 1px solid red;
+}
+
+
+#body-page
+{
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: 20;
+   
+   width: 100%;
+   height: 100%;
+   
+   overflow: auto;
+}
+
+.body-page-footer
+{
+   position: absolute;
+   left: 0px;
+   top: 0px;
+   z-index: 5;
+}
+
+
+#loading
+{
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: 50;
+}
+
+
+.text
+{
+   font-family: Arial, Helvetica, sans-serif;
+   font-weight: normal;
+   color: #000000;
+   text-decoration: none;
+   font-size: 10pt;
+}

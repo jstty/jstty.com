@@ -1,0 +1,265 @@
+.roundbox
+{
+   border-radius: 5px;
+   
+   color: #FFFFFF;
+   border: 1px solid #959DB1;
+   background-color: #959DB1;
+   
+   padding: 5px;
+   
+   font-weight: bold;
+   font-size: 18pt;
+}
+
+.portfolioFilter
+{
+   padding: 2px;
+}
+
+.portfolioBody
+{
+   padding: 5px;   
+}
+
+.portfolioBody .catagory
+{
+   padding-bottom: 5px;
+}
+
+.portfolioBody .catagory .basicFormat
+{
+   font-weight: bold;
+   font-size: 18pt;
+   text-decoration: underline;
+}
+
+.portfolioBody .catagory .roundbox
+{
+   background-color: rgba(27, 42, 75, 0.75);
+   
+   text-shadow: 0.15em 0.15em 0.11em black;
+}
+
+.formatLinks
+{
+   border-radius: 5px;
+   padding-left: 5px;
+   padding-top: 2px;
+   padding-bottom: 2px;
+   
+   color: #FFFFFF;
+   border: 1px solid #959DB1;
+   background-color: rgba(27, 42, 75, 0.75);
+}
+
+.formatLinks a
+{
+   font-size: 13pt;
+   padding-right: 2px;
+   padding-left: 2px;
+   
+   text-shadow: 0.15em 0.15em 0.11em black;
+}
+
+.formatLinks a:link, .formatLinks a:visited
+{   
+   color: #F1F1F1;
+   text-decoration: none;
+}
+
+.formatLinks a:active, .formatLinks a:hover
+{   
+   color: #EE2B33;
+   text-decoration: none;
+}
+
+
+.portfolioBody .item
+{
+   border: 0px solid red;
+}
+
+
+.portfolioBody .bodyTemplate hr
+{
+   margin-top: 7px;
+   margin-bottom: 7px;
+     
+   margin-left: 20px;
+   border-top: 1px solid #5d626f;
+   border-bottom: 1px solid #959DB1;
+}
+
+.portfolioBody .categoryBodyTemplate
+{
+   padding-bottom: 5px;
+}
+
+.portfolioBody .categoryBodyTemplate hr
+{
+   margin-top: 7px;
+   margin-bottom: 7px;
+     
+   margin-left: 20px;
+   border-top: 1px solid #5d626f;
+   border-bottom: 1px solid #959DB1;
+}
+
+
+.portfolioBody .links a:link, .links a:visited 
+{
+   color: #F1F1F1;
+   text-decoration: none;
+}
+
+.portfolioBody .links a:active, .links a:hover
+{
+   color: #EE2B33;
+   text-decoration: none;
+}
+
+
+.portfolioBody .header
+{
+   padding-left: 5px;
+   padding-right: 5px;
+}
+
+.portfolioBody .header div
+{ 
+   text-shadow: 0.15em 0.15em 0.11em black;
+}
+
+.portfolioBody .name
+{
+   text-shadow: none;
+   float: left;
+   font-weight: bold;
+   font-size: 120%;
+}
+
+.portfolioBody .startEndDate
+{
+   text-shadow: none;
+   float: right;
+}
+
+.portfolioBody .location
+{
+   text-shadow: none;
+   float: left;
+}
+
+.portfolioBody .position
+{
+   text-shadow: none;
+   float: left;
+}
+
+.portfolioBody .education
+{
+   border: 0px solid yellow;
+}
+
+.portfolioBody .education .roundbox
+{
+   margin-bottom: 5px;
+}
+
+.portfolioBody .education .details
+{
+   border: 0px solid green;
+   padding-left: 20px;
+   padding-bottom: 5px;
+}
+
+.portfolioBody .education .projects
+{
+   margin-bottom: 10px;
+}
+
+
+.portfolioBody .company
+{
+   border: 0px solid yellow;
+   padding-bottom: 5px;
+}
+
+.portfolioBody .company .roundbox
+{
+   margin-bottom: 5px;
+}
+
+.portfolioBody .projects
+{
+   border: 0px solid yellow;
+   text-shadow: none;
+   
+   margin-left: 20px;
+}
+
+.portfolioBody .projects .title
+{
+   font-weight: bold;
+}
+
+.portfolioBody .projects ul
+{
+   padding-top: 2px;
+   margin: 0px;
+   margin-bottom: 5px;
+}
+
+.portfolioBody .projects ul li
+{
+   padding-top: 3px;
+}
+
+
+.portfolioBody .projects .imageList img
+{
+   width: 80px;
+   padding: 0px;
+   margin: 0px;
+}
+
+.portfolioBody .projects .imageList a:link img, 
+.portfolioBody .projects .imageList a:visited img
+{
+   border: 2px solid #F1F1F1;
+   padding: 0px;
+   margin: 0px;
+}
+
+.portfolioBody .projects .imageList a:active img, 
+.portfolioBody .projects .imageList a:hover img
+{
+   border: 2px solid #EE2B33;
+   padding: 0px;
+   margin: 0px;
+}
+
+.portfolioBody .projects .imageList
+{
+   border: 0px solid red;
+   padding: 0px;
+   margin: 0px;
+}
+
+.portfolioBody .projects .imageList .roundbox
+{
+   background-color: rgba(111, 122, 133, 0.50);
+   padding-left: 5px;
+   padding-top: 5px;
+   padding-bottom: 0px;
+   padding-right: 0px;
+   margin: 0px;
+}
+
+.portfolioBody .misc
+{
+   border: 0px solid red;
+   padding-bottom: 5px;
+}
+

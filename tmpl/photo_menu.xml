@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<photos>
+   <dirs>
+   <dir name="%name%">
+      <files><file name="%file%"></file>
+      </files>
+   </dir></dirs>
+   <dirs_no_sub>
+   <dir name="%name%">
+      <files><file name="%file%"></file>
+      </files>
+   </dir></dirs_no_sub>
+</photos>
