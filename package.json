@@ -1,0 +1,23 @@
+{
+  "name": "jstty.com",
+  "version": "0.1.0",
+  "author": {
+    "name": "Joseph E. Sutton",
+    "email": "joe@jstty.com",
+    "url": "http://www.jstty.com"
+  },
+  "maintainers": [
+    {
+      "name": "jstty",
+      "email": "joe@jstty.com"
+    }
+  ],
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.0"
+  },
+  "engines": {
+    "node": ">=4.0"
+  }
+}
