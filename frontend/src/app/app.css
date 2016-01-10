@@ -71,6 +71,16 @@ body, table, form {
   color: rgba(171,171,171,0.8);
 }
 
+.links .resume {
+  position: relative;
+}
+
+.links .fa-angle-down {
+  position: absolute;
+  left: 3px;
+  top: 9px;
+}
+
 section {
   color: white;
 }

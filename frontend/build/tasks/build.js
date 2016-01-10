@@ -45,8 +45,8 @@ gulp.task('build-css', function() {
     .pipe(browserSync.stream());
 });
 
-gulp.task('build-images', function() {
-  return gulp.src(paths.images)
+gulp.task('build-assets', function() {
+  return gulp.src(paths.assets)
     .pipe(changed(paths.output))
     .pipe(gulp.dest(paths.output))
     .pipe(browserSync.stream());
@@ -59,7 +59,7 @@ gulp.task('build-images', function() {
 gulp.task('build', function(callback) {
   return runSequence(
     'clean',
-    ['build-system', 'build-html', 'build-css', 'build-images'],
+    ['build-system', 'build-html', 'build-css', 'build-assets'],
     callback
   );
 });

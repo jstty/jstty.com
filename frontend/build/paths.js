@@ -7,7 +7,7 @@ module.exports = {
   source: appRoot + '**/*.js',
   html: appRoot + '**/*.html',
   css: appRoot + '**/*.css',
-  images: appRoot + '**/*.{jpg,png,gif,svg}',
+  assets: appRoot + '**/*.{jpg,png,gif,svg,pdf,zip,txt}',
   output: outputRoot,
   exportSrv: exportSrvRoot,
   doc: './doc',
