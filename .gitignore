@@ -1,7 +1,3 @@
-/* OS */
-/*
 .DS_Store
-*/
-
-/* packages */
 node_modules
+jspm_packages
