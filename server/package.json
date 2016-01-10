@@ -1,0 +1,10 @@
+{
+  "name": "jstty.server",
+  "dependencies": {
+    "hyper.io": "jstty/hyper.io#4908c3f"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=4.0"
+  }
+}
