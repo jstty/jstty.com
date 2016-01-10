@@ -10,11 +10,16 @@ var assign = Object.assign || require('object.assign');
 var notify = require("gulp-notify");
 var browserSync = require('browser-sync');
 
+require('shelljs/global');
+
 // transpiles changed es6 files to SystemJS format
 // the plumber() call prevents 'pipe breaking' caused
 // by errors from other gulp plugins
 // https://www.npmjs.com/package/gulp-plumber
 gulp.task('build-system', function() {
+  cp('-R', 'jspm_packages', 'dist');
+  cp('config.js', 'dist');
+
   return gulp.src(paths.source)
     .pipe(plumber({errorHandler: notify.onError('Error: <%= error.message %>')}))
     .pipe(changed(paths.output, {extension: '.js'}))
