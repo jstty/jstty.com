@@ -1,12 +1,18 @@
 <template>
-  <require from="blur-image"></require>
+  <require from="sections/projects/projects.css"></require>
 
-  <section class="au-animate">
+  <section class="au-animate projects page-content">
     <h2>${heading}</h2>
+
+    <h2 class="spinner" if.bind="isLoading">
+      <div class="double-bounce1"></div>
+      <div class="double-bounce2"></div>
+    </h2>
+
     <div class="row au-stagger">
       <div class="col-sm-6 col-md-3 card-container au-animate" repeat.for="user of users">
         <div class="card">
-          <canvas class="header-bg" width="250" height="70" blur-image.bind="image"></canvas>
+          <canvas class="header-bg" width="250" height="70"></canvas>
           <div class="avatar">
             <img src.bind="user.avatar_url" crossorigin ref="image"/>
           </div>

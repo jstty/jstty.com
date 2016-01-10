@@ -18,6 +18,7 @@ require('shelljs/global');
 // https://www.npmjs.com/package/gulp-plumber
 gulp.task('build-system', function() {
   cp('-R', 'jspm_packages', 'dist');
+  // need to copy config in to output so system load modules
   cp('config.js', 'dist');
 
   return gulp.src(paths.source)
@@ -44,6 +45,13 @@ gulp.task('build-css', function() {
     .pipe(browserSync.stream());
 });
 
+gulp.task('build-images', function() {
+  return gulp.src(paths.images)
+    .pipe(changed(paths.output))
+    .pipe(gulp.dest(paths.output))
+    .pipe(browserSync.stream());
+});
+
 // this task calls the clean task (located
 // in ./clean.js), then runs the build-system
 // and build-html tasks in parallel
@@ -51,7 +59,7 @@ gulp.task('build-css', function() {
 gulp.task('build', function(callback) {
   return runSequence(
     'clean',
-    ['build-system', 'build-html', 'build-css'],
+    ['build-system', 'build-html', 'build-css', 'build-images'],
     callback
   );
 });
