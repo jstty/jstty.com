@@ -75,12 +75,6 @@ body, table, form {
   position: relative;
 }
 
-.links .fa-angle-down {
-  position: absolute;
-  left: 3px;
-  top: 9px;
-}
-
 section {
   color: white;
 }

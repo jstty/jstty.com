@@ -5,5 +5,8 @@
 node_modules
 jspm_packages
 
+# Editors
+.idea
+
 # temp files
 frontend/dist
