@@ -1,0 +1,48 @@
+{
+  "columns": [
+    {
+      "width": <%= leftColumnWidth %>,
+      "text": "Projects & Experience",
+      "style": "columnHeader"
+    },
+    [
+      <% for(var i = 0; i < list.length; i++) { var item = list[i]; %>
+      {
+        "width": <%= pageWidth - leftColumnWidth %>,
+        "table": {
+          "widths": ["auto", "*"],
+          "body": [
+            [{ "text": "<%= item.Position %> - <%= item.Company %>", "style":"subheader"}, { "text":"<%= item.StartDate %> - <%= item.EndDate %>", "alignment":"right"}],
+            ["<%= item.Location %>", { "text": "<%= item.Link %>", "alignment":"right"}]
+          ]
+        },
+        "layout": "noBorders"
+      },
+      [
+        <% for(var j = 0; j < item.Projects.length; j++) { var project = item.Projects[j]; %>
+        {
+          "ul": ["<%= project.Title %>"]
+        },
+        {
+          "width": <%= pageWidth - leftColumnWidth %>,
+          "table": {
+            "widths": ["auto", "*"],
+            "body": [
+              <% for(var k = 0; k < project.Points.length; k++) { var point = project.Points[k]; %>
+              ["-", "<%= point %>"]
+              <% if(k+1 != project.Points.length){ %>,<% } %>
+              <% } %>
+            ]
+          },
+          "margin": [ <%= 1.5*linePadding %>, 0, 0, 0],
+          "layout": "noBorders"
+        }
+        <% if(j+1 != item.Projects.length){ %>,<% } %>
+        <% } %>
+      ]
+      <% if(i+1 != list.length){ %>,<% } %>
+      <% } %>
+    ]
+  ],
+  "columnGap": <%= linePadding %>
+}
