@@ -1,6 +1,9 @@
 var PdfPrinter = require('pdfmake');
+var ejs = require('ejs');
 var fs = require('fs');
 var path = require('path');
+var _ = require('lodash');
+var moment = require('moment');
 
 module.exports = PdfGen;
 
@@ -21,51 +24,70 @@ PdfGen.prototype.$init = function() {
     }
   };
 
+  this._resume_template = require('./data/resume-template');
   this._printer = new PdfPrinter(fonts);
+};
+
+PdfGen.prototype.processTemplate = function(templateName, data) {
+  var temp = this._resume_template[templateName];
+  data = data || {};
+
+  try {
+    if(_.isString(temp)) {
+      temp = ejs.render(temp, _.merge(data, this._resume_template.vars));
+      temp = JSON.parse( temp );
+    }
+    else if(_.isObject(temp)) {
+      temp = ejs.render(JSON.stringify(temp), data);
+      temp = JSON.parse( temp );
+    } else {
+      // error
+      logger.error("Not String or Object:", temp);
+    }
+
+  } catch(err) {
+    logger.error("processTemplate Error:", err);
+  }
+
+  return temp;
+};
+
+PdfGen.prototype.processProjects = function(projectList)
+{
+  var list = _.filter(projectList, {'Category': 'Industry', 'Showcase': true } );
+  // sort list
+  list.sort(function(a, b){
+    return moment(b.StartDate, 'MM/YYYY').diff(moment(a.StartDate, 'MM/YYYY'));
+  });
+  _.forEach(list, function(item){
+      item.Projects = _.filter(item.Projects, { 'Showcase': true } );
+  });
+  //
+
+  return {list: list};
 };
 
 PdfGen.prototype.resume = function(projects)
 {
-  var docDefinition = {
-    content: [
-      'This paragraph fills full width, as there are no columns. Next paragraph however consists of three columns',
-      {
-        columns: [
-          {
-            // auto-sized columns have their widths based on their content
-            width: 'auto',
-            text: 'First column'
-          },
-          {
-            // star-sized columns fill the remaining space
-            // if there's more than one star-column, available width is divided equally
-            width: '*',
-            text: 'Second column'
-          },
-          {
-            // fixed width
-            width: 100,
-            text: 'Third column'
-          },
-          {
-            // percentage width
-            width: '10%',
-            text: 'Last column'
-          }
-        ],
-        // optional space between columns
-        columnGap: 10
-      },
-      'This paragraph goes below all columns and has full width'
-    ]
+  //logger.log("projects:", projects);
+
+  var content = [];
+  content.push( this.processTemplate('header', projects.header) );
+  content.push( this.processTemplate('contact', projects.contact) );
+  content.push( this._resume_template.line );
+
+  content.push( this.processTemplate('projects', this.processProjects(projects.list) ) );
+
+  //content.push(this._resume_template.line);
+  //content.push(this._resume_template.computer);
+
+  var dd = {
+    content: content,
+    styles: this._resume_template.styles
   };
 
-  logger.log("projects:", projects);
-  logger.log("docDefinition:", docDefinition);
-
-  // download the PDF (temporarily Chrome-only)
   try {
-    var pdfDoc = this._printer.createPdfKitDocument(docDefinition);
+    var pdfDoc = this._printer.createPdfKitDocument(dd);
     pdfDoc.pipe(fs.createWriteStream('test.pdf'));
     pdfDoc.end();
   } catch(err) {
