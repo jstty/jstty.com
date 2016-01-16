@@ -8,6 +8,35 @@
     "email": "joseph.e.sutton@gmail.com",
     "github": "http://github.com/jstty"
   },
+  "education": [
+    {
+      "Degree": "M.S. in Computer Science",
+      "StartDate": "9/2009",
+      "EndDate": " 5/2011",
+      "Name": "University of Southern California",
+      "Location": "Los Angeles, Ca",
+      "GPA": "3.6/4.0",
+      "Honors": "Cum Laude"
+    },
+    {
+      "Degree": "B.S. in Computer Science",
+      "StartDate": "9/2004",
+      "EndDate": " 9/2007",
+      "Name": "California State University Bakersfield",
+      "Location": "Bakersfield, Ca",
+      "GPA": "3.8/4.0",
+      "Honors": "Magna Cum Laude",
+      "Award": "Outstanding Graduating Senior of 2007"
+    }
+  ],
+  "computer": {
+    "Languages": ["Javascript(5/6)", "HTML(4/5)", "SASS", "CSS", "JSON", "XML", "C/C++", "PHP", "Bash"],
+    "WebDev": ["RESTful", "APIs", "node", "angular 1.x", "react", "reflux", "aurelia", "babel", "gulp", "grunt", "bower", "jspm"],
+    "Protocol/Lib": ["HTTP", "XMPP", "XML-RPC", "MPEG", "AVI", "JPEG", "PNG", "DCT", "FFT"],
+    "OS": ["Linux", "Mac OS X", "Windows"],
+    "Tools": ["Git", "Xcode", "Sublime", "WebStorm", "Nginx", "HaProxy", "Photoshop"],
+    "Database": ["Couchbase", "Redis", "MongoDB", "MySQL", "Oracle", "Cassandra", "Riak"]
+  },
   "list": [
     {
       "__COMMENT__": "Cisco"
@@ -113,7 +142,7 @@
           ]
         },
         {
-          "Showcase": true,
+          "Showcase": false,
           "StartDate": "10/2013",
           "EndDate": "4/2014",
           "Version": "Release 1.0",
@@ -137,9 +166,11 @@
       "StartDate": "6/2013",
       "EndDate": "10/2013",
       "Category": "Industry",
-      "Company": "Intertrust Technologies Corporation",
+      "Company": "Intertrust",
+      "FullCompany": "Intertrust Technologies Corporation",
       "Location": "Sunnyvale, Ca",
       "Position": "Sr. Software Engineer",
+      "Link": "http://kabuto.com",
       "Projects": [
         {
           "Showcase": true,
@@ -177,6 +208,7 @@
       "Company": "Electronic Arts",
       "Location": "Redwood City, Ca - OCCO",
       "Position": "Game Service Engineer",
+      "Link": "http://ea.com",
       "Projects": [
         {
           "StartDate": "1/2012",
@@ -273,7 +305,7 @@
           "StartDate": "3/2012",
           "EndDate": "9/2012",
           "Title": "R & D HTML5 Game (Strike Fortress)",
-          "Showcase": true,
+          "Showcase": false,
           "Labels": [
             "HTML5",
             "WebSockets",

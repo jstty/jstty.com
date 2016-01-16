@@ -12,11 +12,11 @@
         "table": {
           "widths": ["auto", "*"],
           "body": [
-            [{ "text": "<%- item.Position %> - <%- item.Company %>", "style":"subheader"}, { "text":"<%- item.StartDate %> - <%- item.EndDate %>", "alignment":"right"}],
-            ["<%- item.Location %>", { "text": "<%- item.Link %>", "alignment":"right"}]
+            [{ "text": "<%- item.Position %> - <%- item.Company %>", "style":"companyHeader"}, { "text":"<%- item.StartDate %> - <%- item.EndDate %>", "alignment":"right", "style":"companySubHeader"}],
+            [{ "text": "<%- item.Location %>", "style":"companySubHeader"}, { "text": "<%- item.Link %>", "alignment":"right", "style":"companySubHeader"}]
           ]
-        },
-        "layout": "noBorders"
+        }
+        ,"layout": "noBorders"
       },
       [
         <% for(var j = 0; j < item.Projects.length; j++) { var project = item.Projects[j]; %>
@@ -39,7 +39,11 @@
         }
         <% if(j+1 != item.Projects.length){ %>,<% } %>
         <% } %>
-      ]
+      ],
+      {
+          "text": "",
+          "margin": [ 0, 5, 0, 0]
+      }
       <% if(i+1 != list.length){ %>,<% } %>
       <% } %>
     ]

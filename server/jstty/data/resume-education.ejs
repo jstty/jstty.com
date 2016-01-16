@@ -2,27 +2,34 @@
   "columns": [
     {
       "width": <%- leftColumnWidth %>,
-      "text": "Computer Experience",
+      "text": "Education",
       "style": "columnHeader"
     },
-    {
-      "width": "100%",
-      "table": {
-        "widths": [50, 1, "auto"],
-        "body": [
-          <% var keys = Object.keys(list);
-             for(var i = 0; i < keys.length; i++) {
-                var key = keys[i];
-                var item = list[key];
-          %>
-          [ "<%- key %>", ":", "<%- item.join(', ') %>" ]
-          <% if(i+1 != keys.length){ %>,<% } %>
-          <% } %>
-        ]
+    [
+      <% for(var i = 0; i < list.length; i++) { var item = list[i]; %>
+      {
+        "width": "100%",
+        "table": {
+          "widths": ["*", "auto"],
+          "body": [
+            [{ "text": "<%- item.Degree %>", "style": "educationHeader"}, { "text":"<%- item.StartDate %> - <%- item.EndDate %>", "alignment":"right" }],
+            ["<%- item.Name %>, <%- item.Location %>", ""],
+            ["GPA: <%- item.GPA %>, Honors: <%- item.Honors %>", ""]
+            <% if(item.Award){ %>
+            ,["Award: <%- item.Award %>", ""]
+            <% } %>
+          ]
+        },
+        "margin": [0, 0, 0, 0]
+        ,"layout": "noBorders"
       },
-      "margin": [<%- linePadding %>, 0, 0, 0]
-      ,"layout": "noBorders"
-    }
+      {
+        "text": "",
+        "margin": [ 0, 5, 0, 0]
+      }
+      <% if(i+1 != list.length){ %>,<% } %>
+      <% } %>
+    ]
   ],
   "columnGap": <%- linePadding %>
 }
