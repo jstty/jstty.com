@@ -2,51 +2,27 @@
   "columns": [
     {
       "width": <%- leftColumnWidth %>,
-      "text": "Projects & Experience",
+      "text": "Computer Experience",
       "style": "columnHeader"
     },
-    [
-      <% for(var i = 0; i < list.length; i++) { var item = list[i]; %>
-      {
-        "width": <%- pageWidth - leftColumnWidth %>,
-        "table": {
-          "widths": ["auto", "*"],
-          "body": [
-            [{ "text": "<%- item.Position %> - <%- item.Company %>", "style":"companyHeader"}, { "text":"<%- item.StartDate %> - <%- item.EndDate %>", "alignment":"right", "style":"companySubHeader"}],
-            [{ "text": "<%- item.Location %>", "style":"companySubHeader"}, { "text": "<%- item.Link %>", "alignment":"right", "style":"companySubHeader"}]
-          ]
-        }
-        ,"layout": "noBorders"
+    {
+      "width": "100%",
+      "table": {
+        "widths": [50, 1, "auto"],
+        "body": [
+          <% var keys = Object.keys(list);
+             for(var i = 0; i < keys.length; i++) {
+                var key = keys[i];
+                var item = list[key];
+          %>
+          [ "<%- key %>", ":", "<%- item.join(', ') %>" ]
+          <% if(i+1 != keys.length){ %>,<% } %>
+          <% } %>
+        ]
       },
-      [
-        <% for(var j = 0; j < item.Projects.length; j++) { var project = item.Projects[j]; %>
-        {
-          "ul": ["<%- project.Title %>"]
-        },
-        {
-          "width": <%- pageWidth - leftColumnWidth %>,
-          "table": {
-            "widths": ["auto", "*"],
-            "body": [
-              <% for(var k = 0; k < project.Points.length; k++) { var point = project.Points[k]; %>
-              ["-", "<%- point %>"]
-              <% if(k+1 != project.Points.length){ %>,<% } %>
-              <% } %>
-            ]
-          },
-          "margin": [ <%- 1.5*linePadding %>, 0, 0, 0],
-          "layout": "noBorders"
-        }
-        <% if(j+1 != item.Projects.length){ %>,<% } %>
-        <% } %>
-      ],
-      {
-          "text": "",
-          "margin": [ 0, 5, 0, 0]
-      }
-      <% if(i+1 != list.length){ %>,<% } %>
-      <% } %>
-    ]
+      "margin": [0, 0, 0, 0]
+      ,"layout": "noBorders"
+    }
   ],
   "columnGap": <%- linePadding %>
 }

@@ -2,19 +2,20 @@ var fs = require('fs');
 
 var vars = {
     leftColumnWidth: 70,
-    linePadding: 10,
+    linePadding: 5,
     pageWidth: 515
 };
 
 var header = {
     text: '<%= text %>',
-    style: 'header'
+    style: 'header',
+    margin: [vars.leftColumnWidth+vars.linePadding, 0, 0, 0]
 };
 
 var contact = {
     width: '100%',
     table: {
-        widths: [30, 5, 'auto', '*', 40, 5, 'auto'],
+        widths: [20, 1, 'auto', '*', 30, 2, 'auto'],
         body: [
             ['phone', ':', '<%= phone %>'         ,'', 'webfolio', ':', { text: '<%= webfolio %>'} ],
             ['email', ':', { text:'<%= email %>'} ,'', 'github', ':', {text: '<%= github %>'} ]
@@ -30,23 +31,16 @@ var line = {
             type: 'line',
             x1: vars.leftColumnWidth+vars.linePadding, y1: 0,
             x2: vars.pageWidth, y2: 0,
-            lineWidth: 1
+            lineWidth: 0.25
         }
     ],
     margin: [0, vars.linePadding]
 };
 
-var computer = {
-    columns: [
-        {
-            // auto-sized columns have their widths based on their content
-            width: vars.leftColumnWidth,
-            text: 'Computer Experience',
-            style: 'columnHeader'
-        }
-    ]
+var defaultStyle = {
+    fontSize: 9,
+    font: 'Roboto'
 };
-
 var styles = {
     header: {
         fontSize: 18,
@@ -54,12 +48,20 @@ var styles = {
         alignment: 'center'
     },
     columnHeader: {
-        fontSize: 14,
-        bold: true
+      fontSize: 12,
+      bold: true
     },
-    subheader: {
-        fontSize: 14,
-        bold: true
+    companyHeader: {
+      fontSize: 11,
+      bold: true
+    },
+    companySubHeader: {
+      fontSize: 9,
+      bold: false
+    },
+    educationHeader: {
+      fontSize: 12,
+      bold: true
     },
     quote: {
         italics: true
@@ -68,6 +70,23 @@ var styles = {
         fontSize: 8
     }
 };
+
+var path = require('path');
+var fontsDir = path.resolve("./jstty/pdf-fonts");
+var fonts = {
+  Roboto: {
+    normal: fontsDir+'/Roboto-Regular.ttf',
+    bold: fontsDir+'/Roboto-Medium.ttf',
+    italics: fontsDir+'/Roboto-Italic.ttf',
+    bolditalics: fontsDir+'/Roboto-Italic.ttf'
+  }
+};
+
+//defaultStyle = {
+//  fontSize: 12,
+//  bold: false,
+//  font: 'Helvetica'
+//};
 
 /*
  [
@@ -100,7 +119,10 @@ module.exports = {
     header:   header,
     contact:  contact,
     projects: fs.readFileSync(__dirname+'/resume-projects.ejs', 'utf8'),
-    computer: computer,
+    computer: fs.readFileSync(__dirname+'/resume-computer.ejs', 'utf8'),
+    education: fs.readFileSync(__dirname+'/resume-education.ejs', 'utf8'),
     line:     line,
-    styles:   styles
+    styles:   styles,
+    defaultStyle: defaultStyle,
+    fonts: fonts
 };

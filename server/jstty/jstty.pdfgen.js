@@ -1,7 +1,6 @@
 var PdfPrinter = require('pdfmake');
 var ejs = require('ejs');
 var fs = require('fs');
-var path = require('path');
 var _ = require('lodash');
 var moment = require('moment');
 
@@ -14,18 +13,8 @@ function PdfGen($logger){
 }
 
 PdfGen.prototype.$init = function() {
-  var fontsDir = path.resolve("./jstty/pdf-fonts");
-  var fonts = {
-    Roboto: {
-      normal: fontsDir+'/Roboto-Regular.ttf',
-      bold: fontsDir+'/Roboto-Medium.ttf',
-      italics: fontsDir+'/Roboto-Italic.ttf',
-      bolditalics: fontsDir+'/Roboto-Italic.ttf'
-    }
-  };
-
   this._resume_template = require('./data/resume-template');
-  this._printer = new PdfPrinter(fonts);
+  this._printer = new PdfPrinter(this._resume_template.fonts);
 };
 
 PdfGen.prototype.processTemplate = function(templateName, data) {
@@ -74,16 +63,20 @@ PdfGen.prototype.resume = function(projects)
   var content = [];
   content.push( this.processTemplate('header', projects.header) );
   content.push( this.processTemplate('contact', projects.contact) );
-  content.push( this._resume_template.line );
 
+  content.push( this._resume_template.line );
   content.push( this.processTemplate('projects', this.processProjects(projects.list) ) );
 
   //content.push(this._resume_template.line);
-  //content.push(this._resume_template.computer);
+  content.push( this.processTemplate('computer', {list: projects.computer} ) );
+
+  //content.push(this._resume_template.line);
+  content.push( this.processTemplate('education', {list: projects.education} ) );
 
   var dd = {
     content: content,
-    styles: this._resume_template.styles
+    styles: this._resume_template.styles,
+    defaultStyle: this._resume_template.defaultStyle
   };
 
   try {
