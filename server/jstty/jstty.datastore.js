@@ -7,10 +7,15 @@ function DataStore($logger){
 }
 
 DataStore.prototype.$init = function() {
-  this._projects = require('./data/projects.json');
+  this._cv = require('./data/cv.json');
+};
+
+DataStore.prototype.getCV = function()
+{
+  return Promise.resolve(this._cv);
 };
 
 DataStore.prototype.getProjects = function()
 {
-  return Promise.resolve(this._projects);
+  return Promise.resolve(this._cv.projects);
 };
