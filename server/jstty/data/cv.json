@@ -31,13 +31,13 @@
   ],
   "computer": {
     "Languages": ["Javascript(5/6)", "HTML(4/5)", "SASS", "CSS", "JSON", "XML", "C/C++", "PHP", "Bash"],
-    "WebDev": ["RESTful", "APIs", "node", "angular 1.x", "react", "reflux", "aurelia", "babel", "gulp", "grunt", "bower", "jspm"],
+    "WebDev": ["RESTful", "APIs", "node", "babel", "gulp", "angular 1.x", "react", "reflux", "polymer", "aurelia", "browserify", "webpack", "grunt", "bower", "jspm"],
     "Protocol/Lib": ["HTTP", "XMPP", "XML-RPC", "MPEG", "AVI", "JPEG", "PNG", "DCT", "FFT"],
     "OS": ["Linux", "Mac OS X", "Windows"],
     "Tools": ["Git", "Xcode", "Sublime", "WebStorm", "Nginx", "HaProxy", "Photoshop"],
     "Database": ["Couchbase", "Redis", "MongoDB", "MySQL", "Oracle", "Cassandra", "Riak"]
   },
-  "list": [
+  "projects": [
     {
       "__COMMENT__": "Cisco"
     },
@@ -72,13 +72,13 @@
           "Showcase": true,
           "StartDate": "3/2014",
           "Version": "Release 0.5",
-          "Title": "Core Project Frameworks",
+          "Title": "Core Project Tools/Framework",
           "Labels": [
           ],
           "Points": [
-            "Using: Gulp, Jenkins+Git Hooks, Jira+Git Hooks, Node-Webkit, Protractor, Supertest, Mocha, Chai, JsDoc, Swagger UI, Bower",
+            "Using: ES6, NodeJS, NPM, Gulp, Babel, Jenkins+Git Hooks, Jira+Git Hooks, Node-Webkit/Electron, Protractor/Karma/Testem, Supertest, Mocha, Chai, JsDoc, Swagger UI, Bower/Browserify/Webpack,  Yeoman, Yanpm, Web Components, RxJS",
             "Lead architect and lead engineer",
-            "Scalable service based architect"
+            "Scalable, modular, plugin based CLI tool to accelerate projects development"
           ],
           "Links": {
           }
@@ -86,12 +86,12 @@
         {
           "Showcase": true,
           "StartDate": "3/2014",
-          "Title": "Secret Projects",
+          "Title": "Innovation Projects",
           "Labels": [
           ],
           "Points": [
-            "Using: Gulp, AngularJS 1.3, React, RefluxJS, D3, RESTful APIs, NodeJS",
-            "Lead Architect, Lead 10 Projects and Lead 10 Engineers"
+            "Using: Custom Core Project Tools, AngularJS 1.3/React+Reflux/Polymer, Module Components, D3, RESTful APIs, NodeJS, Hyper.io (Microservices), Adapter pattern",
+            "Lead architect and lead engineer on several concurrent long and short term projects showcased at conferences all over the globe."
           ],
           "Links": {
           }
@@ -107,7 +107,7 @@
       "EndDate": "10/2014",
       "Category": "Industry",
       "Company": "GlassLab",
-      "Link": "http://GlassLabGames.com",
+      "Link": "https://GlasslabGames.org",
       "Location": "Redwood City, Ca",
       "Position": "Principal Platform Engineer",
       "Projects": [
@@ -201,7 +201,7 @@
       "__COMMENT__": "EA"
     },
     {
-      "Showcase": true,
+      "Showcase": false,
       "StartDate": "8/2011",
       "EndDate": "6/2013",
       "Category": "Industry",

@@ -10,4 +10,8 @@ export class App {
 
     this.router = router;
   }
+
+  downloadResume() {
+    "/api/resume"
+  }
 }

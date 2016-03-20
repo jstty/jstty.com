@@ -3,6 +3,7 @@ var ejs = require('ejs');
 var fs = require('fs');
 var _ = require('lodash');
 var moment = require('moment');
+var Q = null;
 
 module.exports = PdfGen;
 
@@ -12,8 +13,9 @@ function PdfGen($logger){
   logger = $logger;
 }
 
-PdfGen.prototype.$init = function() {
-  this._resume_template = require('./data/resume-template');
+PdfGen.prototype.$init = function($q) {
+  Q = $q;
+  this._resume_template = require('./resume-templates/template.js');
   this._printer = new PdfPrinter(this._resume_template.fonts);
 };
 
@@ -53,39 +55,56 @@ PdfGen.prototype.processProjects = function(projectList)
   });
   //
 
-  return {list: list};
+  return list;
 };
 
-PdfGen.prototype.resume = function(projects)
+PdfGen.prototype.resume = function(cv)
 {
-  //logger.log("projects:", projects);
+  return Q.promise(function(resolve, reject, notify) {
 
-  var content = [];
-  content.push( this.processTemplate('header', projects.header) );
-  content.push( this.processTemplate('contact', projects.contact) );
+    //logger.log("cv:", cv);
 
-  content.push( this._resume_template.line );
-  content.push( this.processTemplate('projects', this.processProjects(projects.list) ) );
+    var content = [];
+    content.push( this.processTemplate('header', cv.header) );
+    content.push( this.processTemplate('contact', cv.contact) );
 
-  //content.push(this._resume_template.line);
-  content.push( this.processTemplate('computer', {list: projects.computer} ) );
+    content.push( _.cloneDeep(this._resume_template.line) );
+    content.push( this.processTemplate('projects', { list: this.processProjects(cv.projects) } ) );
 
-  //content.push(this._resume_template.line);
-  content.push( this.processTemplate('education', {list: projects.education} ) );
+    content.push( _.cloneDeep(this._resume_template.line) );
+    content.push( this.processTemplate('computer', { list: cv.computer } ) );
 
-  var dd = {
-    content: content,
-    styles: this._resume_template.styles,
-    defaultStyle: this._resume_template.defaultStyle
-  };
+    content.push( _.cloneDeep(this._resume_template.line) );
+    content.push( this.processTemplate('education', { list: cv.education } ) );
 
-  try {
-    var pdfDoc = this._printer.createPdfKitDocument(dd);
-    pdfDoc.pipe(fs.createWriteStream('test.pdf'));
-    pdfDoc.end();
-  } catch(err) {
-    logger.error("PDF Error:", err);
-  }
+    var dd = {
+      content: content,
+      styles: this._resume_template.styles,
+      defaultStyle: this._resume_template.defaultStyle
+    };
 
-  return {};
+    try {
+      var pdfDocChunks = [];
+      var pdfDoc = this._printer.createPdfKitDocument(dd);
+
+      pdfDoc.on('data', function (chunk) {
+        pdfDocChunks.push(chunk);
+      });
+
+      pdfDoc.on('end', function () {
+        var result = Buffer.concat(pdfDocChunks);
+        resolve({data: result, filename: "resume.pdf" });
+      });
+
+      pdfDoc.end();
+    } catch(err) {
+      logger.error("PDF Error:", err);
+      reject(err);
+    }
+
+  }.bind(this))
+};
+
+PdfGen.prototype.writeToFile = function(cvFile) {
+  fs.writeFileSync(cvFile.filename, cvFile.data);
 };

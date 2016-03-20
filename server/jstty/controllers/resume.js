@@ -7,13 +7,13 @@ function ResumeCtrl($logger){
 }
 
 // localhost:8000/api/resume
-ResumeCtrl.prototype.index = function($done, db, pdf)
+ResumeCtrl.prototype.index = function($custom, db, pdf)
 {
-    db.getProjects()
-      .then(function(projects) {
-        return pdf.resume(projects);
+    db.getCV()
+      .then(function(cv) {
+        return pdf.resume(cv);
       } )
       .then(function(data) {
-        return $done( data );
+        $custom( data );
       } );
 };
