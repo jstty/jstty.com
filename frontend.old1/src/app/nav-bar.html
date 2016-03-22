@@ -1,0 +1,31 @@
+<template bindable="router">
+  <section class="app-nav">
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#skeleton-navigation-navbar-collapse">
+          <span class="sr-only">Toggle Navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="skeleton-navigation-navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li repeat.for="row of router.navigation" class="${row.isActive ? 'active' : ''}">
+            <a data-toggle="collapse"
+               data-target="#skeleton-navigation-navbar-collapse.in"
+               href.bind="row.href">${row.title}</a>
+          </li>
+        </ul>
+
+        <!-- <ul class="nav navbar-nav">
+          <li class="loader" if.bind="router.isNavigating">
+            <i class="fa fa-spinner fa-spin fa-1x"></i>
+          </li>
+        </ul> -->
+
+      </div>
+    </nav>
+  </section>
+</template>
