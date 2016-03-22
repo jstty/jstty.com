@@ -1,0 +1,33 @@
+.nav-bar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 10000;
+
+  nav {
+    font-size: 20px;
+    background-color: transparentize(lighten(black, 10%), 0.5);
+  }
+
+  .fa {
+    color: darken(white, 25%) !important;
+    left: 15px !important;
+    top: 2px !important;
+    font-size: 20px;
+  }
+
+  .menu-item {
+    color: darken(white, 25%) !important;
+  }
+
+  // TODO: need a better fix
+  // added line break to remove padding on next items
+  p {
+    display: block;
+    margin-top: 1px;
+    line-height: 1px;
+    margin-bottom: 0;
+    visibility: hidden;
+  }
+}

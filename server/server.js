@@ -4,7 +4,18 @@ var Hyper = require('hyper.io');
 var hyper = new Hyper();
 
 // Start web server
-hyper.load(['jstty'])
+hyper.load([
+    'jstty',
+    {
+        routes: [
+            {
+                otherwise: {
+                    static: "../frontend/dist"
+                }
+            }
+        ]
+    }
+])
     .then(function(){
         hyper.httpFramework()
             .app()

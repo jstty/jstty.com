@@ -1,0 +1,20 @@
+<template>
+  <require from="sections/projects/projects.css"></require>
+
+  <section class="au-animate projects page-content">
+    <h2>${heading}</h2>
+
+    <h2 class="spinner" if.bind="isLoading">
+      <div class="double-bounce1"></div>
+      <div class="double-bounce2"></div>
+    </h2>
+
+    <section>
+      <li repeat.for="project in projects">
+        <li>Company: ${project.Company}</li>
+      </li>
+    </section>
+
+
+  </section>
+</template>
