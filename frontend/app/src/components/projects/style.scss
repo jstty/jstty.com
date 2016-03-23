@@ -1,18 +1,20 @@
-.welcome {
-  div, h2 {
+.projects {
+  h1, h2 {
     text-align: center;
     color: transparentize(white, 0.15);
     //text-shadow: 2px 2px transparentize(black, 0.55);
   }
 
-  div {
-    margin-bottom: 15vw;
+  h1 {
+    font-size: 5vw;
+    padding-top: 5vw;
+    padding-bottom: 5vw;
   }
 
   h2 {
-    font-size: 5vw;
-    padding-top: 10vw;
-    padding-bottom: 1vw;
+    font-size: 4vw;
+    padding-top: 4vw;
+    padding-bottom: 4vw;
   }
 
   p {

@@ -1,6 +1,8 @@
 import React from 'react';
 import LeftNav from 'material-ui/lib/left-nav';
 import MenuItem from 'material-ui/lib/menus/menu-item';
+import Scroll from 'react-scroll';
+var ScrollLink = Scroll.Link;
 
 import './style.scss';
 
@@ -52,9 +54,21 @@ export default class NavBar extends React.Component {
                                   primaryText="Close"
                                   className="menu-item"
                                   leftIcon={<i className="fa fa-angle-left"></i>}></MenuItem>
-                        <MenuItem primaryText="Resume" className="menu-item" leftIcon={<i className="fa fa-file-text-o"></i>}></MenuItem>
-                        <MenuItem primaryText="Projects" className="menu-item" leftIcon={<i className="fa fa-code"></i>}></MenuItem>
-                        <MenuItem primaryText="Photos" className="menu-item" leftIcon={<i className="fa fa-file-image-o"></i>}></MenuItem>
+                        <ScrollLink activeClass="active" to="welcome" spy={true} smooth={true} duration={500}>
+                            <MenuItem primaryText="Welcome" className="menu-item" leftIcon={<i className="fa fa-home"></i>}></MenuItem>
+                        </ScrollLink>
+                        <ScrollLink activeClass="active" to="resume" spy={true} smooth={true} duration={500}>
+                            <MenuItem primaryText="Resume" className="menu-item" leftIcon={<i className="fa fa-file-text-o"></i>}></MenuItem>
+                        </ScrollLink>
+                        <ScrollLink activeClass="active" to="portfolio" spy={true} smooth={true} duration={500}>
+                            <MenuItem primaryText="Portfolio" className="menu-item" leftIcon={<i className="fa fa-newspaper-o"></i>}></MenuItem>
+                        </ScrollLink>
+                        <ScrollLink activeClass="active" to="projects" spy={true} smooth={true} duration={500}>
+                            <MenuItem primaryText="Projects" className="menu-item" leftIcon={<i className="fa fa-code"></i>}></MenuItem>
+                        </ScrollLink>
+                        <ScrollLink activeClass="active" to="photos" spy={true} smooth={true} duration={500}>
+                            <MenuItem primaryText="Photos" className="menu-item" leftIcon={<i className="fa fa-photo"></i>}></MenuItem>
+                        </ScrollLink>
                     </LeftNav>
                 </nav>
                 <p>_</p>
