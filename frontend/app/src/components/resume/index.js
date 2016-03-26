@@ -28,7 +28,7 @@ export default class Resume extends React.Component {
                             <p>Latest and greatest work summarized to fit on one amazingly beautiful page, but still jam packed full of awesomeness!!
                                 <br/><br/></p>
                         </section>
-                        <RaisedButton label="Download" primary={true} href="/api/resume?style=sp" target="_blank" linkButton={true} />
+                        <RaisedButton className="link" label="Download" primary={true} href="/api/resume?style=sp" target="_blank" linkButton={true} />
                     </div>
                     <div className="col s5 center">
                         <MultiIcon className="icon"/>
@@ -38,7 +38,7 @@ export default class Resume extends React.Component {
                                 You will see all the project/work experiace, research and publications in all it's glory<br />
                                 Act now, while supplies last!! <br /></p>
                         </section>
-                        <RaisedButton label="Download" primary={true} href="/api/resume?style=full" target="_blank" linkButton={true} />
+                        <RaisedButton className="link" label="Out of stock" disabled={true} primary={true} href="/api/resume?style=full" target="_blank" linkButton={true} />
                     </div>
                 </div>
             </ScrollElement>
