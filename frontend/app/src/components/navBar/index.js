@@ -1,6 +1,9 @@
 import React from 'react';
 import LeftNav from 'material-ui/lib/left-nav';
 import MenuItem from 'material-ui/lib/menus/menu-item';
+import FontIcon from 'material-ui/lib/font-icon';
+import IconButton from 'material-ui/lib/icon-button';
+
 import Scroll from 'react-scroll';
 var ScrollLink = Scroll.Link;
 
@@ -29,27 +32,39 @@ export default class NavBar extends React.Component {
         return (
             <div className="nav-bar">
                 <nav role="navigation">
-                    <div className="nav-wrapper ">
+                    <div className="nav-wrapper nav-icons">
                         <ul className="left hide-on-med-and-down">
                             <li><a onClick={this.handleToggle}><i className="fa fa-angle-right fa-2x"></i></a></li>
                         </ul>
 
-
                         <ul className="right hide-on-med-and-down">
-                            <li><a target="_blank" href="https://github.com/jstty"><i className="fa fa-github-square fa-2x"></i></a></li>
+                            <li>
+                                <IconButton tooltip="Github" href="https://github.com/jstty" target="_blank" tooltipPosition="bottom-left" linkButton="true">
+                                    <FontIcon className="fa fa-github-square fa-2x" />
+                                </IconButton>
+                            </li>
                         </ul>
                         <ul className="right hide-on-med-and-down">
-                            <li><a target="_blank" href="https://www.linkedin.com/in/joseph-sutton-5195677"><i className="fa fa-linkedin-square fa-2x"></i></a></li>
+                            <li>
+                                <IconButton tooltip="LinkedIn" href="https://www.linkedin.com/in/joseph-sutton-5195677" target="_blank" tooltipPosition="bottom-left" linkButton="true">
+                                    <FontIcon className="fa fa-linkedin-square fa-2x" />
+                                </IconButton>
+                            </li>
                         </ul>
                         <ul className="right hide-on-med-and-down">
-                            <li><a target="_blank" href="http://localhost:8000/api/resume"><i className="fa fa-file-pdf-o fa-2x"></i></a></li>
+                            <li>
+                                <IconButton tooltip="Resume" href="/api/resume?style=sp" target="_blank" tooltipPosition="bottom-left" linkButton="true">
+                                    <FontIcon className="fa fa-file-pdf-o fa-2x" />
+                                </IconButton>
+                            </li>
                         </ul>
 
                         <ul id="nav-mobile" className="side-nav">
                             <li><a onClick={this.handleToggle}><i className="fa fa-angle-right fa-1x"></i></a></li>
                         </ul>
                     </div>
-                    <LeftNav open={this.state.open}>
+
+                    <LeftNav open={this.state.open} className="nav-menu">
                         <MenuItem onClick={this.handleToggle}
                                   primaryText="Close"
                                   className="menu-item"

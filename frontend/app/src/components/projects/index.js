@@ -15,7 +15,7 @@ export default class Projects extends React.Component {
                 <Parallax bgImage={backGroundImage} strength={300}>
                     <h1>Projects</h1>
                 </Parallax>
-
+                <br/><br/>
                 <p>Coming Soon...</p>
             </ScrollElement>
         )

@@ -15,10 +15,8 @@ export default class Photos extends React.Component {
                 <Parallax bgImage={backGroundImage} strength={300}>
                     <h1>Photos</h1>
                 </Parallax>
-                <br /> <br /><br /> <br />
+                <br /> <br />
                 <p>Coming Soon...</p>
-                <br /> <br /><br /> <br /><br /> <br /><br /> <br /><br /> <br /><br /> <br /><br /> <br /><br /> <br />
-                <br /> <br /><br /> <br /><br /> <br /><br /> <br /><br /> <br /><br /> <br /><br /> <br /><br /> <br />
             </ScrollElement>
         )
     }

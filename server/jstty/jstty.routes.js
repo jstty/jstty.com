@@ -14,5 +14,10 @@ module.exports = [
         method: {
             get: "index"
         }
+    },
+    {
+        "otherwise": {
+            "static": "../frontend/dist"
+        }
     }
 ];

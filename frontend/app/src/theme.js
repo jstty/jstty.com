@@ -8,7 +8,7 @@ export default {
     palette: {
         primary1Color: Colors.red900,
         primary2Color: Colors.red900,
-        primary3Color: Colors.grey600,
+        primary3Color: Colors.grey200,
         accent1Color: Colors.grey600,
         accent2Color: Colors.grey700,
         accent3Color: Colors.grey900,
