@@ -38,6 +38,7 @@ PdfGen.prototype.processTemplate = function(templateName, data) {
 
   } catch(err) {
     logger.error("processTemplate Error:", err);
+    logger.error('processTemplate Error Temp Data:', temp);
   }
 
   return temp;
@@ -76,6 +77,8 @@ PdfGen.prototype.resume = function(cv)
 
     content.push( _.cloneDeep(this._resume_template.line) );
     content.push( this.processTemplate('education', { list: cv.education } ) );
+
+    logger.info("cv pdf json:", JSON.stringify(content));
 
     var dd = {
       content: content,

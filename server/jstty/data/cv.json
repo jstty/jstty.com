@@ -31,7 +31,7 @@
   ],
   "computer": {
     "Languages": ["Javascript(5/6)", "HTML(4/5)", "SASS", "CSS", "JSON", "XML", "C/C++", "PHP", "Bash"],
-    "WebDev": ["RESTful", "APIs", "node", "babel", "gulp", "angular 1.x", "react", "reflux", "polymer", "aurelia", "browserify", "webpack", "grunt", "bower", "jspm"],
+    "Web Dev": ["RESTful", "APIs", "node", "babel", "gulp", "angular 1.x", "react", "reflux", "polymer", "aurelia", "browserify", "webpack", "grunt", "bower", "jspm"],
     "Protocol/Lib": ["HTTP", "XMPP", "XML-RPC", "MPEG", "AVI", "JPEG", "PNG", "DCT", "FFT"],
     "OS": ["Linux", "Mac OS X", "Windows"],
     "Tools": ["Git", "Xcode", "Sublime", "WebStorm", "Nginx", "HaProxy", "Photoshop"],
@@ -56,13 +56,14 @@
           "StartDate": "10/2014",
           "EndDate": "2/2015",
           "Title": "DT CloudVPN Portal",
-          "Version": "Release 1.2",
+          "Version": "Release v1.3",
           "Labels": [
             "AngularJS 1.3", "RESTful APIs", "JSON", "NodeJS", "Protractor"
           ],
           "Points": [
             "Using: AngularJS 1.3, RESTful APIs, JSON, NodeJS, Protractor"
           ],
+          "//": "Lead architect and lead engineer",
           "Links": {
             "Announcement 1": "http://newsroom.cisco.com/bg/press-release-content?articleId=1600834",
             "Announcement 2": "http://www.t-systems.hu/news-and-media/news/deutsche-telekom-launches-cloud-vpn-service"
@@ -71,14 +72,14 @@
         {
           "Showcase": true,
           "StartDate": "3/2014",
-          "Version": "Release 0.5",
-          "Title": "Core Project Tools/Framework",
+          "Version": "Alpha v0.5",
+          "Title": "Core Project Tools and UI libraries",
           "Labels": [
           ],
           "Points": [
             "Using: ES6, NodeJS, NPM, Gulp, Babel, Jenkins+Git Hooks, Jira+Git Hooks, Node-Webkit/Electron, Protractor/Karma/Testem, Supertest, Mocha, Chai, JsDoc, Swagger UI, Bower/Browserify/Webpack,  Yeoman, Yanpm, Web Components, RxJS",
             "Lead architect and lead engineer",
-            "Scalable, modular, plugin based CLI tool to accelerate projects development"
+            "Scalable, modular, plugin based CLI tool and UI libraries to accelerate projects development"
           ],
           "Links": {
           }
@@ -116,7 +117,7 @@
           "StartDate": "10/2013",
           "EndDate": "10/2014",
           "Title": "Game Services Platform",
-          "Version": "Release 2.0",
+          "Version": "Release v2.0",
           "Labels": [
             "NodeJS", "RESTful APIs", "JSON", "Redis", "Couchbase", "MySQL", "Express", "PassportJS", "Mocha", "AWS"
           ],
@@ -130,7 +131,7 @@
           "Showcase": true,
           "StartDate": "4/2014",
           "EndDate": "10/2014",
-          "Version": "Release 1.0",
+          "Version": "Release v1.0",
           "Title": "http://Playfully.org",
           "link": "http://Playfully.org",
           "Labels": [
@@ -145,7 +146,7 @@
           "Showcase": false,
           "StartDate": "10/2013",
           "EndDate": "4/2014",
-          "Version": "Release 1.0",
+          "Version": "Release v1.0",
           "Title": "http://ArgubotAcademy.org",
           "link": "http://ArgubotAcademy.org",
           "Labels": [
@@ -162,7 +163,7 @@
       "__COMMENT__": "Intertrust"
     },
     {
-      "Showcase": true,
+      "Showcase": false,
       "StartDate": "6/2013",
       "EndDate": "10/2013",
       "Category": "Industry",
@@ -201,7 +202,7 @@
       "__COMMENT__": "EA"
     },
     {
-      "Showcase": false,
+      "Showcase": true,
       "StartDate": "8/2011",
       "EndDate": "6/2013",
       "Category": "Industry",
@@ -292,7 +293,7 @@
             "Windows",
             "Linux"
           ],
-          "Version": "Beta 0.1",
+          "Version": "Beta v1.0",
           "Points": [
             "Using: Video Streaming, NodeJS, HTML5, iOS, PhantomJS, MySQL5, Riak, AWS",
             "Lead Architect, Technical Director, and Server Engineer.",

@@ -47,6 +47,9 @@ var styles = {
         bold: true,
         alignment: 'center'
     },
+    thinTableRow: {
+        "margin": [0, -1, 0, 0]
+    },
     columnHeader: {
       fontSize: 12,
       bold: true
