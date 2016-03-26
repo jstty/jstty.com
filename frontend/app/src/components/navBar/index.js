@@ -39,21 +39,21 @@ export default class NavBar extends React.Component {
 
                         <ul className="right hide-on-med-and-down">
                             <li>
-                                <IconButton tooltip="Github" href="https://github.com/jstty" target="_blank" tooltipPosition="bottom-left" linkButton="true">
+                                <IconButton tooltip="Github" href="https://github.com/jstty" target="_blank" tooltipPosition="bottom-left" linkButton={true}>
                                     <FontIcon className="fa fa-github-square fa-2x" />
                                 </IconButton>
                             </li>
                         </ul>
                         <ul className="right hide-on-med-and-down">
                             <li>
-                                <IconButton tooltip="LinkedIn" href="https://www.linkedin.com/in/joseph-sutton-5195677" target="_blank" tooltipPosition="bottom-left" linkButton="true">
+                                <IconButton tooltip="LinkedIn" href="https://www.linkedin.com/in/joseph-sutton-5195677" target="_blank" tooltipPosition="bottom-left" linkButton={true}>
                                     <FontIcon className="fa fa-linkedin-square fa-2x" />
                                 </IconButton>
                             </li>
                         </ul>
                         <ul className="right hide-on-med-and-down">
                             <li>
-                                <IconButton tooltip="Resume" href="/api/resume?style=sp" target="_blank" tooltipPosition="bottom-left" linkButton="true">
+                                <IconButton tooltip="Resume" href="/api/resume?style=sp" target="_blank" tooltipPosition="bottom-left" linkButton={true}>
                                     <FontIcon className="fa fa-file-pdf-o fa-2x" />
                                 </IconButton>
                             </li>
@@ -69,19 +69,19 @@ export default class NavBar extends React.Component {
                                   primaryText="Close"
                                   className="menu-item"
                                   leftIcon={<i className="fa fa-angle-left"></i>}></MenuItem>
-                        <ScrollLink activeClass="active" to="welcome" spy={true} smooth={true} duration={500}>
+                        <ScrollLink onClick={this.handleToggle} activeClass="active" to="welcome" spy={true} smooth={true} duration={500}>
                             <MenuItem primaryText="Welcome" className="menu-item" leftIcon={<i className="fa fa-home"></i>}></MenuItem>
                         </ScrollLink>
-                        <ScrollLink activeClass="active" to="resume" spy={true} smooth={true} duration={500}>
+                        <ScrollLink onClick={this.handleToggle} activeClass="active" to="resume" spy={true} smooth={true} duration={500}>
                             <MenuItem primaryText="Resume" className="menu-item" leftIcon={<i className="fa fa-file-text-o"></i>}></MenuItem>
                         </ScrollLink>
-                        <ScrollLink activeClass="active" to="portfolio" spy={true} smooth={true} duration={500}>
+                        <ScrollLink onClick={this.handleToggle} activeClass="active" to="portfolio" spy={true} smooth={true} duration={500}>
                             <MenuItem primaryText="Portfolio" className="menu-item" leftIcon={<i className="fa fa-newspaper-o"></i>}></MenuItem>
                         </ScrollLink>
-                        <ScrollLink activeClass="active" to="projects" spy={true} smooth={true} duration={500}>
+                        <ScrollLink onClick={this.handleToggle} activeClass="active" to="projects" spy={true} smooth={true} duration={500}>
                             <MenuItem primaryText="Projects" className="menu-item" leftIcon={<i className="fa fa-code"></i>}></MenuItem>
                         </ScrollLink>
-                        <ScrollLink activeClass="active" to="photos" spy={true} smooth={true} duration={500}>
+                        <ScrollLink onClick={this.handleToggle} activeClass="active" to="photos" spy={true} smooth={true} duration={500}>
                             <MenuItem primaryText="Photos" className="menu-item" leftIcon={<i className="fa fa-photo"></i>}></MenuItem>
                         </ScrollLink>
                     </LeftNav>
