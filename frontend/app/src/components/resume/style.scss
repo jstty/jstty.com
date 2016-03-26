@@ -44,8 +44,16 @@
     color: transparentize(white, 0.30);
   }
 
-  a {
+  .link {
     border-radius: 0 !important;
+
+    background-color: transparentize(white, 0.60) !important;
+    span {
+      color: transparentize(white, 0.10) !important;
+    }
+  }
+
+  a.link {
     background-color: transparentize(white, 0.30) !important;
     span {
       color: transparentize(black, 0.10) !important;

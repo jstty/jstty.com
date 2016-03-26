@@ -117,6 +117,8 @@ var columns = [
     }
 ];
 
+// <SlideColumnList columns={columns}/>
+
 export default class Portfolio extends React.Component {
 
     render() {
@@ -126,9 +128,7 @@ export default class Portfolio extends React.Component {
                     <h1>Portfolio</h1>
                 </Parallax>
                 <br/><br/>
-
-                <SlideColumnList columns={columns}/>
-
+                
                 <p>Coming Soon...</p>
             </ScrollElement>
         )
