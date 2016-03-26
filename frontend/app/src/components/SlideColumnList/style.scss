@@ -1,0 +1,58 @@
+.slide-column-list {
+  color: white;
+
+  white-space: nowrap;
+  overflow-x: scroll;
+  max-height: 400px;
+  width: 100%;
+
+  .column {
+    display: inline-block;
+    vertical-align: top;
+    width: 300px;
+    max-height: 350px;
+    padding-right: 2px;
+    padding-bottom: 5px;
+
+    .header {
+      color: transparentize(white, 0.15) !important;
+    }
+
+    .row {
+      border: 1px solid red;
+
+      &.selection {
+        color: black;
+        background-color: transparentize(white, 0.15) !important;
+
+        .name {
+          color: transparentize(black, 0.15) !important;
+        }
+
+        .desc {
+          color: transparentize(black, 0.15) !important;
+        }
+
+        &:hover {
+          background-color: transparentize(white, 0.50) !important;
+
+          .name {
+            color: transparentize(white, 0.15) !important;
+          }
+
+          .desc {
+            color: transparentize(white, 0.40) !important;
+          }
+        }
+      }
+
+      .name {
+        color: transparentize(white, 0.15) !important;
+      }
+
+      .desc {
+        color: transparentize(white, 0.40) !important;
+      }
+    }
+  }
+}
