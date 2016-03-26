@@ -5,7 +5,7 @@ import ThemeManager from 'material-ui/lib/styles/theme-manager';
 import MyRawTheme from './theme';
 
 import NavBar from './components/navBar';
-import Body from './components/body';
+import Body from './components/body/index';
 
 import './app.scss';
 

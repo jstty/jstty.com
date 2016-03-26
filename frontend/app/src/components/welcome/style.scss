@@ -1,4 +1,6 @@
 .welcome {
+  padding-bottom: 250px;
+
   div, h2 {
     text-align: center;
     color: transparentize(white, 0.15);
@@ -10,17 +12,19 @@
   //}
 
   div {
-    margin-bottom: 15vw;
+    padding-top: 6vw;
+    padding-bottom: 2vw;
+    //margin-bottom: 15vw;
   }
 
   h2 {
-    font-size: 5vw;
-    padding-top: 10vw;
-    padding-bottom: 1vw;
+    font-size: 5em;
+    padding-top: 5vw;
+    padding-bottom: 5vw;
   }
 
   p {
-    font-size: 2vw;
+    font-size: 2em;
     text-align: center;
     color: white;
   }

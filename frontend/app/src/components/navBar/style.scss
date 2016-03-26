@@ -10,15 +10,23 @@
     background-color: transparentize(lighten(black, 10%), 0.5);
   }
 
-  .fa {
-    color: darken(white, 25%) !important;
-    left: 15px !important;
-    top: 2px !important;
-    font-size: 20px;
+  .nav-icons {
+    ul.right > li > a {
+      padding: 0 !important;
+    }
   }
 
-  .menu-item {
-    color: darken(white, 25%) !important;
+  .nav-menu {
+    .fa {
+      color: darken(white, 25%) !important;
+      left: 15px !important;
+      top: 2px !important;
+      font-size: 20px;
+    }
+
+    .menu-item {
+      color: darken(white, 25%) !important;
+    }
   }
 
   // TODO: need a better fix

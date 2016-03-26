@@ -1,25 +1,54 @@
 .resume {
-  h1, h2 {
-    text-align: center;
-    color: transparentize(white, 0.15);
-    //text-shadow: 2px 2px transparentize(black, 0.55);
+  padding-bottom: 150px;
+
+  .row {
+    margin-top: 3vw;
+
+    .col {
+
+
+      section {
+        margin-top: 0vw;
+        margin-bottom: 3vw;
+      }
+    }
+  }
+
+  .icon {
+    width: 8.0em !important;
+    height: 8.0em !important;
+    margin-bottom: -1.0em;
+
+    path {
+      fill: transparentize(white, 0.10);
+    }
   }
 
   h1 {
+    text-align: center;
+    color: transparentize(white, 0.20);
     font-size: 5vw;
     padding-top: 5vw;
     padding-bottom: 5vw;
   }
 
-  h2 {
-    font-size: 4vw;
-    padding-top: 4vw;
-    padding-bottom: 4vw;
+  h3 {
+    font-size: 2.8em;
+    color: transparentize(white, 0.10);
   }
 
   p {
-    font-size: 2vw;
-    text-align: center;
-    color: white;
+    font-size: 1em;
+    margin: auto;
+    max-width: 20em;
+    color: transparentize(white, 0.30);
+  }
+
+  a {
+    border-radius: 0 !important;
+    background-color: transparentize(white, 0.30) !important;
+    span {
+      color: transparentize(black, 0.10) !important;
+    }
   }
 }

@@ -78,7 +78,7 @@ PdfGen.prototype.resume = function(cv)
     content.push( _.cloneDeep(this._resume_template.line) );
     content.push( this.processTemplate('education', { list: cv.education } ) );
 
-    logger.info("cv pdf json:", JSON.stringify(content));
+    //logger.info("cv pdf json:", JSON.stringify(content));
 
     var dd = {
       content: content,

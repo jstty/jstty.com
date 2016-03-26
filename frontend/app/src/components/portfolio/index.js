@@ -15,7 +15,7 @@ export default class Portfolio extends React.Component {
                 <Parallax bgImage={backGroundImage} strength={300}>
                     <h1>Portfolio</h1>
                 </Parallax>
-
+                <br/><br/>
                 <p>Coming Soon...</p>
             </ScrollElement>
         )
