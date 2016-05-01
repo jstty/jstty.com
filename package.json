@@ -18,7 +18,7 @@
     "gulp": "^3.9.0"
   },
   "scripts": {
-    "pre:start": "cd frontend && npm install && cd ../server && npm install",
+    "prestart": "cd frontend && npm install && cd ../server && npm install",
     "start": "cd server && node server.js"
   },
   "engines": {
