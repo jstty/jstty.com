@@ -128,7 +128,7 @@ export default class Portfolio extends React.Component {
                     <h1>Portfolio</h1>
                 </Parallax>
                 <br/><br/>
-                
+
                 <p>Coming Soon...</p>
             </ScrollElement>
         )
