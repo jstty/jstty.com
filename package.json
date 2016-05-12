@@ -13,7 +13,13 @@
     }
   ],
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "ejs": "^2.3.4",
+    "hyper.io": "^0.5.0-alpha4",
+    "lodash": "^3.10.1",
+    "moment": "^2.11.1",
+    "pdfmake": "^0.1.18"
+  },
   "devDependencies": {
     "gulp": "^3.9.0"
   },
@@ -22,8 +28,8 @@
     "init": "npm install && cd frontend && npm install && cd ../server && npm install",
     "build": "cd frontend && npm run build",
     "deploy": "eb deploy",
-    "prestart": "npm run init && npm run build",
-    "start": "cd server && node server.js"
+    "_prestart": "npm run init && npm run build",
+    "start": "node app"
   },
   "engines": {
     "node": ">=4.0"

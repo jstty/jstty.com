@@ -8,9 +8,6 @@ jspm_packages
 # Editors
 .idea
 
-# temp files
-frontend/dist
-
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml
