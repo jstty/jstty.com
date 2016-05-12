@@ -2,12 +2,20 @@
 // Routes
 module.exports = [
     {
-        api: "/api/resume",
+        api: "/api/resume/showcase",
         controller: "resume", // default "<service.directory>/controllers/<controller>.js"
         method: {
-            get: "index" // defined in controller module"
+            get: "showcase" // defined in controller module"
         }
     },
+    {
+        api: "/api/resume/full",
+        controller: "resume", // default "<service.directory>/controllers/<controller>.js"
+        method: {
+            get: "full" // defined in controller module"
+        }
+    },
+
     {
         api: "/api/projects",
         controller: "projects",
