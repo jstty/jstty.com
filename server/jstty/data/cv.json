@@ -655,6 +655,7 @@
       "StartDate": "1/2007",
       "EndDate": "9/2009",
       "Category": "Research",
+      "Showcase": true,
       "Company": "CSUB Research",
       "University": "California State University of Bakersfield",
       "Location": "Bakersfield, Ca",
@@ -662,6 +663,7 @@
       "Projects": [
         {
           "Title": "Chemical Plume Tracing System",
+          "Showcase": true,
           "Labels": [
             "C/C++",
             "OpenGL",
@@ -691,6 +693,7 @@
         },
         {
           "Title": "Digital Video Watermarking and Attacks",
+          "Showcase": true,
           "Labels": [
             "C/C++",
             "FFTW",
