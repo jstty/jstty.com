@@ -124,6 +124,10 @@ module.exports = {
     projects: fs.readFileSync(__dirname+'/projects.ejs', 'utf8'),
     computer: fs.readFileSync(__dirname+'/computer.ejs', 'utf8'),
     education: fs.readFileSync(__dirname+'/education.ejs', 'utf8'),
+
+    research: fs.readFileSync(__dirname+'/research.ejs', 'utf8'),
+    teaching: fs.readFileSync(__dirname+'/teaching.ejs', 'utf8'),
+
     line:     line,
     styles:   styles,
     defaultStyle: defaultStyle,

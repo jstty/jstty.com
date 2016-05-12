@@ -44,22 +44,45 @@ PdfGen.prototype.processTemplate = function(templateName, data) {
   return temp;
 };
 
-PdfGen.prototype.processProjects = function(projectList)
+//PdfGen.prototype.processProjects = function(projectList)
+//{
+//  var list = _.filter(projectList, function(project) {
+//    return (project.Category === 'Industry' && !project.Archive);
+//  });
+//  // sort list
+//  list.sort(function(a, b){
+//    return moment(b.StartDate, 'MM/YYYY').diff(moment(a.StartDate, 'MM/YYYY'));
+//  });
+//  _.forEach(list, function(item){
+//      item.Projects = _.filter(item.Projects, function(project){
+//        return (!project.Archive);
+//      } );
+//  });
+//  //
+//
+//  return list;
+//};
+
+PdfGen.prototype.filterProjects = function(category, projectList)
 {
-  var list = _.filter(projectList, {'Category': 'Industry', 'Showcase': true } );
+  var list = _.filter(projectList, function(project) {
+    return (project.Category === category && !project.Archive);
+  });
   // sort list
   list.sort(function(a, b){
     return moment(b.StartDate, 'MM/YYYY').diff(moment(a.StartDate, 'MM/YYYY'));
   });
   _.forEach(list, function(item){
-      item.Projects = _.filter(item.Projects, { 'Showcase': true } );
+    item.Projects = _.filter(item.Projects, function(project){
+      return (!project.Archive);
+    } );
   });
   //
 
   return list;
 };
 
-PdfGen.prototype.resume = function(cv)
+PdfGen.prototype.resume = function(cv, type)
 {
   return Q.promise(function(resolve, reject, notify) {
 
@@ -70,7 +93,19 @@ PdfGen.prototype.resume = function(cv)
     content.push( this.processTemplate('contact', cv.contact) );
 
     content.push( _.cloneDeep(this._resume_template.line) );
-    content.push( this.processTemplate('projects', { list: this.processProjects(cv.projects) } ) );
+    content.push( this.processTemplate('projects', { list: this.filterProjects('Industry', cv.projects) } ) );
+
+    if(type === 'full') {
+      // TODO
+      //content.push( _.cloneDeep(this._resume_template.line) );
+      //content.push( this.processTemplate('publications', { list: this.getPublications('Publications', cv.projects) } ) );
+
+      content.push( _.cloneDeep(this._resume_template.line) );
+      content.push( this.processTemplate('research', { list: this.filterProjects('Research', cv.projects) } ) );
+
+      content.push( _.cloneDeep(this._resume_template.line) );
+      content.push( this.processTemplate('teaching', { list: this.filterProjects('Teaching', cv.projects) } ) );
+    }
 
     content.push( _.cloneDeep(this._resume_template.line) );
     content.push( this.processTemplate('computer', { list: cv.computer } ) );
@@ -96,7 +131,7 @@ PdfGen.prototype.resume = function(cv)
 
       pdfDoc.on('end', function () {
         var result = Buffer.concat(pdfDocChunks);
-        resolve({data: result, filename: "resume.pdf" });
+        resolve({data: result, filename: "jsutton_resume_"+type+".pdf" });
       });
 
       pdfDoc.end();

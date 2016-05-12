@@ -21,13 +21,6 @@ export default class NavBar extends React.Component {
         this.setState( { open: !this.state.open } );
     }
 
-    downloadResume = () => {
-        fetch('http://localhost:8000/api/resume')
-            .catch((error) => {
-                    console.warn(error);
-            });
-    }
-
     render() {
         return (
             <div className="nav-bar">
@@ -53,7 +46,7 @@ export default class NavBar extends React.Component {
                         </ul>
                         <ul className="right hide-on-med-and-down">
                             <li>
-                                <IconButton tooltip="Resume" href="/api/resume?style=sp" target="_blank" tooltipPosition="bottom-left" linkButton={true}>
+                                <IconButton tooltip="Resume" href="/api/resume/showcase" target="_blank" tooltipPosition="bottom-left" linkButton={true}>
                                     <FontIcon className="fa fa-file-pdf-o fa-2x" />
                                 </IconButton>
                             </li>
