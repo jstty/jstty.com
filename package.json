@@ -29,7 +29,7 @@
     "build": "cd frontend && npm run build",
     "frontend": "cd frontend && node webpack.server.js",
     "predeploy": "npm run init && npm run build",
-    "deploy": "npm run predeploy && eb deploy",
+    "deploy": "eb deploy",
     "start": "node app"
   },
   "engines": {
