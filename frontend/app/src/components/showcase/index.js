@@ -112,7 +112,7 @@ export default class ProjectsShowcase extends React.Component {
                     //    <img src={link.image} />
                     //</a>
 
-                    return (<div className="project col s3">
+                    return (<div className="project col s12 m6 l3">
                             <div className="projectWrapper">
                                 <h3>{item.companyName}<br/>{item.title}</h3>
                                 <Carousel decorators={carouselDecorators} framePadding="0px 0px 20px 0px" cellAlign="center">{links}</Carousel>
