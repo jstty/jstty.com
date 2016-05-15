@@ -98,9 +98,7 @@
             "Using: ES6, NodeJS, NPM, Gulp, Babel, Jenkins+Git Hooks, Jira+Git Hooks, Node-Webkit/Electron, Protractor/Karma/Testem, Supertest, Mocha, Chai, JsDoc, Swagger UI, Bower/Browserify/Webpack,  Yeoman, Yanpm, Web Components, RxJS",
             "Lead architect and lead engineer",
             "Scalable, modular, plugin based CLI tool and UI libraries to accelerate projects development"
-          ],
-          "Links": {
-          }
+          ]
         },
         {
           "Showcase": true,
@@ -113,8 +111,14 @@
             "Using: Custom Core Project Tools, AngularJS 1.3/React+Reflux/Polymer, Module Components, D3, RESTful APIs, NodeJS, Hyper.io (Microservices), Adapter pattern",
             "Lead architect and lead engineer on several concurrent long and short term projects showcased at conferences all over the globe."
           ],
-          "Links": {
-          }
+          "links": [
+            {
+              "name": "Video",
+              "type": "video",
+              "image": "projects/cisco/atcs/atcs.png",
+              "url": "https://www.youtube.com/watch?v=Bix03SUOt0w"
+            }
+          ]
         }
       ]
     },
@@ -139,7 +143,7 @@
           "Description": "TODO",
           "Version": "Release v2.0",
           "Links": {
-            "Website": "http://Playfully.org"
+            "Website": "http://GlasslabGames.org"
           },
           "Labels": [
             "NodeJS", "RESTful APIs", "JSON", "Redis", "Couchbase", "MySQL", "Express", "PassportJS", "Mocha", "AWS"
@@ -148,6 +152,32 @@
             "Using: NodeJS, RESTful APIs, JSON, Redis, Couchbase, MySQL, Express, PassportJS, Mocha, AWS",
             "Lead architect and lead engineer",
             "Scalable service based architect"
+          ],
+          "links": [
+            {
+              "name": "GlassLabGames",
+              "type": "link",
+              "image": "/projects/glasslab/glasslab_games.png",
+              "url": "http://www.glasslabgames.org"
+            },
+            {
+              "name": "Argubot Academy",
+              "type": "link",
+              "image": "/projects/glasslab/argubot_academy.png",
+              "url": "http://www.glasslabgames.org/games/AA-1"
+            },
+            {
+              "name": "SimCity EDU",
+              "type": "link",
+              "image": "/projects/glasslab/simcity.png",
+              "url": "http://www.glasslabgames.org/games/SC"
+            },
+            {
+              "name": "Argument Wars",
+              "type": "link",
+              "image": "/projects/glasslab/argument_wars.png",
+              "url": "http://www.glasslabgames.org/games/AW-1"
+            }
           ]
         },
         {
@@ -309,10 +339,26 @@
           "Title": "Xfinity Games Powered by EA",
           "Description": "TODO",
           "Showcase": true,
-          "Links": {
-            "Announcement": "http://corporate.comcast.com/comcast-voices/game-on-experience-a-whole-new-way-to-play-on-your-tv",
-            "Article": "http://www.polygon.com/2015/7/14/8958867/xfinity-games-powered-by-ea"
-          },
+          "links": [
+            {
+              "name": "Video",
+              "type": "video",
+              "image": "/projects/ea/xfinity_games/video.png",
+              "url": "https://www.youtube.com/watch?v=_s0Aw0QwjTs"
+            },
+            {
+              "name": "Article",
+              "type": "link",
+              "image": "/projects/ea/xfinity_games/article.png",
+              "url": "http://www.polygon.com/2015/7/14/8958867/xfinity-games-powered-by-ea"
+            },
+            {
+              "name": "Announcement",
+              "type": "link",
+              "image": "/projects/ea/xfinity_games/announcement.png",
+              "url": "http://corporate.comcast.com/comcast-voices/game-on-experience-a-whole-new-way-to-play-on-your-tv"
+            }
+          ],
           "Labels": [
             "Cloud Computing",
             "Video Streaming",

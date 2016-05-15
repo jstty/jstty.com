@@ -1,5 +1,4 @@
 .photos {
-  padding-bottom: 350px;
 
   h1, h2 {
     text-align: center;
@@ -23,5 +22,10 @@
     font-size: 2vw;
     text-align: center;
     color: white;
+  }
+
+  .body {
+    margin-top: 3vw;
+    min-height: 300px;
   }
 }

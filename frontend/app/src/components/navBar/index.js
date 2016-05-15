@@ -68,8 +68,8 @@ export default class NavBar extends React.Component {
                         <ScrollLink onClick={this.handleToggle} activeClass="active" to="resume" spy={true} smooth={true} duration={500}>
                             <MenuItem primaryText="Resume" className="menu-item" leftIcon={<i className="fa fa-file-text-o"></i>}></MenuItem>
                         </ScrollLink>
-                        <ScrollLink onClick={this.handleToggle} activeClass="active" to="portfolio" spy={true} smooth={true} duration={500}>
-                            <MenuItem primaryText="Portfolio" className="menu-item" leftIcon={<i className="fa fa-newspaper-o"></i>}></MenuItem>
+                        <ScrollLink onClick={this.handleToggle} activeClass="active" to="showcase" spy={true} smooth={true} duration={500}>
+                            <MenuItem primaryText="Showcase" className="menu-item" leftIcon={<i className="fa fa-newspaper-o"></i>}></MenuItem>
                         </ScrollLink>
                         <ScrollLink onClick={this.handleToggle} activeClass="active" to="projects" spy={true} smooth={true} duration={500}>
                             <MenuItem primaryText="Projects" className="menu-item" leftIcon={<i className="fa fa-code"></i>}></MenuItem>
