@@ -1,141 +1,135 @@
-import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Parallax } from 'react-parallax';
 import Scroll from 'react-scroll';
-
-import LinearProgress from 'material-ui/lib/linear-progress';
-import {Card, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/lib/card';
-var Carousel = require('nuka-carousel');
-
-
 var ScrollElement = Scroll.Element;
 
-import backGroundImage from '../../../backgrounds/eye_of_the_beholder.jpg';
+import SlideColumnList from '../slideColumnList';
+
+import backGroundImage from '../../../backgrounds/fallen.jpg';
 import './style.scss';
 
-export default class Projects extends React.Component {
-
-    constructor() {
-        super();
-        this.url = '/api/projects';
-        this.state = {
-            ready: false,
-            data: {}
-        };
-    }
-
-    componentDidMount() {
-        $.ajax({
-            url: this.url,
-            dataType: 'json',
-            cache: false,
-            success: (data) => {
-                this.setState({
-                    ready: true,
-                    data: data
-                });
-
+var columns = [
+    {
+        header: "1",
+        items: [
+            {
+                id: 1,
+                name: "Photos",
+                desc: "Jan 9, 2014"
             },
-            error: (xhr, status, err) => {
-                console.error(this.url, status, err.toString());
+            {
+                id: 2,
+                name: "Recipes",
+                desc: "Jan 17, 2014"
+            },
+            {
+                id: 3,
+                name: "Work",
+                desc: "Jan 28, 2014"
             }
-        });
-    }
-
-    getList(ready, data) {
-        if(!ready) {
-            return (<div></div>);
-        } else {
-            if(data.items) {
-                var carouselDecorators = [
-                    {
-                        component: React.createClass({
-                            render() {
-                                return (
-                                    <button
-                                        className="carouselPrev"
-                                        onClick={this.handleClick}>
-                                        <i className="fa fa-angle-left"></i>
-                                    </button>
-                                )
-                            },
-                            handleClick(e) {
-                                e.preventDefault();
-
-                                if(this.props.currentSlide === 0) {
-                                    // start wrap around
-                                    this.props.goToSlide(this.props.slideCount-1);
-                                } else {
-                                    this.props.previousSlide();
-                                }
-                            }
-                        }),
-                        position: 'CenterLeft',
-                    },
-                    {
-                        component: React.createClass({
-                            render() {
-                                return (
-                                <button
-                                    className="carouselNext"
-                                    onClick={this.handleClick}>
-                                    <i className="fa fa-angle-right"></i>
-                                </button>
-                                )
-                            },
-                            handleClick(e) {
-                                e.preventDefault();
-
-                                if(this.props.currentSlide + 1 >= this.props.slideCount) {
-                                    // end wrap around
-                                    this.props.goToSlide(0);
-                                } else {
-                                    this.props.nextSlide();
-                                }
-                            }
-                        }),
-                        position: 'CenterRight'
-                    }
-                ];
-
-                return data.items.map(function(item, i){
-                    let links = item.links.map(function(link){
-                        return <div>
-                            <h4>{link.name}</h4>
-                            <a href={link.url} target="_blank">
-                                <img height="200px" src={link.image} />
-                            </a>
-                        </div>
-                    });
-
-                    //<a href={link.url} target="_blank">
-                    //    <img src={link.image} />
-                    //</a>
-
-                    return (<div className="item"><Card>
-                                <h3>{item.title}</h3>
-                                <Carousel decorators={carouselDecorators} framePadding="0px 0px 20px 0px" cellAlign="center">{links}</Carousel>
-                            </Card></div>
-                    );
-                });
+        ]
+    },
+    {
+        header: "2",
+        items: [
+            {
+                id: 1,
+                name: "Photos",
+                desc: "Jan 9, 2014"
+            },
+            {
+                id: 2,
+                name: "Work",
+                desc: "Jan 28, 2014"
             }
-        }
+        ]
+    },
+    {
+        header: "3",
+        items: [
+            {
+                id: 1,
+                name: "Recipes",
+                desc: "Jan 17, 2014"
+            },
+            {
+                id: 2,
+                name: "Work",
+                desc: "Jan 28, 2014"
+            }
+        ]
+    },
+    {
+        header: "4",
+        items: [
+            {
+                id: 1,
+                name: "Work",
+                desc: "Jan 28, 2014"
+            }
+        ]
+    },
+    {
+        header: "5",
+        items: [
+            {
+                id: 1,
+                name: "Photos",
+                desc: "Jan 9, 2014"
+            }
+        ]
+    },
+    {
+        header: "1",
+        items: [
+            {
+                id: 1,
+                name: "Photos",
+                desc: "Jan 9, 2014"
+            },
+            {
+                id: 2,
+                name: "Recipes",
+                desc: "Jan 17, 2014"
+            },
+            {
+                id: 3,
+                name: "Work",
+                desc: "Jan 28, 2014"
+            }
+        ]
+    },
+    {
+        header: "2",
+        items: [
+            {
+                id: 1,
+                name: "Photos",
+                desc: "Jan 9, 2014"
+            },
+            {
+                id: 2,
+                name: "Work",
+                desc: "Jan 28, 2014"
+            }
+        ]
     }
+];
+
+// <SlideColumnList columns={columns}/>
+
+export default class ProjectsList extends React.Component {
 
     render() {
         return (
-            <ScrollElement name="projects" className="projects">
+            <ScrollElement name="projects" className="projects-all">
                 <Parallax bgImage={backGroundImage} strength={300}>
-                    <h1>Projects</h1>
+                    <h1>All Projects</h1>
                 </Parallax>
-                <br/><br/>
-                <section className="list">
-                    <div className={"container loading "+ (this.state.ready ? 'invisable' : 'visable')}><LinearProgress mode="indeterminate" /></div>
-                    <div className={"container loaded "+ (this.state.ready ? 'visable' : 'invisable')}>
-                        {this.getList(this.state.ready, this.state.data)}
-                    </div>
-                </section>
+                <div className="body">
+                    <p>Coming Soon...</p>
+                </div>
             </ScrollElement>
         )
     }

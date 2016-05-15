@@ -1,0 +1,160 @@
+// TODO: move to global
+$text-color: rgba(255, 255, 255, 0.7);
+
+.projects-showcase {
+  h1, h2 {
+    text-align: center;
+    color: transparentize(white, 0.15);
+    //text-shadow: 2px 2px transparentize(black, 0.55);
+  }
+
+  h1 {
+    font-size: 5vw;
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+  }
+
+  h2 {
+    font-size: 4vw;
+    padding-top: 4vw;
+    padding-bottom: 4vw;
+  }
+
+  section {
+    width: 40vw;
+    //border: 1px solid red;
+    margin: auto;
+  }
+
+  p {
+    font-size: 2vw;
+    text-align: center;
+    color: $text-color;
+  }
+
+  .body {
+    margin-top: 3vw;
+    min-height: 450px;
+  }
+
+  .list {
+    position: relative;
+    width: 100%;
+    padding-top: 2vw;
+    //padding-left: 1vw;
+    //padding-right: 1vw;
+
+    /* TODO: make loader a component */
+    .loading {
+      padding: 1vw;
+
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    .loadWrapper {
+      /* TODO: use mixin */
+      -webkit-transition: opacity 300ms, max-height 1s;
+      transition: opacity 300ms, max-height 1s;
+
+      font-size: 2vw;
+      text-align: center;
+      color: $text-color;
+
+      width: 100%;
+      height: 100%;
+    }
+
+    .loaded {
+      //border: 1px solid red;
+      width: 100%;
+    }
+
+    .project {
+
+      .projectWrapper {
+        //background-color: #151515;
+        //border-radius: 10px;
+
+        border-color: #414141;
+        border-style: solid;
+        //border-width: 1px;
+        border-width: 0px;
+
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+      }
+
+      h3 {
+        font-size: 1.5vw;
+        text-align: center;
+        color: $text-color;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+
+      .slider-frame {
+        margin-bottom: 0 !important;
+      }
+
+      .carouselBlock {
+        position: relative;
+
+        h4 {
+          position: absolute;
+          left: 0;
+          top: 60px;
+          width: 100%;
+
+          padding: 20px;
+          background-color: rgba(0, 0, 0, 0.65);
+
+          font-size: 1.2vw;
+          text-align: center;
+          color: white;
+        }
+      }
+    }
+
+    .carouselPrev, .carouselNext {
+      border: 0;
+
+      //background: rgba(0,0,0,0.1);
+      background: none;
+
+      color: rgba(255,255,255,0.1);
+      padding: 10px;
+      outline: 0;
+      opacity: 1;
+      cursor: pointer;
+
+      &:hover {
+        //background: rgba(0,0,0,0.15);
+        background: none;
+
+        color: rgba(255,255,255,0.8);
+      }
+    }
+  }
+
+  .invisable {
+    opacity: 0;
+    display: none;
+    max-height: 0;
+  }
+
+  .visable {
+    opacity: 1;
+    display: block;
+    max-height: 30vw;
+  }
+
+}

@@ -25,10 +25,10 @@ module.exports = [
     },
 
     {
-        api: "/api/portfolio",
-        controller: "portfolio",
+        api: "/api/projects/showcase",
+        controller: "projects",
         method: {
-            get: "index"
+            get: "showcase"
         }
     }
 ];
