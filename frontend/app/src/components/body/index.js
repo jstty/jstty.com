@@ -11,14 +11,17 @@ import './style.scss';
 
 export default class Body extends React.Component {
 
+    /*
+     <section className="add-padding">
+     <Portfolio />
+     </section>
+     */
     render() {
         return (
             <div className="body">
                 <Welcome />
                 <Resume />
-                <section className="add-padding">
-                    <Portfolio />
-                </section>
+
                 <section className="add-padding">
                     <Projects />
                 </section>

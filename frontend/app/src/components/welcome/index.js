@@ -24,7 +24,7 @@ export default class Welcome extends React.Component {
                                 0:   {opacity:'1'},
                                 200: {opacity:'0'}
                             }}
-                        >Another visitor...</SparkScroll.h2>
+                        >Welcome...</SparkScroll.h2>
                         <SparkScroll.h2 className="initHidden"
                             timeline={{
                                 ease:'easeOutQuad',
