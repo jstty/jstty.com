@@ -28,8 +28,8 @@
     "init": "npm install && cd frontend && npm install && cd ../server && npm install",
     "build": "cd frontend && npm run build",
     "frontend": "cd frontend && node webpack.server.js",
-    "deploy": "eb deploy",
-    "_prestart": "npm run init && npm run build",
+    "predeploy": "npm run init && npm run build",
+    "deploy": "npm run predeploy && eb deploy",
     "start": "node app"
   },
   "engines": {

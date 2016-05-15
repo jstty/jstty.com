@@ -17,20 +17,21 @@ export default class Resume extends React.Component {
         return (
             <ScrollElement name="resume" className="resume">
                 <Parallax bgImage={backGroundImage} strength={300}>
-                    <h1>Resume</h1>
+                    <h1>R&eacute;sum&eacute;</h1>
                 </Parallax>
 
                 <div className="row">
-                    <div className="col s5 center offset-s1">
+                    <div className="col s12 m5 center offset-m1">
                         <SingleIcon className="icon"/>
                         <section>
                             <h3>Single Page</h3>
                             <p>Latest and greatest work summarized to fit on one amazingly beautiful page, but still jam packed full of awesomeness!!
-                                <br/><br/></p>
+                                <div className="hide-on-small-and-down"><br/></div>
+                            </p>
                         </section>
                         <RaisedButton className="link" label="Download" primary={true} href="/api/resume/showcase" target="_blank" linkButton={true} />
                     </div>
-                    <div className="col s5 center">
+                    <div className="col s12 m5 center">
                         <MultiIcon className="icon"/>
                         <section>
                             <h3>Multi-Page CV</h3>
