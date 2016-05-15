@@ -14,12 +14,6 @@ $text-color: rgba(255, 255, 255, 0.7);
     padding-bottom: 5vw;
   }
 
-  h2 {
-    font-size: 4vw;
-    padding-top: 4vw;
-    padding-bottom: 4vw;
-  }
-
   section {
     width: 40vw;
     //border: 1px solid red;
@@ -27,7 +21,7 @@ $text-color: rgba(255, 255, 255, 0.7);
   }
 
   p {
-    font-size: 2vw;
+    font-size: 1em;
     text-align: center;
     color: $text-color;
   }
@@ -58,7 +52,7 @@ $text-color: rgba(255, 255, 255, 0.7);
       -webkit-transition: opacity 300ms, max-height 1s;
       transition: opacity 300ms, max-height 1s;
 
-      font-size: 2vw;
+      font-size: 0.5em;
       text-align: center;
       color: $text-color;
 
@@ -77,6 +71,10 @@ $text-color: rgba(255, 255, 255, 0.7);
         //background-color: #151515;
         //border-radius: 10px;
 
+        button {
+          font-size: 2.5em;
+        }
+
         border-color: #414141;
         border-style: solid;
         //border-width: 1px;
@@ -94,7 +92,7 @@ $text-color: rgba(255, 255, 255, 0.7);
       }
 
       h3 {
-        font-size: 1.5vw;
+        font-size: 2.5em;
         text-align: center;
         color: $text-color;
         margin-top: 10px;
@@ -117,7 +115,7 @@ $text-color: rgba(255, 255, 255, 0.7);
           padding: 20px;
           background-color: rgba(0, 0, 0, 0.65);
 
-          font-size: 1.2vw;
+          font-size: 2.0em;
           text-align: center;
           color: white;
         }
