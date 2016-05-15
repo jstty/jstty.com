@@ -23,9 +23,12 @@ module.exports = [
             get: "index"
         }
     },
+
     {
-        "otherwise": {
-            "static": "../frontend/dist"
+        api: "/api/portfolio",
+        controller: "portfolio",
+        method: {
+            get: "index"
         }
     }
 ];

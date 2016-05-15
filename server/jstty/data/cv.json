@@ -65,10 +65,26 @@
             "Using: AngularJS 1.3, RESTful APIs, JSON, NodeJS, Protractor"
           ],
           "//": "Lead architect and lead engineer",
-          "Links": {
-            "Announcement 1": "http://newsroom.cisco.com/bg/press-release-content?articleId=1600834",
-            "Announcement 2": "http://www.t-systems.hu/news-and-media/news/deutsche-telekom-launches-cloud-vpn-service"
-          }
+          "links": [
+            {
+              "name": "Announcement",
+              "type": "link",
+              "image": "/projects/cisco/cloudvpn/announcement.jpg",
+              "url": "http://newsroom.cisco.com/bg/press-release-content?articleId=1600834"
+            },
+            {
+              "name": "Video",
+              "type": "video",
+              "image": "/projects/cisco/cloudvpn/video.jpg",
+              "url": "https://www.youtube.com/watch?v=Vq5M_vehiUg"
+            },
+            {
+              "name": "Axel Clauberg Slide Deck",
+              "type": "link",
+              "image": "/projects/cisco/cloudvpn/axel-clauberg-slidedeck.jpg",
+              "url": "http://www.slideshare.net/openstackil/axel-clauberg-deutsche-telekom-keynote-open-stack-israel-2015"
+            }
+          ]
         },
         {
           "Showcase": true,
