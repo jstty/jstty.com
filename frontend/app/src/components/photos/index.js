@@ -4,12 +4,16 @@ import { Parallax } from 'react-parallax';
 import Scroll from 'react-scroll';
 var ScrollElement = Scroll.Element;
 
+import PhotoTreeMap from './treemap';
+
 import backGroundImage from '../../../backgrounds/descent2.jpg';
 import './style.scss';
 
 export default class Photos extends React.Component {
 
     render() {
+        // <PhotoTreeMap />
+
         return (
             <ScrollElement name="photos" className="photos">
                 <Parallax bgImage={backGroundImage} strength={300}>

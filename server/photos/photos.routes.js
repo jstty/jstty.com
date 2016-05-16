@@ -15,6 +15,13 @@ module.exports = [
         method: {
             get: "tree"
         }
+    },
+    {
+        api: "/api/photos/tree/map",
+        controller: "main",
+        method: {
+            get: "treeMap"
+        }
     }
 
     // TODO: add oauth2 google login
