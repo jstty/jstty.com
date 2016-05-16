@@ -2,13 +2,14 @@ var Hyper = require('hyper.io');
 
 // load config and routes
 var hyper = new Hyper( {
-    port: process.env.PORT || 8000
+    port: process.env.PORT || 8000,
+    appName: "jstty"
 } );
 
 // Start web server
 hyper.load([
     'jstty',
-    // 'photos',
+    'photos',
     'frontend'
 ])
     .then(function(){
