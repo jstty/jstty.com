@@ -46,6 +46,7 @@
     "webpack-dev-server": "^1.12.1"
   },
   "dependencies": {
+    "d3": "^3.5.17",
     "file-loader": "^0.8.5",
     "font-awesome": "~4.5.0",
     "jquery": "^2.2.3",

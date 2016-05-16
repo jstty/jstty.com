@@ -52,6 +52,17 @@ DataStore.prototype.getTree = function() {
     return output;
 };
 
+/*
+TODO: add more image tools
+upload images
+create thumb, midsize images
+create json file with image meta data
+    https://github.com/bwindels/exif-parser
+    https://github.com/gomfunkel/node-exif
+
+Maybe?
+store image data in SQLite DB for fast Q's (tree map)
+*/
 
 
 // TODO move this to it's own module
