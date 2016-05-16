@@ -1,7 +1,6 @@
 {
   "name": "jstty.server",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {},
   "engines": {
     "node": ">=4.0"

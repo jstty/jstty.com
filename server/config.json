@@ -1,7 +1,12 @@
 {
-  "port": "8001",
   "http": {
     "CORS": true,
     "secure": false
+  },
+  "photos": {
+    "aws": {
+      "accessKeyId": "SET-IN-ENV",
+      "secretAccessKey": "SET-IN-ENV"
+    }
   }
 }
