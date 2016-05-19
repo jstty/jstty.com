@@ -23,12 +23,12 @@ DataStore.prototype.$init = function($config){
     config.accessKeyId     = process.env.AWS_ACCESS_ID  || $config.aws.accessKeyId;
     config.secretAccessKey = process.env.AWS_SECRET_KEY || $config.aws.secretAccessKey;
 
-    return this._initGetAllFiles(config)
-        .then(function(data){
-            this.files = data.files;
-            this.tree = data.tree;
-            this.urlBase = data.urlBase;
-        }.bind(this));
+    //return this._initGetAllFiles(config)
+    //    .then(function(data){
+    //        this.files = data.files;
+    //        this.tree = data.tree;
+    //        this.urlBase = data.urlBase;
+    //    }.bind(this));
 };
 
 DataStore.prototype.getFileList = function() {

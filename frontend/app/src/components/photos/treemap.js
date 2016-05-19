@@ -120,12 +120,19 @@ export default class PhotoTreeMap extends React.Component {
                     .classed("children", true)
                     .on("click", transition);
 
-                g.selectAll(".child")
+                var children = g.selectAll(".child")
                     .data(function (d) {
                         return d._children || [d];
                     })
-                    .enter().append("rect")
+                    .enter();
+
+                children.append("rect")
                     .attr("class", "child")
+                    .call(rect);
+
+                children.append("svg:image")
+                    .attr("xlink:href", d => d.image )
+                    .attr("class", "child-image")
                     .call(rect);
 
                 g.append("rect")
@@ -135,6 +142,11 @@ export default class PhotoTreeMap extends React.Component {
                     .text(function (d) {
                         return formatNumber(d.value);
                     });
+
+                g.append("svg:image")
+                    .attr("xlink:href", d => d.image )
+                    .attr("class", "parent-image")
+                    .call(rect);
 
                 g.append("text")
                     .attr("dy", ".75em")
@@ -168,9 +180,14 @@ export default class PhotoTreeMap extends React.Component {
 
                     // Transition to the new view.
                     t1.selectAll("text").call(text).style("fill-opacity", 0);
+                    t1.selectAll("rect").call(rect).style("stroke-opacity", 0);
+                    t1.selectAll(".parent-image").call(rect).style("opacity", 0);
+                    t1.selectAll(".child-image").call(rect).style("opacity", 0);
+
                     t2.selectAll("text").call(text).style("fill-opacity", 1);
-                    t1.selectAll("rect").call(rect);
-                    t2.selectAll("rect").call(rect);
+                    t2.selectAll("rect").call(rect).style("stroke-opacity", 0.5);
+                    t2.selectAll(".parent-image").call(rect).style("opacity", 1);
+                    t2.selectAll(".child-image").call(rect).style("opacity", 1);
 
                     // Remove the old node when the transition is finished.
                     t1.remove().each("end", function () {
