@@ -4,7 +4,9 @@ import { Parallax } from 'react-parallax';
 import Scroll from 'react-scroll';
 var ScrollElement = Scroll.Element;
 
+//import PhotoTreeMap from './treemapSimple';
 import PhotoTreeMap from './treemap';
+//import PhotoTreeMap from './treemap2';
 
 import backGroundImage from '../../../backgrounds/descent2.jpg';
 import './style.scss';
@@ -12,7 +14,6 @@ import './style.scss';
 export default class Photos extends React.Component {
 
     render() {
-        // <PhotoTreeMap />
 
         return (
             <ScrollElement name="photos" className="photos">
@@ -20,6 +21,7 @@ export default class Photos extends React.Component {
                     <h1>Photos</h1>
                 </Parallax>
                 <div className="body">
+                    <PhotoTreeMap />
                     <p>Coming Soon...</p>
                 </div>
             </ScrollElement>

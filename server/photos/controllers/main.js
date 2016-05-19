@@ -28,6 +28,7 @@ PhotosCtrl.prototype.treeMap = function(db, $done)
                     "children": [
                         {
                             "name": "2007",
+                            "image": "https://s3-us-west-1.amazonaws.com/jstty-photos/photos/2006/_best/acidburn.jpg",
                             "children": [
                                 {"name": "AgglomerativeCluster", "value": 3938},
                                 {"name": "CommunityStructure", "value": 3812},
@@ -37,6 +38,7 @@ PhotosCtrl.prototype.treeMap = function(db, $done)
                         },
                         {
                             "name": "2008",
+                            "image": "https://s3-us-west-1.amazonaws.com/jstty-photos/photos/2006/_best/acidwash.jpg",
                             "children": [
                                 {"name": "BetweennessCentrality", "value": 3534},
                                 {"name": "LinkDistance", "value": 5731},
@@ -47,6 +49,7 @@ PhotosCtrl.prototype.treeMap = function(db, $done)
                         },
                         {
                             "name": "2009",
+                            "image": "https://s3-us-west-1.amazonaws.com/jstty-photos/photos/2006/_best/darksky.jpg",
                             "children": [
                                 {"name": "AspectRatioBanker", "value": 7074},
                                 {"name": "ISchedulable", "value": 1041},
@@ -67,6 +70,7 @@ PhotosCtrl.prototype.treeMap = function(db, $done)
                     "children": [
                         {
                             "name": "2007",
+                            "image": "https://s3-us-west-1.amazonaws.com/jstty-photos/photos/2006/_best/darksky.jpg",
                             "children": [
                                 {"name": "ArrayInterpolator", "value": 1983},
                                 {"name": "ColorInterpolator", "value": 2047},
@@ -81,6 +85,7 @@ PhotosCtrl.prototype.treeMap = function(db, $done)
                         },
                         {
                             "name": "2008",
+                            "image": "https://s3-us-west-1.amazonaws.com/jstty-photos/photos/2006/_best/forgotten.jpg",
                             "children": [
                                 {"name": "DataField", "value": 1759},
                                 {"name": "DataSchema", "value": 2165},
@@ -92,6 +97,7 @@ PhotosCtrl.prototype.treeMap = function(db, $done)
                         },
                         {
                             "name": "2009",
+                            "image": "https://s3-us-west-1.amazonaws.com/jstty-photos/photos/2006/_best/lady_in_white.jpg",
                             "children": [
                                 {"name": "DirtySprite", "value": 8833},
                                 {"name": "LineSprite", "value": 1732},
@@ -101,6 +107,7 @@ PhotosCtrl.prototype.treeMap = function(db, $done)
                         },
                         {
                             "name": "2010",
+                            "image": "https://s3-us-west-1.amazonaws.com/jstty-photos/photos/2006/_best/looming.jpg",
                             "children": [
                                 {"name": "DragForce", "value": 1082},
                                 {"name": "GravityForce", "value": 1336},
@@ -119,6 +126,7 @@ PhotosCtrl.prototype.treeMap = function(db, $done)
                     "children": [
                         {
                            "name": "Bakersfield",
+                            "image": "https://s3-us-west-1.amazonaws.com/jstty-photos/photos/2006/_best/lost.jpg",
                             "children": [
                                 {"name": "AggregateExpression", "value": 1616},
                                 {"name": "And", "value": 1027},
@@ -142,6 +150,7 @@ PhotosCtrl.prototype.treeMap = function(db, $done)
                         },
                         {
                             "name": "LA",
+                            "image": "https://s3-us-west-1.amazonaws.com/jstty-photos/photos/2006/_best/noise.jpg",
                             "children": [
                                 {"name": "add", "value": 593},
                                 {"name": "and", "value": 330},
@@ -179,6 +188,7 @@ PhotosCtrl.prototype.treeMap = function(db, $done)
                         },
                         {
                             "name": "San Jose",
+                            "image": "https://s3-us-west-1.amazonaws.com/jstty-photos/photos/2006/_best/overworld.jpg",
                             "children": [
                                 {"name": "Minimum", "value": 843},
                                 {"name": "Not", "value": 1554},
@@ -196,6 +206,7 @@ PhotosCtrl.prototype.treeMap = function(db, $done)
                 },
                 {
                     "name": "print ready",
+                    "image": "https://s3-us-west-1.amazonaws.com/jstty-photos/photos/2006/_best/trapped.jpg",
                     "children": [
                         {"name": "IScaleMap", "value": 2105},
                         {"name": "LinearScale", "value": 1316},

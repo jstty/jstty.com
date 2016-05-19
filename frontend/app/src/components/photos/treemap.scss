@@ -15,6 +15,7 @@
 
 
   text {
+    fill: #ffffff;
     pointer-events: none;
   }
 
@@ -23,6 +24,7 @@
   }
 
   rect {
+    //fill: #161616;
     fill: none;
     stroke: #fff;
   }
@@ -46,7 +48,7 @@
   }
 
   .children rect.parent {
-    fill: #bbb;
+    fill: #161616;
     fill-opacity: .5;
   }
 
