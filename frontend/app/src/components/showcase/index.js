@@ -100,7 +100,7 @@ export default class ProjectsShowcase extends React.Component {
                 if(item.links && item.links.length) {
                     let links =[];
                     links = item.links.map(function(link){
-                        return (<div className="carouselBlock">
+                        return (<div key={link.name} className="carouselBlock">
                             <a href={link.url} target="_blank">
                                 <h4>{link.name}</h4>
                                 <img height="200px" src={link.image} />
@@ -112,7 +112,7 @@ export default class ProjectsShowcase extends React.Component {
                     //    <img src={link.image} />
                     //</a>
 
-                    return (<div className="project col s12 m6 l3">
+                    return (<div key={item.title} className="project col s12 m6 l3">
                             <div className="projectWrapper">
                                 <h3>{item.companyName}<br/>{item.title}</h3>
                                 <Carousel decorators={carouselDecorators} framePadding="0px 0px 20px 0px" cellAlign="center">{links}</Carousel>

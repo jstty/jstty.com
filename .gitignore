@@ -5,8 +5,7 @@
 node_modules
 jspm_packages
 
-photos
-
+/photos
 
 # Editors
 .idea
