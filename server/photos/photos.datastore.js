@@ -1,6 +1,7 @@
 var AWS = require('aws-sdk');
 var _   = require('lodash');
 var co  = require('co');
+var rp  = require('request-promise');
 
 
 module.exports = DataStore;
@@ -23,30 +24,39 @@ DataStore.prototype.$init = function($config){
     config.accessKeyId     = process.env.AWS_ACCESS_ID  || $config.aws.accessKeyId;
     config.secretAccessKey = process.env.AWS_SECRET_KEY || $config.aws.secretAccessKey;
 
-    //return this._initGetAllFiles(config)
-    //    .then(function(data){
-    //        this.files = data.files;
-    //        this.tree = data.tree;
-    //        this.urlBase = data.urlBase;
-    //    }.bind(this));
+    return this._initGetAllFiles(config)
+        .then(function(data){
+            this.allFiles = data.allFiles;
+            this.infoFiles = data.infoFiles;
+            this.tree = data.tree;
+            this.baseUrl = data.baseUrl;
+        }.bind(this));
 };
 
 DataStore.prototype.getFileList = function() {
+    var files = _.cloneDeep(this.allFiles);
+    files = _(files)
+        .values()
+        .sortBy(function(item) {
+          return item.size.large.height;
+        })
+        .value();
+
     var output = {
         total: 0,
         offset: 0,
-        urlBase: this.urlBase,
-        items: _.cloneDeep(this.files)
+        baseUrl: this.baseUrl,
+        items: files
     };
-    output.items.total = output.items.length;
+    output.total = output.items.length;
 
     return output;
 };
 
 DataStore.prototype.getTree = function() {
     var output = {
-        urlBase: this.urlBase,
-        tree: _.cloneDeep(this.tree)
+        baseUrl: this.baseUrl,
+        tree: _.cloneDeep(this.allTree)
     };
 
     return output;
@@ -81,26 +91,96 @@ DataStore.prototype._initGetAllFiles = function(config) {
     return this._getAllFiles(s3, config.batchSize)
         .then(function(files){
             var data =  {};
-
-            data.urlBase = "https://s3-"+config.region+".amazonaws.com/"+config.bucket+"/";
-            data.files = files;
-            data.tree = this._buildTree(files);
-
+            var baseUrl = "https://s3-"+config.region+".amazonaws.com/"+config.bucket+"/";
+            var infoFiles = _.filter(files, function(file){
+                return (file.path.indexOf('images-info.json') >= 0);
+            });
+            //data.infoTree = this._buildFullTree(data.infoFiles);
+            //this.L.info("infoFiles:", JSON.stringify(data.infoFiles, null, 2));
             //this.L.info("tree:", JSON.stringify(data.tree, null, 2));
+            //this.L.info("infoTree:", JSON.stringify(data.infoTree, null, 2));
 
-            return data;
+            return this._getAllFilesInfo(baseUrl, infoFiles, files)
+                .then(function(allFilesInfo) {
+                    data.baseUrl   = baseUrl;
+
+                    data.rawFiles  = files;
+                    data.infoFiles = infoFiles;
+                    data.infoTree  = this._buildFullTree( infoFiles );
+
+                    data.allFiles  = allFilesInfo;
+                    data.allTree   = this._buildFullTree(data.allFiles);
+
+                    return data;
+                }.bind(this));
         }.bind(this));
 };
 
-DataStore.prototype._buildTree = function(files) {
+
+// http://stackoverflow.com/questions/2332811/capitalize-words-in-string
+function Capitalize(str) {
+    return str.replace(/(?:^|\s)\S/g, function(a) { return a.toUpperCase(); });
+}
+
+DataStore.prototype._getAllFilesInfo = function(baseUrl, infoFiles, allRawFiles) {
+    var plist = _.map(infoFiles, function(infoFile){
+        //this.L.info('_buildFlatTree infoFile:', infoFile);
+        return rp(baseUrl + infoFile.path).then(JSON.parse)
+    }.bind(this));
+
+    return this.Q.all(plist)
+        .then(function(list){
+
+            //return _.reduce(list, _.merge);
+
+            // temp to remove '../' in front of all files
+            return _.reduce(list, function(allFiles, files){
+                files = _.mapKeys(files, function(file, key){
+                    var pkey = key.split('../');
+                    return pkey[1];
+                });
+
+                _.forEach(files, function(file, fkey){
+                    files[fkey].files = _.mapValues(file.files, function(filePath){
+                        var pfilePath = filePath.split('../');
+                        return pfilePath[1];
+                    });
+
+                    files[fkey].id = fkey;
+
+                    var parts = fkey.split('/');
+                    var filename = parts.pop().split('.')[0];
+                    // replace all underscores with spaces
+                    filename = filename.replace('_', ' ');
+                    files[fkey].title = Capitalize(filename);
+
+                    files[fkey].bytes = allRawFiles[fkey].bytes;
+                });
+
+                return _.merge(allFiles, files);
+            }, {});
+        }.bind(this));
+};
+
+
+DataStore.prototype._buildFullTree = function(files) {
     var tree = {};
 
-    _.forEach(files, function(file){
-        var pathA = file.name.split('/');
+    _.forEach(files, function(file, key){
+        var pathA = [];
+        if( _.isString(key) ){
+            pathA = key.split('/');
+        }
+        else if( _.isString(file.path) ) {
+            pathA = file.path.split('/');
+        }
+
         var fileName = pathA.pop();
 
         var treeN  = tree;
         _.forEach(pathA, function(name, i){
+            if(name === '..') return;
+
             if(!treeN.hasOwnProperty(name)) {
                 treeN[name] = {};
             }
@@ -124,7 +204,7 @@ DataStore.prototype._getAllFiles = function(s3, batchSize) {
         var continuationToken = null;
         var done = false;
         var batchSize = batchSize || 999;
-        var files = [];
+        var files = {};
 
         while(!done) {
             var data = yield self._getBatchFiles(s3, batchSize, continuationToken);
@@ -142,15 +222,13 @@ DataStore.prototype._getAllFiles = function(s3, batchSize) {
                 }
             });
 
-            files = files.concat(
-                _.map(data.Contents, function(obj){
-                    return {
-                        type: "image",
-                        name: obj.Key,
-                        size: obj.Size
-                    };
-                })
-            );
+            _.forEach(data.Contents, function(obj){
+                files[obj.Key] = {
+                    type: "image",
+                    path:  obj.Key,
+                    bytes: obj.Size
+                };
+            });
         }
 
         return files;

@@ -28,6 +28,10 @@ module.exports = {
         loader: 'url-loader?limit=100000'
       },
       {
+        test: /\.(css)$/,
+        loaders: ["style", "css"]
+      },
+      {
         test: /\.(sass|scss)$/,
         loaders: ["style", "css", "sass"]
       }

@@ -20,7 +20,8 @@
     "hyper.io": "^0.5.0-alpha4",
     "lodash": "^3.10.1",
     "moment": "^2.11.1",
-    "pdfmake": "^0.1.18"
+    "pdfmake": "^0.1.18",
+    "request-promise": "^3.0.0"
   },
   "devDependencies": {
     "gulp": "^3.9.0"
