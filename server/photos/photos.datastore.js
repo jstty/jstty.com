@@ -26,10 +26,14 @@ DataStore.prototype.$init = function($config){
 
     return this._initGetAllFiles(config)
         .then(function(data){
-            this.allFiles = data.allFiles;
+            this.baseUrl   = data.baseUrl;
+
+            this.rawFiles  = data.rawFiles;
             this.infoFiles = data.infoFiles;
-            this.tree = data.tree;
-            this.baseUrl = data.baseUrl;
+            this.infoTree  = data.infoTree;
+
+            this.allFiles  = data.allFiles;
+            this.allTree   = data.allTree;
         }.bind(this));
 };
 
@@ -77,7 +81,6 @@ store image data in SQLite DB for fast Q's (tree map)
 
 // TODO move this to it's own module
 DataStore.prototype._initGetAllFiles = function(config) {
-    // https://s3-us-west-1.amazonaws.com/jstty-photos/photos/2006/_best/lady_in_white.jpg
     var s3 = new AWS.S3({
         sslEnabled: true,
         region: config.region,
@@ -91,10 +94,23 @@ DataStore.prototype._initGetAllFiles = function(config) {
     return this._getAllFiles(s3, config.batchSize)
         .then(function(files){
             var data =  {};
-            var baseUrl = "https://s3-"+config.region+".amazonaws.com/"+config.bucket+"/";
+            var baseUrl = "https://s3-"+config.region+".amazonaws.com/"+config.bucket+"/photos";
             var infoFiles = _.filter(files, function(file){
                 return (file.path.indexOf('images-info.json') >= 0);
             });
+
+            // remove prepend 'photos'
+            files = _.mapKeys(files, function(file, key){
+                var pkey = key.split('photos');
+                return pkey[1];
+            });
+
+            // remove prepend 'photos'
+            _.forEach(infoFiles, function(file, key){
+                var pkey = file.path.split('photos');
+                infoFiles[key].path = pkey[1];
+            });
+
             //data.infoTree = this._buildFullTree(data.infoFiles);
             //this.L.info("infoFiles:", JSON.stringify(data.infoFiles, null, 2));
             //this.L.info("tree:", JSON.stringify(data.tree, null, 2));
@@ -136,13 +152,13 @@ DataStore.prototype._getAllFilesInfo = function(baseUrl, infoFiles, allRawFiles)
             // temp to remove '../' in front of all files
             return _.reduce(list, function(allFiles, files){
                 files = _.mapKeys(files, function(file, key){
-                    var pkey = key.split('../');
+                    var pkey = key.split('../photos');
                     return pkey[1];
                 });
 
                 _.forEach(files, function(file, fkey){
                     files[fkey].files = _.mapValues(file.files, function(filePath){
-                        var pfilePath = filePath.split('../');
+                        var pfilePath = filePath.split('../photos');
                         return pfilePath[1];
                     });
 
