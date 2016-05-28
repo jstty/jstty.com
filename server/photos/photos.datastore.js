@@ -94,20 +94,20 @@ DataStore.prototype._initGetAllFiles = function(config) {
     return this._getAllFiles(s3, config.batchSize)
         .then(function(files){
             var data =  {};
-            var baseUrl = "https://s3-"+config.region+".amazonaws.com/"+config.bucket+"/photos";
+            var baseUrl = "https://s3-"+config.region+".amazonaws.com/"+config.bucket+"/photos/";
             var infoFiles = _.filter(files, function(file){
                 return (file.path.indexOf('images-info.json') >= 0);
             });
 
             // remove prepend 'photos'
             files = _.mapKeys(files, function(file, key){
-                var pkey = key.split('photos');
+                var pkey = key.split('photos/');
                 return pkey[1];
             });
 
             // remove prepend 'photos'
             _.forEach(infoFiles, function(file, key){
-                var pkey = file.path.split('photos');
+                var pkey = file.path.split('photos/');
                 infoFiles[key].path = pkey[1];
             });
 
@@ -152,13 +152,13 @@ DataStore.prototype._getAllFilesInfo = function(baseUrl, infoFiles, allRawFiles)
             // temp to remove '../' in front of all files
             return _.reduce(list, function(allFiles, files){
                 files = _.mapKeys(files, function(file, key){
-                    var pkey = key.split('../photos');
+                    var pkey = key.split('../photos/');
                     return pkey[1];
                 });
 
                 _.forEach(files, function(file, fkey){
                     files[fkey].files = _.mapValues(file.files, function(filePath){
-                        var pfilePath = filePath.split('../photos');
+                        var pfilePath = filePath.split('../photos/');
                         return pfilePath[1];
                     });
 
@@ -167,7 +167,7 @@ DataStore.prototype._getAllFilesInfo = function(baseUrl, infoFiles, allRawFiles)
                     var parts = fkey.split('/');
                     var filename = parts.pop().split('.')[0];
                     // replace all underscores with spaces
-                    filename = filename.replace('_', ' ');
+                    filename = filename.replace(/_/g, ' ');
                     files[fkey].title = Capitalize(filename);
 
                     files[fkey].bytes = allRawFiles[fkey].bytes;

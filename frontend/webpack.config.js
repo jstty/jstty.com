@@ -2,7 +2,8 @@ var path = require('path');
 var webpack = require('webpack');
 
 module.exports = {
-  devtool: 'eval',
+  //devtool: 'eval',
+  devtool: 'source-map',
   entry: [
     'webpack-dev-server/client?http://localhost:3000',
     'webpack/hot/only-dev-server',
@@ -14,7 +15,12 @@ module.exports = {
     publicPath: '/'
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery",
+      "window.jQuery": "jquery"
+    })
   ],
   module: {
     loaders: [
@@ -28,12 +34,16 @@ module.exports = {
         loader: 'url-loader?limit=100000'
       },
       {
-        test: /\.(css)$/,
-        loaders: ["style", "css"]
-      },
-      {
-        test: /\.(sass|scss)$/,
+        test: /\.(sass|scss|css)$/,
         loaders: ["style", "css", "sass"]
+      },
+      //{
+      //  test: /\.css$/,
+      //  loaders: ["style", "css"]
+      //},
+      {
+        test: /\.less$/,
+        loaders: ["style", "css", "less"]
       }
     ]
   }
