@@ -6,7 +6,7 @@ var ScrollElement = Scroll.Element;
 import $ from 'jquery';
 import LinearProgress from 'material-ui/lib/linear-progress';
 
-import Gallery from './gallery';
+import GalleryTree from './galleryTree';
 //import PhotoTreeMap from './treemapSimple';
 //import PhotoTreeMap from './treemap';
 //import PhotoTreeMap from './treemap2';
@@ -18,10 +18,10 @@ export default class Photos extends React.Component {
 
     constructor() {
         super();
-        this.url = '/api/photos';
+        this.url = '/api/photos/tree';
         this.state = {
             ready: false,
-            photos: null
+            tree: null
         };
     }
 
@@ -31,9 +31,13 @@ export default class Photos extends React.Component {
             dataType: 'json',
             cache: false,
             success: (data) => {
+                data.tree = {
+                    '2006': data.tree['2006']
+                };
+
                 this.setState({
                     ready: true,
-                    photos: data
+                    data: data
                 });
 
             },
@@ -61,7 +65,7 @@ export default class Photos extends React.Component {
                         </div>
                         <div className={"loadWrapper loaded "+ (this.state.ready ? 'visable' : 'invisable')}>
                             <div className="row">
-                                <Gallery photos={this.state.photos} />
+                                <GalleryTree data={this.state.data} />
                             </div>
                         </div>
                     </section>
