@@ -98,11 +98,11 @@ export default class GalleryTree extends React.Component {
             height: treeItemPos.height,
         }
 
-        console.log("treeItemPos:", treeItemPos);
-        console.log("treeRowPos:", treeRowPos);
+        //console.log("treeItemPos:", treeItemPos);
+        //console.log("treeRowPos:", treeRowPos);
         //console.log("toggleGallaryGrid galleryGridCat:", this.galleryGridCat);
         //console.log('toggleGallaryGrid currentPhotos:', this.currentPhotos);
-        console.log("toggleGallaryGrid photos:", photos);
+        //console.log("toggleGallaryGrid photos:", photos);
 
         if (((this.galleryGridCat === null) ||
             (this.galleryGridCat === undefined)) &&
@@ -140,7 +140,7 @@ export default class GalleryTree extends React.Component {
             gridItemElm.css('top', diff.top+'px');
         }
 
-        console.log("galleryGridCat:", this.galleryGridCat, ', photos:', this.currentPhotos);
+        //console.log("galleryGridCat:", this.galleryGridCat, ', photos:', this.currentPhotos);
     }
 
     getRenderList(data){
@@ -236,7 +236,9 @@ export default class GalleryTree extends React.Component {
 
         if(photos) {
             return (<div>
-                <h4>{photos.title}<sub>{'(' + photos.total + ' photos)'}</sub></h4>
+                <a href="javascript:;" onClick={this.toggleGallaryGrid.bind(this, photos.cat)}>
+                    <h4><i className="fa fa-angle-left" /> {photos.title}<sub>{'(' + photos.total + ' photos)'}</sub></h4>
+                </a>
                 <GalleryGrid photos={photos} />
             </div>);
         } else {
@@ -254,11 +256,10 @@ export default class GalleryTree extends React.Component {
                          className="gallery-tree-item-rows g-visable">
                         {this.getRenderList()}
                     </div>
-                    <a id={'gallery-grid'}
-                       className="gallery-tree-grid-item g-hidden"
-                       href="javascript:;" onClick={this.toggleGallaryGrid.bind(this, this.galleryGridCat)}>
+                    <div id={'gallery-grid'}
+                       className="gallery-tree-grid-item g-hidden">
                         {this.renderGalleryGrid(this.currentPhotos)}
-                    </a>
+                    </div>
                 </div>
             </div>);
         } else {
