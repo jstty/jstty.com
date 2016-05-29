@@ -76,22 +76,32 @@ export default class GalleryTree extends React.Component {
         var $thisElm = $(ReactDOM.findDOMNode(this));
 
         var gridItemElm = $thisElm.find("#gallery-grid");
-        var treeItemElm = $thisElm.find("#gallery-tree");
-        var treeItemPos = treeItemElm.offset() || {};
+        //var treeItemElm = $thisElm.find("#gallery-tree");
+        var treeItemElm = $thisElm.find("#gallery-tree-item-"+photos.cat);
+        var allTreeItemElm = $thisElm.find(".gallery-tree-item");
+
+        var treeItemPos = treeItemElm.offset() || { left: 0, right: 0 };
+        //var treeItemPos = treeItemElm.position() || { left: 0, right: 0 };
         treeItemPos.width = treeItemElm.outerWidth();
         treeItemPos.height = treeItemElm.outerHeight();
 
         var treeRowElm = $thisElm;
-        var treeRowPos = treeRowElm.offset() || {};
+        var treeRowPos = treeRowElm.offset() || { left: 0, right: 0 };
+        //var treeRowPos = treeRowElm.position() || { left: 0, right: 0 };
         treeRowPos.width = treeRowElm.outerWidth();
         treeRowPos.height = treeRowElm.outerHeight();
 
-        //console.log("treeItemPos:", treeItemPos);
-        //console.log("treeRowPos:", treeRowPos);
-        //console.log("galleryGridCat:", this.galleryGridCat, ', photos:', photos);
+        var diff = {
+            left: treeItemPos.left - treeRowPos.left,
+            right: treeItemPos.right - treeRowPos.right,
+            width: treeItemPos.widht,
+            height: treeItemPos.height,
+        }
 
-        console.log("toggleGallaryGrid galleryGridCat:", this.galleryGridCat);
-        console.log('toggleGallaryGrid currentPhotos:', this.currentPhotos);
+        console.log("treeItemPos:", treeItemPos);
+        console.log("treeRowPos:", treeRowPos);
+        //console.log("toggleGallaryGrid galleryGridCat:", this.galleryGridCat);
+        //console.log('toggleGallaryGrid currentPhotos:', this.currentPhotos);
         console.log("toggleGallaryGrid photos:", photos);
 
         if (((this.galleryGridCat === null) ||
@@ -101,18 +111,33 @@ export default class GalleryTree extends React.Component {
             this.currentPhotos = photos;
             this.setState({});
 
-            treeItemElm.removeClass('g-visable');
-            treeItemElm.addClass('g-hidden');
-            gridItemElm.addClass('g-visable');
-            gridItemElm.removeClass('g-hidden');
+            gridItemElm.css('left', diff.left+'px');
+            gridItemElm.css('top', diff.top+'px');
+            gridItemElm.css('transition', 'opacity 500ms ease-in-out');
+
+            setTimeout(function(){
+                // show grid, hide tree
+                allTreeItemElm.removeClass('g-visable');
+                allTreeItemElm.addClass('g-hidden');
+
+                gridItemElm.css('transition', 'opacity 150ms ease-in-out, width 250ms ease-in-out, top 500ms ease-in-out, left 500ms ease-in-out');
+                gridItemElm.addClass('g-visable');
+                gridItemElm.removeClass('g-hidden');
+                gridItemElm.css('left', 0);
+                gridItemElm.css('top', 0);
+            }, 10);
         } else {
             this.galleryGridCat = null;
             this.currentPhotos = null;
 
-            treeItemElm.removeClass('g-hidden');
-            treeItemElm.addClass('g-visable');
+            // show all trees, hide grid
+            allTreeItemElm.removeClass('g-hidden');
+            allTreeItemElm.addClass('g-visable');
+
             gridItemElm.addClass('g-hidden');
             gridItemElm.removeClass('g-visable');
+            gridItemElm.css('left', diff.left+'px');
+            gridItemElm.css('top', diff.top+'px');
         }
 
         console.log("galleryGridCat:", this.galleryGridCat, ', photos:', this.currentPhotos);
@@ -130,7 +155,7 @@ export default class GalleryTree extends React.Component {
                 photos.total = photos.items.length;
 
                 return (
-                    <a className="galleryTreeRow" href="javascript:;" onClick={this.toggleGallaryGrid.bind(this, photos)}>
+                    <a id={"gallery-tree-item-"+photos.cat} className="gallery-tree-item" href="javascript:;" onClick={this.toggleGallaryGrid.bind(this, photos)}>
                         <h4>{photos.title}<sub>{'(' + photos.total + ' photos)'}</sub></h4>
                         <div className="cat-photo-wrapper">
                             {this.renderActiveImages(photos.baseUrl, photos.cat)}
@@ -224,13 +249,13 @@ export default class GalleryTree extends React.Component {
         if(this.props.data) {
             return (<div className="photoGalleryTree">
 
-                <div className="photoGalleryTreeWrapper">
+                <div className="photo-gallery-tree-wrapper">
                     <div id={'gallery-tree'}
-                         className="gallery-tree-item g-visable">
+                         className="gallery-tree-item-rows g-visable">
                         {this.getRenderList()}
                     </div>
                     <a id={'gallery-grid'}
-                       className="gallery-tree-grid-item gallery-tree-item g-hidden"
+                       className="gallery-tree-grid-item g-hidden"
                        href="javascript:;" onClick={this.toggleGallaryGrid.bind(this, this.galleryGridCat)}>
                         {this.renderGalleryGrid(this.currentPhotos)}
                     </a>

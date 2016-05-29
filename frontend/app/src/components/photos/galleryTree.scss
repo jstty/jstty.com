@@ -4,32 +4,42 @@ $photoGalleryTreeTileWidth: 400px;
   padding: 10px;
   width: 100%;
 
-  .photoGalleryTreeWrapper {
-    justify-content: center;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    border: 1px solid yellow;
-
+  .photo-gallery-tree-wrapper {
+    //border: 1px solid yellow;
     position: relative;
     left: 0;
     top: 0;
     z-index: 105;
     width: 100%;
-    height: $photoGalleryTreeTileWidth;
+    //height: $photoGalleryTreeTileWidth;
+
+    .gallery-tree-item {
+      position: relative;
+      left: 0px;
+      top: 0px;
+      z-index: 101;
+      width: $photoGalleryTreeTileWidth;
+      //border: 1px solid red;
+
+      &.g-visable {
+        width: $photoGalleryTreeTileWidth;
+      }
+
+      &.g-hidden {
+        width: 0;
+      }
+
+      transition: width 250ms ease-in-out,
+                  opacity 150ms ease-in-out,
+                  top 500ms ease-in-out,
+                  left 500ms ease-in-out;
+    }
 
     .g-visable {
       opacity: 1;
-      //transform: scale(1);
-      width: $photoGalleryTreeTileWidth;
-      //border: 1px solid red;
     }
-
     .g-hidden {
       opacity: 0.0;
-      //transform: scale(0.50);
-      width: $photoGalleryTreeTileWidth;
-      //border: 1px solid yellow;
     }
 
     .gallery-tree-grid-item {
@@ -57,20 +67,18 @@ $photoGalleryTreeTileWidth: 400px;
       }
     }
 
-    .gallery-tree-item {
+    .gallery-tree-item-rows {
+      justify-content: center;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+
       position: relative;
       left: 0px;
       top: 0px;
-      border: 1px solid red;
       z-index: 101;
-      width: $photoGalleryTreeTileWidth;
+      //width: $photoGalleryTreeTileWidth;
       //height: $photoGalleryTreeTileWidth;
-
-      transition: width 150ms ease-in-out,
-                  //scale 1000ms ease-in-out,
-                  opacity 250ms ease-in-out,
-                  top 500ms ease-in-out,
-                  left 500ms ease-in-out;
     }
   }
 
@@ -97,7 +105,7 @@ $photoGalleryTreeTileWidth: 400px;
     }
   }
 
-  .galleryTreeRow {
+  .gallery-tree-item {
     //border-top: 2px solid gray;
     margin: 10px;
     float: left;
