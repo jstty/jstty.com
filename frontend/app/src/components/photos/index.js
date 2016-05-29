@@ -31,9 +31,10 @@ export default class Photos extends React.Component {
             dataType: 'json',
             cache: false,
             success: (data) => {
-                data.tree = {
-                    '2006': data.tree['2006']
-                };
+                //data.tree = {
+                //    '2006': data.tree['2006'],
+                //    '2007': data.tree['2007']
+                //};
 
                 this.setState({
                     ready: true,
