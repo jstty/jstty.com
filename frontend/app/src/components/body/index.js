@@ -20,10 +20,10 @@ export default class Body extends React.Component {
                     <ProjectsShowcase />
                 </section>
                 <section className="add-padding">
-                    <ProjectsList />
+                    <Photos />
                 </section>
                 <section className="add-padding">
-                    <Photos />
+                    <ProjectsList />
                 </section>
             </div>
         )
