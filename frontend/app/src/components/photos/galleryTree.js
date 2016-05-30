@@ -61,14 +61,17 @@ export default class GalleryTree extends React.Component {
             this.filesState[cat] = state;
         }.bind(this));
 
+        // TODO rework this so the variation changes per cycle, instead of being fixed from the start
         _.forEach(this.cats, function (cat) {
-            var time = 3000 + _.random(0, 2000);
-            //time = 5500;
+            var time = 5 + _.random(0, 10);
+            time *= 1000; // change to miliseconds
+
             //setTimeout(function () {
             setInterval(function () {
                 //console.log('init rotateActive:', cat);
                 this.rotateActive(cat);
             }.bind(this), time);
+
         }.bind(this));
     }
 

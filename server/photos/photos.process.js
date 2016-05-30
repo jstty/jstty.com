@@ -17,10 +17,16 @@ function PhotosProcess($logger, $q) {
 }
 
 PhotosProcess.prototype.$init = function(){
-    var dir = '../photos';
-
+    var dir = '../';
     this.L.info('Processing Images in Dir:', dir);
-    return this.processDir(dir, '.cache');
+
+    var prevDir = shell.pwd();
+    shell.cd(dir);
+
+    return this.processDir('photos', '.cache')
+        .then(function(){
+            shell.cd(prevDir);
+        });
 };
 
 PhotosProcess.prototype.processDir = function(dir, outSubDir) {
@@ -243,8 +249,12 @@ PhotosProcess.prototype.getImageInfo = function(filepath, outDir) {
             mid:      { width: 640,  height: -1 },
             large:    { width: 1280, height: -1 }
         },
-        exif: {}
+        exif: {},
+        bytes: 0
     };
+
+    var stats = fs.statSync(filepath)
+    imageInfo.bytes = stats["size"];
 
     gm(filepath).identify(function(err, features) {
         if (err) {
