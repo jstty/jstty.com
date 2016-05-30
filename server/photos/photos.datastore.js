@@ -183,9 +183,8 @@ DataStore.prototype._getAllFilesInfo = function(baseUrl, infoFiles, allRawFiles)
                     var filename = parts.pop().split('.')[0];
                     // replace all underscores with spaces
                     filename = filename.replace(/_/g, ' ');
+                    // add title, currently not present in processed images
                     files[fkey].title = Capitalize(filename);
-
-                    files[fkey].bytes = allRawFiles[fkey].bytes;
                 });
 
                 return _.merge(allFiles, files);
