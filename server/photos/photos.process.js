@@ -16,6 +16,11 @@ function PhotosProcess($logger, $q) {
     this.Q = $q;
 }
 
+/*
+TODO
+create manifest file in the root with the list of info files
+ */
+
 PhotosProcess.prototype.$init = function(){
     var dir = '../';
     this.L.info('Processing Images in Dir:', dir);
@@ -252,6 +257,13 @@ PhotosProcess.prototype.getImageInfo = function(filepath, outDir) {
         exif: {},
         bytes: 0
     };
+
+    /*
+        TODO
+        Add title, '_' -> ' ' and Capitalize words
+        Add Create date, mod date
+        Add MD5/SAH1 check sum?
+    */
 
     var stats = fs.statSync(filepath)
     imageInfo.bytes = stats["size"];
