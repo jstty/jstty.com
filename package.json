@@ -30,7 +30,7 @@
     "clean": "cd frontend && rm -rf node_modules && rm -rf dist && cd ../server && rm -rf node_modules && cd .. && rm -rf node_modules",
     "init": "npm install && cd frontend && npm install && cd ../server && npm install",
     "build": "cd frontend && npm run build",
-    "frontend": "cd frontend && node webpack.server.js",
+    "frontend": "cd frontend && npm run start",
     "predeploy": "npm run init && npm run build",
     "deploy": "eb deploy",
     "start": "node app"

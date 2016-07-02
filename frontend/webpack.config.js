@@ -30,9 +30,16 @@ module.exports = {
         include: path.join(__dirname, 'app/src')
       },
       {
-        test: /\.(jpg|jpeg|png|woff|woff2|eot|ttf|svg)(\?.*$|$)/,
+        test: /\.(jpe?g|png|gif|ttf|svg|woff|woff2|eot)(\?.*$|$)/,
         loader: 'url-loader?limit=100000'
       },
+      //{
+      //  test: /\.(jpe?g|png|gif|ttf|svg)$/i,
+      //  loaders: [
+      //    'file?hash=sha512&digest=hex&name=[hash].[ext]',
+      //    'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false'
+      //  ]
+      //},
       {
         test: /\.(sass|scss|css)$/,
         loaders: ["style", "css", "sass"]
