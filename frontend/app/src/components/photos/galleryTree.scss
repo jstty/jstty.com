@@ -29,10 +29,8 @@ $photoGalleryTreeTileWidth: 400px;
         //width: 0;
       }
 
-      transition: width 250ms ease-in-out,
-                  opacity 150ms ease-in-out,
-                  top 500ms ease-in-out,
-                  left 500ms ease-in-out;
+      transition: opacity 150ms ease-in-out, height 250ms ease-in-out, width 250ms ease-in-out, top 500ms ease-in-out, left 500ms ease-in-out
+      //transition: width 250ms ease-in-out, opacity 150ms ease-in-out, top 500ms ease-in-out, left 500ms ease-in-out;
     }
 
     .g-visable {

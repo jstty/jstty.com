@@ -116,14 +116,15 @@ export default class GalleryTree extends React.Component {
 
             gridItemElm.css('left', diff.left+'px');
             gridItemElm.css('top', diff.top+'px');
-            gridItemElm.css('transition', 'opacity 500ms ease-in-out');
+            gridItemElm.css('transition', 'opacity 150ms ease-in-out');
+            //gridItemElm.css('transition', 'opacity 150ms ease-in-out, width 250ms ease-in-out, top 500ms ease-in-out, left 500ms ease-in-out');
 
             setTimeout(function(){
                 // show grid, hide tree
                 allTreeItemElm.removeClass('g-visable');
                 allTreeItemElm.addClass('g-hidden');
 
-                gridItemElm.css('transition', 'opacity 150ms ease-in-out, width 250ms ease-in-out, top 500ms ease-in-out, left 500ms ease-in-out');
+                gridItemElm.css('transition', 'opacity 150ms ease-in-out, height 250ms ease-in-out, width 250ms ease-in-out, top 500ms ease-in-out, left 500ms ease-in-out');
                 gridItemElm.addClass('g-visable');
                 gridItemElm.removeClass('g-hidden');
                 gridItemElm.css('left', 0);
@@ -136,6 +137,8 @@ export default class GalleryTree extends React.Component {
             // show all trees, hide grid
             allTreeItemElm.removeClass('g-hidden');
             allTreeItemElm.addClass('g-visable');
+
+            gridItemElm.css('transition', 'opacity 150ms ease-in-out, height 250ms ease-in-out, width 250ms ease-in-out, top 500ms ease-in-out, left 500ms ease-in-out');
 
             gridItemElm.addClass('g-hidden');
             gridItemElm.removeClass('g-visable');
