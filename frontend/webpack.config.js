@@ -1,5 +1,6 @@
 var path = require('path');
 var webpack = require('webpack');
+var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   //devtool: 'eval',
@@ -20,7 +21,11 @@ module.exports = {
       $: "jquery",
       jQuery: "jquery",
       "window.jQuery": "jquery"
-    })
+    }),
+    new CopyWebpackPlugin([
+      { from: 'app/backgrounds', to: 'backgrounds' },
+      { from: 'app/projects', to: 'projects' }
+    ])
   ],
   module: {
     loaders: [
@@ -30,7 +35,7 @@ module.exports = {
         include: path.join(__dirname, 'app/src')
       },
       {
-        test: /\.(jpe?g|png|gif|ttf|svg|woff|woff2|eot)(\?.*$|$)/,
+        test: /\.(jpg|jpeg|png|gif|ttf|svg|woff|woff2|eot)(\?.*$|$)/,
         loader: 'url-loader?limit=100000'
       },
       //{
@@ -53,6 +58,23 @@ module.exports = {
         loaders: ["style", "css", "less"]
       }
     ]
+  },
+
+  imageWebpackLoader: {
+    pngquant:{
+      quality: "65-90",
+      speed: 4
+    },
+    svgo:{
+      plugins: [
+        {
+          removeViewBox: false
+        },
+        {
+          removeEmptyAttrs: false
+        }
+      ]
+    }
   }
 
 };
