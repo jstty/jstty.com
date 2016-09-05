@@ -9,6 +9,7 @@ jspm_packages
 
 # Editors
 .idea
+.vscode
 
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
