@@ -66,6 +66,14 @@ var styles = {
       fontSize: 12,
       bold: true
     },
+    publicationHeader: {
+      fontSize: 11,
+      bold: true
+    },
+    publicationTitle: {
+      fontSize: 9,
+      bold: true
+    },
     quote: {
         italics: true
     },
@@ -125,8 +133,9 @@ module.exports = {
     computer: fs.readFileSync(__dirname+'/computer.ejs', 'utf8'),
     education: fs.readFileSync(__dirname+'/education.ejs', 'utf8'),
 
-    research: fs.readFileSync(__dirname+'/research.ejs', 'utf8'),
-    teaching: fs.readFileSync(__dirname+'/teaching.ejs', 'utf8'),
+    research:    fs.readFileSync(__dirname+'/research.ejs', 'utf8'),
+    publication: fs.readFileSync(__dirname+'/publication.ejs', 'utf8'),
+    teaching:    fs.readFileSync(__dirname+'/teaching.ejs', 'utf8'),
 
     line:     line,
     styles:   styles,

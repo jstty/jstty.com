@@ -30,8 +30,8 @@
     }
   ],
   "computer": {
-    "Languages": ["Javascript(5/6)", "HTML(4/5)", "SASS", "CSS", "JSON", "XML", "C/C++", "PHP", "Bash"],
-    "Web Dev": ["RESTful", "APIs", "node", "babel", "gulp", "angular 1.x", "react", "reflux", "polymer", "aurelia", "browserify", "webpack", "grunt", "bower", "jspm"],
+    "Languages": ["Javascript(5/6/7)", "HTML(4/5)", "SASS", "CSS", "JSON", "XML", "C/C++", "PHP", "Bash"],
+    "Web Dev": ["RESTful", "APIs", "node", "babel", "gulp", "angular 1.x", "vue", "react", "polymer", "aurelia", "browserify", "webpack", "grunt", "bower", "jspm"],
     "Protocol/Lib": ["HTTP", "XMPP", "XML-RPC", "MPEG", "AVI", "JPEG", "PNG", "DCT", "FFT"],
     "OS": ["Linux", "Mac OS X", "Windows"],
     "Tools": ["Git", "Xcode", "Sublime", "WebStorm", "Nginx", "HaProxy", "Photoshop"],
@@ -49,7 +49,7 @@
       "Company": "Cisco",
       "Link": "http://cisco.com",
       "Location": "San Jose, Ca - CTAO",
-      "Position": "Technical Leader/Architect",
+      "Position": "Sr. Technical Leader/Architect",
       "Projects": [
         {
           "Showcase": true,
@@ -89,13 +89,13 @@
         {
           "Showcase": true,
           "StartDate": "3/2014",
-          "Version": "Alpha v0.5",
+          "Version": "Beta v1.0",
           "Title": "Core Project Tools and UI libraries",
           "Description": "TODO",
           "Labels": [
           ],
           "Points": [
-            "Using: ES6, NodeJS, NPM, Gulp, Babel, Jenkins+Git Hooks, Jira+Git Hooks, Node-Webkit/Electron, Protractor/Karma/Testem, Supertest, Mocha, Chai, JsDoc, Swagger UI, Bower/Browserify/Webpack,  Yeoman, Yanpm, Web Components, RxJS",
+            "Using: ES6, NodeJS, NPM, Beelzebub, Gulp, Babel, Jenkins+Git Hooks, Jira+Git Hooks, Node-Webkit, Electron, Protractor/Karma/Testem, Ava, Supertest, Mocha, Chai, eslint, JsDoc, Swagger UI, Browserify, Webpack, Bower, Yeoman, Yanpm, Web Components, RxJS",
             "Lead architect and lead engineer",
             "Scalable, modular, plugin based CLI tool and UI libraries to accelerate projects development"
           ]
@@ -108,7 +108,7 @@
           "Labels": [
           ],
           "Points": [
-            "Using: Custom Core Project Tools, AngularJS 1.3/React+Reflux/Polymer, Module Components, D3, RESTful APIs, NodeJS, Hyper.io (Microservices), Adapter pattern",
+            "Using: Custom Core Project Tools, Vue 2, AngularJS 1.x, React, Polymer, Web Components, D3, three.js, OpenCV, Hololens, Unity, AR/VR, RESTful APIs, NodeJS, Hyper.io (Microservices), Adapter pattern",
             "Lead architect and lead engineer on several concurrent long and short term projects showcased at conferences all over the globe."
           ],
           "links": [
@@ -708,7 +708,9 @@
       ],
       "Publications": [
         {
-          "Desc": "Jim Blythe and Aaron Botello and Joseph Sutton and David Mazzocco and Jerry Lin and Marc Spraragen and Mike Zyda, \"Testing Cyber Security with Simulated Humans that Plan,\" 23rd Innovative Applications of Artificial Intelligence, (IAAI ’11).",
+          "Title": "Testing Cyber Security with Simulated Humans that Plan",
+          "Authors": "Jim Blythe and Aaron Botello and Joseph Sutton and David Mazzocco and Jerry Lin and Marc Spraragen and Mike Zyda",
+          "Publisher": "23rd Innovative Applications of Artificial Intelligence, (IAAI ’11)",
           "Link": "My Files/School/Research/Papers/11_IAAI/IAAI2011.pdf"
         }
       ]
@@ -789,23 +791,33 @@
       ],
       "Publications": [
         {
-          "Desc": "S. Behseta, C. Lam, J. Sutton, R.L. Webb, \"A Time-Series Intra-Video Collusion Attack on Frame-by-Frame Video Watermarking,\" 7th International Workshop, (IWDW ’08), LNCS 5450, pp. 31-44, 2008.",
+          "Title": "A Time-Series Intra-Video Collusion Attack on Frame-by-Frame Video Watermarking",
+          "Authors": "S. Behseta, C. Lam, J. Sutton, R.L. Webb",
+          "Publisher": "7th International Workshop, (IWDW ’08), LNCS 5450, pp. 31-44, 2008.",
           "Link": "My Files/School/Research/Papers/08_IWDW/Paper14-Camera.pdf"
         },
         {
-          "Desc": "J. Sutton and W. Li, \"Development of CPT M3D for Multiple Chemical Plume Tracing and Source Identification,\" Proc of the 2008 IEEE International Conference on Machine Learning and Applications (ICMLA’08), pp. 470-475, 2008.",
+          "Title": "Development of CPT M3D for Multiple Chemical Plume Tracing and Source Identification",
+          "Authors": "J. Sutton and W. Li",
+          "Publisher": "Proc of the 2008 IEEE International Conference on Machine Learning and Applications (ICMLA’08), pp. 470-475, 2008.",
           "Link": "My Files/School/Research/Papers/08_ICMLA/08_ICMLA_dev_CPT_M3D_3495a470.pdf"
         },
         {
-          "Desc": "W. Li, J. Sutton, and Y. Li, \"Integration of Chemical and Visual Sensors for Identifying an Odor Source in Near Shore Ocean Conditions ,\" Proc of the 2008 IEEE Interna- tional Conference on Machine Learning and Applications (ICMLA’08), pp. 444-449, 2008.",
+          "Title": "Integration of Chemical and Visual Sensors for Identifying an Odor Source in Near Shore Ocean Conditions",
+          "Authors": "W. Li, J. Sutton, and Y. Li",
+          "Publisher": "Proc of the 2008 IEEE Interna- tional Conference on Machine Learning and Applications (ICMLA’08), pp. 444-449, 2008.",
           "Link": "My Files/School/Research/Papers/08_ICMLA/08_ICMLA_chem_vision_3495a444.pdf"
         },
         {
-          "Desc": "W. Li, and J. Sutton, \"Optimization of Source Identification Algorithm Derived from Moth-Inspired Plume Tracing Strategies,\" Proc of the 2007 IEEE International Symposium on Computational Intelligence in Robotics and Automation (CIRA’07), pp. 79-84, 2007.",
+          "Title": "Optimization of Source Identification Algorithm Derived from Moth-Inspired Plume Tracing Strategies",
+          "Authors": "W. Li, and J. Sutton",
+          "Publisher": "Proc of the 2007 IEEE International Symposium on Computational Intelligence in Robotics and Automation (CIRA’07), pp. 79-84, 2007.",
           "Link": "My Files/School/Research/Papers/07_CIRA/CIRA07_09WeiLi.pdf"
         },
         {
-          "Desc": "Wei Li, MM Elgassier, T Rutledge, J Sutton, \"Design of Source Identification Zones for Declaring an Odor Source in Turbulent Fluid-Advected Environments,\" Proc of 2006 IEEE International Conference on Information Reuse and Integration (IRI’06), pp. 466-471, 2006.",
+          "Title": "Design of Source Identification Zones for Declaring an Odor Source in Turbulent Fluid-Advected Environments",
+          "Authors": "Wei Li, MM Elgassier, T Rutledge, J Sutton",
+          "Publisher": "Proc of 2006 IEEE International Conference on Information Reuse and Integration (IRI’06), pp. 466-471, 2006.",
           "Link": "My Files/School/Research/Papers/06_ICRI/ICRI_06.pdf"
         }
       ]

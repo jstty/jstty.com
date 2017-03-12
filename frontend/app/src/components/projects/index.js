@@ -123,14 +123,15 @@ export default class ProjectsList extends React.Component {
 
     render() {
         return (
-            <ScrollElement name="projects" className="projects-all">
-                <Parallax bgImage={backGroundImage} strength={300}>
-                    <h1>All Projects</h1>
-                </Parallax>
-                <div className="body">
-                    <p>Coming Soon...</p>
-                </div>
-            </ScrollElement>
+            <div></div>
+            // <ScrollElement name="projects" className="projects-all">
+            //     <Parallax bgImage={backGroundImage} strength={300}>
+            //         <h1>All Projects</h1>
+            //     </Parallax>
+            //     <div className="body">
+            //         <p>Coming Super Soon...</p>
+            //     </div>
+            // </ScrollElement>
         )
     }
 };
