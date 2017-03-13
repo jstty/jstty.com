@@ -97,13 +97,16 @@ PdfGen.prototype.resume = function(cv, type)
 
     if(type === 'full') {
       content.push( _.cloneDeep(this._resume_template.line) );
+      content.push( this.processTemplate('teaching', { list: this.filterProjects('Teaching', cv.projects) } ) );
+    
+      content.push( _.cloneDeep(this._resume_template.line) );
       content.push( this.processTemplate('research', { list: this.filterProjects('Research', cv.projects) } ) );
       
       content.push( _.cloneDeep(this._resume_template.line) );
       content.push( this.processTemplate('publication', { list: this.filterProjects('Research', cv.projects) } ) );
 
       content.push( _.cloneDeep(this._resume_template.line) );
-      content.push( this.processTemplate('teaching', { list: this.filterProjects('Teaching', cv.projects) } ) );
+      content.push( this.processTemplate('patents', { list: this.filterProjects('Industry', cv.projects) } ) );
     }
 
     content.push( _.cloneDeep(this._resume_template.line) );

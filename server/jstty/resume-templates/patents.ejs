@@ -2,44 +2,76 @@
   "columns": [
     {
       "width": <%- leftColumnWidth %>,
-      "text": "Education",
+      "text": "Patents",
       "style": "columnHeader"
     },
     [
       <% for(var i = 0; i < list.length; i++) { var item = list[i]; %>
+      <% if(item.Patents) { %>
       {
-        "width": "100%",
+        "width": <%- pageWidth - leftColumnWidth %>,
+        "margin": [0, 0, 0, -8],
+        "layout": "noBorders",
         "table": {
-          "widths": ["*", "auto"],
+          "widths": ["100%"],
           "body": [
             [
-              { "text": "<%- item.Degree %>", "style": "educationHeader"},
-              { "text":"<%- item.StartDate %> - <%- item.EndDate %>", "alignment":"right"}
-            ],
-            [
-              { "text": "<%- item.Name %>, <%- item.Location %>", "style": "thinTableRow"},
-              ""
-            ],
-            [
-              { "text": "GPA: <%- item.GPA %>, Honors: <%- item.Honors %>", "style": "thinTableRow"},
-              ""
-            ]
-            <% if(item.Award){ %>
-              ,[
-                { "text": "Award: <%- item.Award %>", "style": "thinTableRow" },
-                ""
+              [
+                {
+                  "margin": [0, 0, 0, 0],
+                  "layout": "noBorders",
+                  "table": {
+                    "widths": ["*"],
+                    "body": [
+                      [
+                        { "text": "<%- item.Company %>", "style":"patentHeader"}
+                      ]
+                    ]
+                  }
+                },
+                [
+                  <% for(var j = 0; j < item.Patents.length; j++) { var patent = item.Patents[j]; %>
+                  {
+                    "ul": [
+                      { "text": "<%- patent.Title %>", "style":"patentTitle"}
+                    ]
+                  },
+                  {
+                    "width": <%- pageWidth - leftColumnWidth %>,
+                    "table": {
+                      "widths": ["*"],
+                      "body": [
+                        [
+                          { "text": "<%- patent.Number %>"}
+                        ],
+                        [
+                          { "text": "<%- patent.Authors %>"}
+                        ]
+                      ]
+                    },
+                    "margin": [ <%- 2.5*linePadding %>, 0, 0, 0],
+                    "layout": "noBorders"
+                  }
+                  <% if(j+1 != item.Patents.length){ %>,<% } %>
+                  <% } %>
+                ],
+                {
+                    "text": "",
+                    "margin": [ 0, 5, 0, 0]
+                }
               ]
-            <% } %>
+            ]
           ]
-        },
-        "margin": [0, 2, 0, 0]
-        ,"layout": "noBorders"
-      },
-      {
-        "text": "",
-        "margin": [ 0, 0, 0, 0]
+        }
       }
-      <% if(i+1 != list.length){ %>,<% } %>
+      <% 
+      // TODO: fix. This only works if the next list item has a patent, but if there are gaps it will break.
+      // a proper fix would be to filter out list items that don't have 'Patents' before the loop
+      if(i+1 != list.length && list[i+1] && list[i+1].Patents){
+        %>,<%
+      }
+      %>
+      <% } %>
       <% } %>
     ]
   ],

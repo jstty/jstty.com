@@ -74,6 +74,14 @@ var styles = {
       fontSize: 9,
       bold: true
     },
+    patentHeader: {
+      fontSize: 11,
+      bold: true
+    },
+    patentTitle: {
+      fontSize: 9,
+      bold: true
+    },
     quote: {
         italics: true
     },
@@ -135,6 +143,7 @@ module.exports = {
 
     research:    fs.readFileSync(__dirname+'/research.ejs', 'utf8'),
     publication: fs.readFileSync(__dirname+'/publication.ejs', 'utf8'),
+    patents:     fs.readFileSync(__dirname+'/patents.ejs', 'utf8'),
     teaching:    fs.readFileSync(__dirname+'/teaching.ejs', 'utf8'),
 
     line:     line,
