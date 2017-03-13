@@ -31,10 +31,9 @@
   ],
   "computer": {
     "Languages": ["Javascript(5/6)", "HTML(4/5)", "CSS", "JSON", "SASS", "XML", "C/C++", "PHP", "Bash"],
-    "Web Dev": ["RESTful", "APIs", "node", "babel", "gulp", "angular 1.x", "vue", "react", "polymer", "aurelia", "browserify", "webpack", "grunt", "bower", "jspm"],
+    "Web Dev": ["RESTful", "APIs", "NodeJS", "Babel", "Gulp", "Angular 1.x", "Vue", "React", "Polymer", "Aurelia", "Browserify", "Webpack", "Grunt", "Bower", "JSpm"],
     "Protocol/Lib": ["HTTP", "XMPP", "XML-RPC", "MPEG", "AVI", "JPEG", "PNG", "DCT", "FFT"],
-    "OS": ["Linux", "Mac OS X", "Windows"],
-    "Tools": ["Git", "Xcode", "Sublime", "Visual Code", "WebStorm", "Nginx", "HaProxy", "Photoshop"],
+    "Tools": ["Linux", "Mac OS X", "Windows", "AWS", "Google Cloud", "Github", "TravisCI", "Docker", "Git", "Xcode", "Sublime", "Visual Code", "Nginx", "HaProxy", "Photoshop"],
     "Database": ["Couchbase", "Redis", "CouchDB", "SQlite", "MongoDB", "MySQL", "Oracle", "Cassandra", "Riak"]
   },
   "projects": [
@@ -81,7 +80,7 @@
           "Labels": [
           ],
           "Points": [
-            "Using: ES6, NodeJS, NPM, Beelzebub, Gulp, Babel, Jenkins+Git Hooks, Jira+Git Hooks, Node-Webkit, Electron, Protractor/Karma/Testem, Ava, Supertest, Mocha, Chai, eslint, JsDoc, Swagger UI, Browserify, Webpack, Bower, Yeoman, Yanpm, RxJS",
+            "Using: ES6, NodeJS, NPM, Beelzebub, Gulp, Babel, Jenkins+Git Hooks, Jira+Git Hooks, Node-Webkit, Electron, Docker, Protractor/Karma/Testem, Ava, Supertest, Mocha, Chai, eslint, JsDoc, Swagger UI, Browserify, Webpack, Bower, Yeoman, Yanpm, RxJS",
             "Scalable, modular, plugin based CLI tool and UI libraries to accelerate projects development"
           ]
         },
