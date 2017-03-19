@@ -7,7 +7,6 @@
     },
     [
       <% for(var i = 0; i < list.length; i++) { var item = list[i]; %>
-      <% if(item.Patents) { %>
       {
         "width": <%- pageWidth - leftColumnWidth %>,
         "margin": [0, 0, 0, -8],
@@ -32,9 +31,18 @@
                 [
                   <% for(var j = 0; j < item.Patents.length; j++) { var patent = item.Patents[j]; %>
                   {
-                    "ul": [
-                      { "text": "<%- patent.Title %>", "style":"patentTitle"}
-                    ]
+                    "width": <%- pageWidth - leftColumnWidth %>,
+                    "table": {
+                      "widths": ["auto", "*"],
+                      "body": [
+                        [
+                          { "text": "<%- patent.Title %>", "style":"patentTitle"},
+                          { "text": "<%- moment(patent.PublicationDate).format('M/YYYY') %>", "alignment":"right" }
+                        ]
+                      ]
+                    },
+                    "margin": [ <%- 2.5*linePadding %>, 0, 0, 0],
+                    "layout": "noBorders"
                   },
                   {
                     "width": <%- pageWidth - leftColumnWidth %>,
@@ -64,14 +72,11 @@
           ]
         }
       }
-      <% 
-      // TODO: fix. This only works if the next list item has a patent, but if there are gaps it will break.
-      // a proper fix would be to filter out list items that don't have 'Patents' before the loop
-      if(i+1 != list.length && list[i+1] && list[i+1].Patents){
+      <%
+      if(i+1 != list.length){
         %>,<%
       }
       %>
-      <% } %>
       <% } %>
     ]
   ],

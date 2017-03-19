@@ -34,8 +34,10 @@ DataStore.prototype.$init = function($config){
         batchSize: null,
         bucket: 'jstty-photos'
     };
-    config.accessKeyId     = process.env.AWS_ACCESS_ID  || $config.aws.accessKeyId;
-    config.secretAccessKey = process.env.AWS_SECRET_KEY || $config.aws.secretAccessKey;
+    // config.accessKeyId     = process.env.AWS_ACCESS_ID  || $config.aws.accessKeyId;
+    // config.secretAccessKey = process.env.AWS_SECRET_KEY || $config.aws.secretAccessKey;
+    config.accessKeyId     = $config.aws.accessKeyId;
+    config.secretAccessKey = $config.aws.secretAccessKey;
 
     return this._initGetAllFiles(config)
         .then(function(data){

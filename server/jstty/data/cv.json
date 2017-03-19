@@ -125,6 +125,9 @@
           "Title": "Addressing and managing an internal network of a virtual branch node",
           "Authors": "Spraggs; Simon James Trevor; (Hants, GB) ; Arunkumar; Nagaraj; (Saratoga, CA) ; Lakshmanan; Yegappan; (Fremont, CA) ; Persaud; Andrew; (San Jose, CA) ; Yeung; Michael; (San Jose, CA) ; Phillips; Andrew Robert; (Dubai, AE) ; Zhang; Lang; (San Jose, CA) ; O'Gorman; Michael F.; (San Carlos, CA) ; Sarbin; Brian Richard; (Santa Clara, CA) ; Sutton; Joe; (San Jose, CA) ; Singla; Vinay; (San Jose, CA)",
           "Number": "US 20160359805 A1",
+          "PublicationDate": "2014-09-18",
+          "FilingDate": "2014-03-14",
+          "PriorityDate": "2013-03-15",
           "Abstract": "A device is configured to support one or more virtual networking functions at a branch in a network. The device receives from a central control entity a command to deploy a particular virtual networking function, the command including or accompanied by a deployment file that identifies an external port at which the particular virtual networking function is accessed externally at the device. The device maps the external port to an internal port on an internal management network of the device, and stores a portmapping entry for the particular virtual networking function based on the mapping. The device sends to the central control entity a notification containing portmapping information that indicates the internal port to which the external port is mapped.",
           "Link": "http://appft1.uspto.gov/netacgi/nph-Parser?Sect1=PTO1&Sect2=HITOFF&d=PG01&p=1&u=/netahtml/PTO/srchnum.html&r=1&f=G&l=50&s1=20160359805.PGNR."
         }
@@ -429,8 +432,11 @@
       "Patents": [
         {
           "Title": "Delivering and consuming interactive video gaming content",
-          "Authors": "Boswell; Colin; (Millbrae, CA) ; Cronce; Scott; (Pacifica, CA) ; Grace; Owen; (Asheville, NC) ; Hilleman; Richard; (San Mateo, CA) ; Li; Lily; (Millbrae, CA) ; Liu; Qian; (Foster City, CA) ; McCabe; Joe; (Napa, CA) ; Medler; Ben; (San Francisco, CA) ; Sutton; Joseph; (Hayward, CA)",
+          "Authors": "Boswell; Colin; (Millbrae, CA); Cronce; Scott; (Pacifica, CA); Grace; Owen; (Asheville, NC); Hilleman; Richard; (San Mateo, CA); Li; Lily; (Millbrae, CA) ; Liu; Qian; (Foster City, CA); McCabe; Joe; (Napa, CA); Medler; Ben; (San Francisco, CA); Sutton; Joseph; (Hayward, CA)",
           "Number": "US 20140274384 A1",
+          "PublicationDate": "2016-12-08",
+          "FilingDate": "2016-06-03",
+          "PriorityDate": "2015-06-05",
           "Abstract": "Delivering and consuming interactive video gaming content is described. An operation for such may include transmitting, over a network to a video content decoding appliance, one or more video frames of a video content item associated with a session related to an interactive video game; receiving, over the network, a game control input from a client computing device associated with the session; and modifying, in view of the game control input, a state of the session.",
           "Link": "http://appft1.uspto.gov/netacgi/nph-Parser?Sect1=PTO1&Sect2=HITOFF&d=PG01&p=1&u=/netahtml/PTO/srchnum.html&r=1&f=G&l=50&s1=20140274384.PGNR."
         }

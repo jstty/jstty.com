@@ -22,6 +22,7 @@ PdfGen.prototype.$init = function($q) {
 PdfGen.prototype.processTemplate = function(templateName, data) {
   var temp = this._resume_template[templateName];
   data = data || {};
+  data.moment = moment; // add moment so it can be used in the templates
 
   try {
     if(_.isString(temp)) {
@@ -106,7 +107,9 @@ PdfGen.prototype.resume = function(cv, type)
       content.push( this.processTemplate('publication', { list: this.filterProjects('Research', cv.projects) } ) );
 
       content.push( _.cloneDeep(this._resume_template.line) );
-      content.push( this.processTemplate('patents', { list: this.filterProjects('Industry', cv.projects) } ) );
+      var patentList = this.filterProjects('Industry', cv.projects);
+      patentList = _.filter(patentList, "Patents");
+      content.push( this.processTemplate('patents', { list: patentList } ) );
     }
 
     content.push( _.cloneDeep(this._resume_template.line) );
