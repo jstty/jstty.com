@@ -425,6 +425,15 @@
             "projects/ea/sf_io/play2.png"
           ]
         }
+      ],
+      "Patents": [
+        {
+          "Title": "Delivering and consuming interactive video gaming content",
+          "Authors": "Boswell; Colin; (Millbrae, CA) ; Cronce; Scott; (Pacifica, CA) ; Grace; Owen; (Asheville, NC) ; Hilleman; Richard; (San Mateo, CA) ; Li; Lily; (Millbrae, CA) ; Liu; Qian; (Foster City, CA) ; McCabe; Joe; (Napa, CA) ; Medler; Ben; (San Francisco, CA) ; Sutton; Joseph; (Hayward, CA)",
+          "Number": "US 20140274384 A1",
+          "Abstract": "Delivering and consuming interactive video gaming content is described. An operation for such may include transmitting, over a network to a video content decoding appliance, one or more video frames of a video content item associated with a session related to an interactive video game; receiving, over the network, a game control input from a client computing device associated with the session; and modifying, in view of the game control input, a state of the session.",
+          "Link": "http://appft1.uspto.gov/netacgi/nph-Parser?Sect1=PTO1&Sect2=HITOFF&d=PG01&p=1&u=/netahtml/PTO/srchnum.html&r=1&f=G&l=50&s1=20140274384.PGNR."
+        }
       ]
     },
     {
