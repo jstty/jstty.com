@@ -30,10 +30,10 @@
     }
   ],
   "computer": {
-    "Languages": ["Javascript(5/6)", "HTML(4/5)", "CSS", "JSON", "SASS", "XML", "C/C++", "PHP", "Bash"],
+    "Languages": ["Javascript(5/6)", "HTML(4/5)", "CSS", "JSON", "SASS", "XML", "C/C++", "C#", "Java", "PHP", "Python", "Bash"],
     "Web Dev": ["RESTful", "APIs", "NodeJS", "Babel", "Gulp", "Angular 1.x", "Vue", "React", "Polymer", "Aurelia", "Browserify", "Webpack", "Grunt", "Bower", "JSpm"],
     "Protocol/Lib": ["HTTP", "XMPP", "XML-RPC", "MPEG", "AVI", "JPEG", "PNG", "DCT", "FFT"],
-    "Tools": ["Linux", "Mac OS X", "Windows", "AWS", "Google Cloud", "Github", "TravisCI", "Docker", "Git", "Xcode", "Sublime", "Visual Code", "Nginx", "HaProxy", "Photoshop"],
+    "Tools": ["Linux", "Mac OS X", "Windows", "AWS", "Google Cloud", "Github", "TravisCI", "Docker", "Kubernetes", "Git", "SVN", "Perforce", "Xcode", "Nginx", "HaProxy", "Photoshop"],
     "Database": ["Couchbase", "Redis", "CouchDB", "SQlite", "MongoDB", "MySQL", "Oracle", "Cassandra", "Riak"]
   },
   "projects": [
@@ -58,7 +58,7 @@
           "Labels": [
           ],
           "Points": [
-            "Using: ES5/6, Vue 2, AngularJS 1.x, React, Polymer, Web Components, D3, Three.js, OpenCV, Unity, NodeJS, Hyper.io (Microservices), AR/VR, RESTful APIs, Adapter pattern",
+            "Using: ES5/6, Vue 2, AngularJS 1.x, React, Polymer, Web Components, D3, Three.js, OpenCV, Unity, NodeJS, Hyper.io (Microservices), Kubernetes, AR/VR, RESTful APIs, Adapter pattern",
             "Technical leader, manager, mentor, architect, resource/project planning and created development methodologies",
             "Released over twenty projects ranging from long (1.5 years) to short (2-3 months) term"
           ],
@@ -80,7 +80,7 @@
           "Labels": [
           ],
           "Points": [
-            "Using: ES6, NodeJS, NPM, Beelzebub, Gulp, Babel, Jenkins+Git Hooks, Jira+Git Hooks, Node-Webkit, Electron, Docker, Protractor/Karma/Testem, Ava, Supertest, Mocha, Chai, eslint, JsDoc, Swagger UI, Browserify, Webpack, Bower, Yeoman, Yanpm, RxJS",
+            "Using: ES6, NodeJS, NPM, Beelzebub, Gulp, Babel, JenkinsCI, Jira, Node-Webkit, Electron, AWS, Docker, Protractor/Karma/Testem, Ava, Supertest, Mocha, Chai, eslint, JsDoc, Swagger UI, Browserify, Webpack, Bower, Yeoman, Yanpm, RxJS",
             "Scalable, modular, plugin based CLI tool and UI libraries to accelerate projects development"
           ]
         },
