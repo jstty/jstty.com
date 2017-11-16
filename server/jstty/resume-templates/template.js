@@ -15,7 +15,7 @@ var header = {
 var contact = {
     width: '100%',
     table: {
-        widths: [26, 1, 'auto', '*', 36, 2, 'auto'],
+        widths: [27, 1, 'auto', '*', 36, 2, 'auto'],
         body: [
             ['phone', ':', '<%= phone %>'         ,'', 'webfolio', ':', { text: '<%= webfolio %>'} ],
             ['email', ':', { text:'<%= email %>'} ,'', 'github', ':', {text: '<%= github %>'} ]
