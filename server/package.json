@@ -1,13 +1,89 @@
 {
-  "name": "jstty.server",
-  "dependencies": {},
-  "devDependencies": {
-    "gm": "^1.22.0",
-    "imagemagick": "^0.1.3",
-    "progress": "^1.1.8",
-    "shelljs": "^0.7.0"
+  "name": "jstty-com-server",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jstty/jstty.com",
+    "current-hash": ""
   },
+  "main": "lib/firebase.functions.js",
   "engines": {
-    "node": ">=4.0"
-  }
+    "node": "10"
+  },
+  "scripts": {
+    "lint": "tslint --project tsconfig.json",
+    "build": "rm -rf lib && tsc",
+    "fb.serve": "npm run build && firebase emulators:start",
+    "fb.shell": "npm run build && firebase functions:shell",
+    "fb.start": "npm run fb.shell",
+    "fb.logs": "firebase functions:log",
+    "start:dev": "nodemon",
+    "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:cov": "jest --coverage",
+    "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
+    "test:e2e": "jest --config ./test/jest-e2e.json"
+  },
+  "dependencies": {
+    "@nestjs/common": "^7.1.1",
+    "@nestjs/config": "^0.6.1",
+    "@nestjs/core": "^7.1.1",
+    "@nestjs/microservices": "^7.1.1",
+    "@nestjs/platform-express": "^7.1.1",
+    "@nestjs/websockets": "^7.1.1",
+    "@types/jasmine": "^3.5.10",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "firebase": "^8.1.1",
+    "firebase-admin": "^9.4.1",
+    "firebase-functions": "^3.11.0",
+    "lodash": "^4.17.15",
+    "moment": "^2.26.0",
+    "phonetic": "^0.1.1",
+    "reflect-metadata": "^0.1.13",
+    "rimraf": "^3.0.2",
+    "rxjs": "^6.5.4",
+    "tslint": "^6.1.2",
+    "uuid": "^8.1.0"
+  },
+  "devDependencies": {
+    "@nestjs/cli": "^7.2.0",
+    "@nestjs/schematics": "^7.0.0",
+    "@nestjs/testing": "^7.1.1",
+    "@types/express": "^4.17.6",
+    "@types/jest": "25.1.4",
+    "@types/node": "^13.13.9",
+    "@types/supertest": "^2.0.8",
+    "@typescript-eslint/eslint-plugin": "^2.23.0",
+    "@typescript-eslint/parser": "^2.23.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-import": "^2.20.1",
+    "jest": "^25.1.0",
+    "nodemon": "^2.0.4",
+    "prettier": "^1.19.1",
+    "supertest": "^4.0.2",
+    "ts-jest": "^26.4.4",
+    "ts-loader": "^6.2.2",
+    "ts-node": "^8.6.2",
+    "tsconfig-paths": "^3.9.0",
+    "typescript": "^3.9.3"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "rootDir": "src",
+    "testRegex": ".spec.ts$",
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest"
+    },
+    "coverageDirectory": "../coverage",
+    "testEnvironment": "node"
+  },
+  "private": true
 }

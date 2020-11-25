@@ -1,11 +1,26 @@
+# firebase configs certs
+.cert
+.firebase
+
 # OS files
 .DS_Store
 
-# dependent packages
-node_modules
-jspm_packages
+.db
+.notes
+.backup
+*.apk
 
-/photos
+**/release/app.aab
+
+# node/npm files
+package-lock.json
+node_modules
+npm-debug.log
+
+# forever
+out.log
+err.log
+forever.log
 
 # Editors
 .idea

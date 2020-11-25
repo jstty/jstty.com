@@ -1,0 +1,84 @@
+{
+  "columns": [
+    {
+      "width": <%- leftColumnWidth %>,
+      "text": "Patents",
+      "style": "columnHeader"
+    },
+    [
+      <% for(var i = 0; i < list.length; i++) { var item = list[i]; %>
+      {
+        "width": <%- pageWidth - leftColumnWidth %>,
+        "margin": [0, 0, 0, -8],
+        "layout": "noBorders",
+        "table": {
+          "widths": ["100%"],
+          "body": [
+            [
+              [
+                {
+                  "margin": [0, 0, 0, 0],
+                  "layout": "noBorders",
+                  "table": {
+                    "widths": ["*"],
+                    "body": [
+                      [
+                        { "text": "<%- item.Company %>", "style":"patentHeader"}
+                      ]
+                    ]
+                  }
+                },
+                [
+                  <% for(var j = 0; j < item.Patents.length; j++) { var patent = item.Patents[j]; %>
+                  {
+                    "width": <%- pageWidth - leftColumnWidth %>,
+                    "table": {
+                      "widths": ["auto", "*"],
+                      "body": [
+                        [
+                          { "text": "<%- patent.Title %>", "style":"patentTitle"},
+                          { "text": "<%- moment(patent.PublicationDate).format('M/YYYY') %>", "alignment":"right" }
+                        ]
+                      ]
+                    },
+                    "margin": [ <%- 2.5*linePadding %>, 0, 0, 0],
+                    "layout": "noBorders"
+                  },
+                  {
+                    "width": <%- pageWidth - leftColumnWidth %>,
+                    "table": {
+                      "widths": ["*"],
+                      "body": [
+                        [
+                          { "text": "<%- patent.Number %>"}
+                        ],
+                        [
+                          { "text": "<%- patent.Authors %>"}
+                        ]
+                      ]
+                    },
+                    "margin": [ <%- 2.5*linePadding %>, 0, 0, 0],
+                    "layout": "noBorders"
+                  }
+                  <% if(j+1 != item.Patents.length){ %>,<% } %>
+                  <% } %>
+                ],
+                {
+                    "text": "",
+                    "margin": [ 0, 5, 0, 0]
+                }
+              ]
+            ]
+          ]
+        }
+      }
+      <%
+      if(i+1 != list.length){
+        %>,<%
+      }
+      %>
+      <% } %>
+    ]
+  ],
+  "columnGap": <%- linePadding %>
+}
