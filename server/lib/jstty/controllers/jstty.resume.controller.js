@@ -41,13 +41,11 @@ let JsttyResumeController = JsttyResumeController_1 = class JsttyResumeControlle
                 bolditalics: fontsDir + '/Roboto-Italic.ttf'
             }
         };
-        console.log('fontsDir:', fontsDir);
         this.pdf = new pdf_1.default(this.logger);
         this.pdf.$init(resume_template, fonts);
     }
     resumeShowcase(res) {
         return __awaiter(this, void 0, void 0, function* () {
-            this.logger.log('resume showcase');
             let cv = yield this.jsttyModel.getShowcaseCV();
             let cvPDF = yield this.pdf.resume(cv, 'sp');
             let headers = {
@@ -61,7 +59,6 @@ let JsttyResumeController = JsttyResumeController_1 = class JsttyResumeControlle
     }
     resumeFull(res) {
         return __awaiter(this, void 0, void 0, function* () {
-            this.logger.log('resume full');
             let cv = yield this.jsttyModel.getFullCV();
             let cvPDF = yield this.pdf.resume(cv, 'full');
             let headers = {

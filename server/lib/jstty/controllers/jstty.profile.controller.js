@@ -29,13 +29,11 @@ let JsttyProfileController = JsttyProfileController_1 = class JsttyProfileContro
     }
     projectsAll() {
         return __awaiter(this, void 0, void 0, function* () {
-            this.logger.log('projects all');
             return yield this.jsttyModel.getProjectsAll();
         });
     }
     projectsShowcase() {
         return __awaiter(this, void 0, void 0, function* () {
-            this.logger.log('projects showcase');
             return yield this.jsttyModel.getProjectsShowcase();
         });
     }
