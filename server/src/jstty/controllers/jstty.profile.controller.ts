@@ -13,7 +13,7 @@ import {
 
     @Get('/api/projects')
     async projectsAll(): Promise<object> {
-      this.logger.log('projects all');
+      // this.logger.log('projects all');
 
       return await this.jsttyModel.getProjectsAll();
     }
@@ -21,7 +21,7 @@ import {
     
     @Get('/api/projects/showcase')
     async projectsShowcase(): Promise<object> {
-      this.logger.log('projects showcase');
+      // this.logger.log('projects showcase');
 
       return await this.jsttyModel.getProjectsShowcase();
     }

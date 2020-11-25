@@ -10,7 +10,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.JsttyModel = void 0;
-const lodash_1 = require("lodash");
+let _ = require('lodash');
 const common_1 = require("@nestjs/common");
 const jstty_datastore_1 = require("../datastore/jstty.datastore");
 class JsttyModel {
@@ -38,8 +38,8 @@ class JsttyModel {
                 limit: 100,
                 items: []
             };
-            lodash_1.default.forEach(projects, function (company) {
-                lodash_1.default.forEach(company.Projects, function (p) {
+            _.forEach(projects, function (company) {
+                _.forEach(company.Projects, function (p) {
                     var project = {
                         companyName: company.Company,
                         companyLink: company.Link,
@@ -49,7 +49,7 @@ class JsttyModel {
                         labels: p.Labels,
                         links: null
                     };
-                    if (p.links && lodash_1.default.isArray(p.links)) {
+                    if (p.links && _.isArray(p.links)) {
                         project.links = p.links;
                     }
                     output.items.push(project);
@@ -68,8 +68,8 @@ class JsttyModel {
                 limit: 100,
                 items: []
             };
-            lodash_1.default.forEach(projects, function (company) {
-                lodash_1.default.forEach(company.Projects, function (p) {
+            _.forEach(projects, function (company) {
+                _.forEach(company.Projects, function (p) {
                     var project = {
                         companyName: company.Company,
                         companyLink: company.Link,
@@ -79,7 +79,7 @@ class JsttyModel {
                         labels: p.Labels,
                         links: null
                     };
-                    if (p.links && lodash_1.default.isArray(p.links)) {
+                    if (p.links && _.isArray(p.links)) {
                         project.links = p.links;
                     }
                     output.items.push(project);

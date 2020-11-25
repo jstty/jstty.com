@@ -51,7 +51,7 @@ PdfGen.prototype.filterProjects = function (category, projectList) {
     return list;
 };
 PdfGen.prototype.resume = function (cv, type) {
-    return Promise.promise(function (resolve, reject, notify) {
+    return new Promise(function (resolve, reject, notify) {
         var content = [];
         content.push(this.processTemplate('header', cv.header));
         content.push(this.processTemplate('contact', cv.contact));

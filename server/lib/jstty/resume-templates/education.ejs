@@ -1,0 +1,47 @@
+{
+  "columns": [
+    {
+      "width": <%- leftColumnWidth %>,
+      "text": "Education",
+      "style": "columnHeader"
+    },
+    [
+      <% for(var i = 0; i < list.length; i++) { var item = list[i]; %>
+      {
+        "width": "100%",
+        "table": {
+          "widths": ["*", "auto"],
+          "body": [
+            [
+              { "text": "<%- item.Degree %>", "style": "educationHeader"},
+              { "text":"<%- item.StartDate %> - <%- item.EndDate %>", "alignment":"right"}
+            ],
+            [
+              { "text": "<%- item.Name %>, <%- item.Location %>", "style": "thinTableRow"},
+              ""
+            ],
+            [
+              { "text": "GPA: <%- item.GPA %>, Honors: <%- item.Honors %>", "style": "thinTableRow"},
+              ""
+            ]
+            <% if(item.Award){ %>
+              ,[
+                { "text": "Award: <%- item.Award %>", "style": "thinTableRow" },
+                ""
+              ]
+            <% } %>
+          ]
+        },
+        "margin": [0, 2, 0, 0]
+        ,"layout": "noBorders"
+      },
+      {
+        "text": "",
+        "margin": [ 0, 0, 0, 0]
+      }
+      <% if(i+1 != list.length){ %>,<% } %>
+      <% } %>
+    ]
+  ],
+  "columnGap": <%- linePadding %>
+}

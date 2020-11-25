@@ -1,3 +1,4 @@
+import { resolve } from 'path';
 import { 
     Controller, 
     Get, 
@@ -7,14 +8,11 @@ import {
     Body, 
     Param, 
     Req,
+    Res,
     Logger } from '@nestjs/common';
+  import { Response } from 'express';
   import { JsttyModel } from '../model/jstty.model';
   import PDF from '../pdf';
-  
-  // export class GameInit {
-  //   content: string;
-  //   submittedBy: string;
-  // }
   
   @Controller()
   export class JsttyResumeController {
@@ -24,9 +22,8 @@ import {
     constructor(private readonly jsttyModel: JsttyModel) {
         let resume_template = require('../resume-templates/template');
 
-        var path = require('path');
-        var fontsDir = path.resolve("../pdf-fonts");
-        var fonts = {
+        let fontsDir = resolve(__dirname, '../pdf-fonts');
+        let fonts = {
           Roboto: {
             normal: fontsDir+'/Roboto-Regular.ttf',
             bold: fontsDir+'/Roboto-Medium.ttf',
@@ -34,29 +31,45 @@ import {
             bolditalics: fontsDir+'/Roboto-Italic.ttf'
           }
         };
+        // console.log('fontsDir:', fontsDir);
+        // console.log('fonts:', fonts);
         
         this.pdf = new PDF(this.logger);
         this.pdf.$init(resume_template, fonts)
     }
   
     @Get('/api/resume/showcase')
-    async resumeShowcase(): Promise<object> {
-      this.logger.log('resume showcase');
+    async resumeShowcase(@Res() res: Response): Promise<void> {
+      // this.logger.log('resume showcase');
 
       let cv = await this.jsttyModel.getShowcaseCV();
       let cvPDF = await this.pdf.resume(cv, 'sp');
 
-      return cvPDF;
+      let headers = {
+        'Content-Type': 'application/pdf',
+        'Content-Disposition': `attachment; filename=${cvPDF.filename}`,
+        'Content-Length': cvPDF.data.length,
+      };
+
+      res.set(headers);
+      res.end(cvPDF.data);
     }
 
     @Get('/api/resume/full')
-    async resumeFull(): Promise<object> {
-      this.logger.log('resume showcase');
+    async resumeFull(@Res() res: Response): Promise<void> {
+      // this.logger.log('resume full');
 
       let cv = await this.jsttyModel.getFullCV();
       let cvPDF = await this.pdf.resume(cv, 'full');
 
-      return cvPDF;
+      let headers = {
+        'Content-Type': 'application/pdf',
+        'Content-Disposition': `attachment; filename=${cvPDF.filename}`,
+        'Content-Length': cvPDF.data.length,
+      };
+
+      res.set(headers);
+      res.end(cvPDF.data);
     }
   
 }

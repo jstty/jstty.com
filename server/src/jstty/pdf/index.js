@@ -83,7 +83,7 @@ PdfGen.prototype.filterProjects = function(category, projectList)
 
 PdfGen.prototype.resume = function(cv, type)
 {
-  return Promise.promise(function(resolve, reject, notify) {
+  return new Promise(function(resolve, reject, notify) {
 
     //logger.log("cv:", cv);
 

@@ -24,9 +24,6 @@ class PhotosModel {
                 "secretAccessKey": secretAccessKey || "SET-IN-ENV"
             }
         };
-        console.log('awsConfig:', awsConfig);
-        console.log('AWS_ACCESS_ID:', accessKeyId);
-        console.log('AWS_SECRET_KEY:', secretAccessKey);
         this.photosDB.$init(awsConfig);
     }
     getAll() {

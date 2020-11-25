@@ -1,4 +1,4 @@
-import _ from 'lodash';
+let _ = require('lodash');
 import { Logger } from '@nestjs/common';
 import JsttyDataStore from '../datastore/jstty.datastore';
 

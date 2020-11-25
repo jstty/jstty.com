@@ -30,11 +30,16 @@
   "scripts": {
     "clean": "cd frontend/app && rm -rf node_modules && rm -rf dist && cd ../server && rm -rf node_modules && cd .. && rm -rf node_modules",
     "init": "npm install && cd frontend && npm install && cd ../server && npm install",
-    "build": "cd frontend && npm run build",
+    "build.frontend": "cd frontend && npm run build",
+    "build.server": "cd server && npm run build",
+    "build": "npm run build.frontend && npm run build.server",
     "frontend": "cd frontend && npm run start",
     "predeploy": "npm run init && npm run build",
     "_deploy": "eb deploy",
+    "predeploy": "npm run build",
     "deploy": "firebase deploy",
+    "fb.login": "firebase logout && firebase login && gcloud auth login && npm run fb.select-project",
+    "fb.select-project": "gcloud config set project jstty-com-8aff9",
     "start": "node app"
   },
   "engines": {

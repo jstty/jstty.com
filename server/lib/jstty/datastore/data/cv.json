@@ -1,0 +1,1134 @@
+{
+  "header": {
+    "text": "Joseph E. Sutton"
+  },
+  "contact": {
+    "phone": "+1 661 748 3226",
+    "webfolio": "http://jstty.com",
+    "email": "joseph.e.sutton@gmail.com",
+    "github": "http://github.com/jstty"
+  },
+  "education": [
+    {
+      "Degree": "M.S. in Computer Science",
+      "StartDate": "9/2009",
+      "EndDate": " 5/2011",
+      "Name": "University of Southern California",
+      "Location": "Los Angeles, Ca",
+      "GPA": "3.6/4.0",
+      "Honors": "Cum Laude"
+    },
+    {
+      "Degree": "B.S. in Computer Science",
+      "StartDate": "9/2004",
+      "EndDate": " 9/2007",
+      "Name": "California State University Bakersfield",
+      "Location": "Bakersfield, Ca",
+      "GPA": "3.8/4.0",
+      "Honors": "Magna Cum Laude",
+      "Award": "Outstanding Graduating Senior of 2007"
+    }
+  ],
+  "computer": {
+    "Languages": ["Javascript(5/6)", "HTML(4/5)", "CSS", "JSON", "SASS", "XML", "C/C++", "C#", "Java", "PHP", "Python", "Bash"],
+    "Web Dev": ["RESTful", "APIs", "NodeJS", "Babel", "Gulp", "Angular 1.x", "Vue", "React", "Polymer", "Aurelia", "Browserify", "Webpack", "Grunt", "Bower", "JSpm"],
+    "Protocol/Lib": ["HTTP", "XMPP", "XML-RPC", "MPEG", "AVI", "JPEG", "PNG", "DCT", "FFT"],
+    "Tools": ["Linux", "Mac OS X", "Windows", "AWS", "Google Cloud", "Github", "TravisCI", "Docker", "Kubernetes", "Git", "SVN", "Perforce", "Xcode", "Nginx", "HaProxy", "Photoshop"],
+    "Database": ["Couchbase", "Redis", "CouchDB", "SQlite", "MongoDB", "MySQL", "Oracle", "Cassandra", "Riak"]
+  },
+  "projects": [
+    {
+      "__COMMENT__": "Cisco"
+    },
+    {
+      "Showcase": true,
+      "StartDate": "10/2014",
+      "EndDate": "Present",
+      "Category": "Industry",
+      "Company": "Cisco",
+      "Link": "http://cisco.com",
+      "Location": "San Jose, Ca - CTAO",
+      "Position": "Sr. Technical Leader/Architect",
+      "Projects": [
+        {
+          "Showcase": true,
+          "StartDate": "3/2014",
+          "Title": "Immersive Innovation Projects",
+          "Description": "TODO",
+          "Labels": [
+          ],
+          "Points": [
+            "Using: ES5/6, Vue 2, AngularJS 1.x, React, Polymer, Web Components, D3, Three.js, OpenCV, Unity, NodeJS, Hyper.io (Microservices), Kubernetes, AR/VR, RESTful APIs, Adapter pattern",
+            "Technical leader, manager, mentor, architect, resource/project planning and created development methodologies",
+            "Released over twenty projects ranging from long (1.5 years) to short (2-3 months) term"
+          ],
+          "links": [
+            {
+              "name": "Video",
+              "type": "video",
+              "image": "projects/cisco/atcs/atcs.png",
+              "url": "https://www.youtube.com/watch?v=Bix03SUOt0w"
+            }
+          ]
+        },
+        {
+          "Showcase": true,
+          "StartDate": "3/2014",
+          "Version": "Beta v1.0",
+          "Title": "Core Project Tools and UI libraries",
+          "Description": "TODO",
+          "Labels": [
+          ],
+          "Points": [
+            "Using: ES6, NodeJS, NPM, Beelzebub, Gulp, Babel, JenkinsCI, Jira, Node-Webkit, Electron, AWS, Docker, Protractor/Karma/Testem, Ava, Supertest, Mocha, Chai, eslint, JsDoc, Swagger UI, Browserify, Webpack, Bower, Yeoman, Yanpm, RxJS",
+            "Scalable, modular, plugin based CLI tool and UI libraries to accelerate projects development"
+          ]
+        },
+        {
+          "Showcase": true,
+          "StartDate": "10/2014",
+          "EndDate": "2/2015",
+          "Title": "DT CloudVPN Portal",
+          "Description": "TODO",
+          "Version": "Release v1.3",
+          "Labels": [
+            "AngularJS 1.3", "RESTful APIs", "JSON", "NodeJS", "Protractor"
+          ],
+          "Points": [
+            "Using: AngularJS 1.3, RESTful APIs, JSON, NodeJS, Protractor"
+          ],
+          "//": "Lead architect and lead engineer",
+          "links": [
+            {
+              "name": "Announcement",
+              "type": "link",
+              "image": "/projects/cisco/cloudvpn/announcement.jpg",
+              "url": "http://newsroom.cisco.com/bg/press-release-content?articleId=1600834"
+            },
+            {
+              "name": "Video",
+              "type": "video",
+              "image": "/projects/cisco/cloudvpn/video.jpg",
+              "url": "https://www.youtube.com/watch?v=Vq5M_vehiUg"
+            },
+            {
+              "name": "Axel Clauberg Slide Deck",
+              "type": "link",
+              "image": "/projects/cisco/cloudvpn/axel-clauberg-slidedeck.jpg",
+              "url": "http://www.slideshare.net/openstackil/axel-clauberg-deutsche-telekom-keynote-open-stack-israel-2015"
+            }
+          ]
+        }
+      ],
+      "Patents": [
+        {
+          "Title": "Addressing and managing an internal network of a virtual branch node",
+          "Authors": "Spraggs; Simon James Trevor; (Hants, GB) ; Arunkumar; Nagaraj; (Saratoga, CA) ; Lakshmanan; Yegappan; (Fremont, CA) ; Persaud; Andrew; (San Jose, CA) ; Yeung; Michael; (San Jose, CA) ; Phillips; Andrew Robert; (Dubai, AE) ; Zhang; Lang; (San Jose, CA) ; O'Gorman; Michael F.; (San Carlos, CA) ; Sarbin; Brian Richard; (Santa Clara, CA) ; Sutton; Joe; (San Jose, CA) ; Singla; Vinay; (San Jose, CA)",
+          "Number": "US 20160359805 A1",
+          "PublicationDate": "2014-09-18",
+          "FilingDate": "2014-03-14",
+          "PriorityDate": "2013-03-15",
+          "Abstract": "A device is configured to support one or more virtual networking functions at a branch in a network. The device receives from a central control entity a command to deploy a particular virtual networking function, the command including or accompanied by a deployment file that identifies an external port at which the particular virtual networking function is accessed externally at the device. The device maps the external port to an internal port on an internal management network of the device, and stores a portmapping entry for the particular virtual networking function based on the mapping. The device sends to the central control entity a notification containing portmapping information that indicates the internal port to which the external port is mapped.",
+          "Link": "http://appft1.uspto.gov/netacgi/nph-Parser?Sect1=PTO1&Sect2=HITOFF&d=PG01&p=1&u=/netahtml/PTO/srchnum.html&r=1&f=G&l=50&s1=20160359805.PGNR."
+        }
+      ]
+    },
+    {
+      "__COMMENT__": "GlassLab"
+    },
+    {
+      "Showcase": true,
+      "StartDate": "10/2013",
+      "EndDate": "10/2014",
+      "Category": "Industry",
+      "Company": "GlassLab",
+      "Link": "https://GlasslabGames.org",
+      "Location": "Redwood City, Ca",
+      "Position": "Principal Platform Engineer",
+      "Projects": [
+        {
+          "Showcase": true,
+          "StartDate": "10/2013",
+          "EndDate": "10/2014",
+          "Title": "Game Services Platform",
+          "Description": "TODO",
+          "Version": "Release v2.0",
+          "Links": {
+            "Website": "http://GlasslabGames.org"
+          },
+          "Labels": [
+            "NodeJS", "RESTful APIs", "JSON", "Redis", "Couchbase", "MySQL", "Express", "PassportJS", "Mocha", "AWS"
+          ],
+          "Points": [
+            "Using: NodeJS, RESTful APIs, JSON, Redis, Couchbase, MySQL, Express, PassportJS, Mocha, AWS",
+            "Lead architect and lead engineer",
+            "Scalable service based architect"
+          ],
+          "links": [
+            {
+              "name": "GlassLabGames",
+              "type": "link",
+              "image": "/projects/glasslab/glasslab_games.png",
+              "url": "http://www.glasslabgames.org"
+            },
+            {
+              "name": "Argubot Academy",
+              "type": "link",
+              "image": "/projects/glasslab/argubot_academy.png",
+              "url": "http://www.glasslabgames.org/games/AA-1"
+            },
+            {
+              "name": "SimCity EDU",
+              "type": "link",
+              "image": "/projects/glasslab/simcity.png",
+              "url": "http://www.glasslabgames.org/games/SC"
+            },
+            {
+              "name": "Argument Wars",
+              "type": "link",
+              "image": "/projects/glasslab/argument_wars.png",
+              "url": "http://www.glasslabgames.org/games/AW-1"
+            }
+          ]
+        },
+        {
+          "Showcase": true,
+          "StartDate": "4/2014",
+          "EndDate": "10/2014",
+          "Version": "Release v1.0",
+          "Title": "http://Playfully.org",
+          "Description": "TODO",
+          "Links": {
+            "Website": "http://Playfully.org"
+          },
+          "Labels": [
+            "AngularJS", "LessJS", "HTML5", "CSS3", "Bootstrap", "JQuery", "Grunt", "Bower", "Karma"
+          ],
+          "Points": [
+            "Using: AngularJS, LessJS, HTML5, CSS3, Bootstrap, JQuery, Grunt, Bower, Karma",
+            "Lead architect and lead engineer"
+          ]
+        },
+        {
+          "Showcase": false,
+          "StartDate": "10/2013",
+          "EndDate": "4/2014",
+          "Version": "Release v1.0",
+          "Title": "http://ArgubotAcademy.org",
+          "Description": "TODO",
+          "Links": {
+            "Website": "http://ArgubotAcademy.org"
+          },
+          "Labels": [
+            "AngularJS", "LessJS", "HTML5", "CSS3", "Bootstrap", "Grunt", "Mocha"
+          ],
+          "Points": [
+              "Using: AngularJS, LessJS, HTML5, CSS3, Bootstrap, Grunt, Mocha",
+              "Lead architect and lead engineer"
+          ]
+        }
+      ]
+    },
+    {
+      "__COMMENT__": "Intertrust"
+    },
+    {
+      "Showcase": false,
+      "StartDate": "6/2013",
+      "EndDate": "10/2013",
+      "Category": "Industry",
+      "Company": "Intertrust",
+      "FullCompany": "Intertrust Technologies Corporation",
+      "Location": "Sunnyvale, Ca",
+      "Position": "Sr. Software Engineer",
+      "Link": "http://kabuto.com",
+      "Projects": [
+        {
+          "Showcase": true,
+          "StartDate": "6/2013",
+          "EndDate": "10/2013",
+          "Title": "Kabuto",
+          "Description": "TODO",
+          "Version": "Release 2.0",
+          "Labels": [
+            "Javascript",
+            "HTML5",
+            "CSS3",
+            "LessJS",
+            "NodeJS",
+            "WebSockets",
+            "BackboneJS",
+            "JQuery",
+            "Handlebars"
+          ],
+          "Points": [
+            "Using: Javascript, HTML5, CSS3, LessJS, NodeJS, WebSockets, BackboneJS, JQuery, Handlebars",
+            "Created WebSockets server for realtime communication and push notifications",
+            "Add/maintained various front-end features"
+          ]
+        }
+      ]
+    },
+    {
+      "__COMMENT__": "EA"
+    },
+    {
+      "Showcase": true,
+      "StartDate": "8/2011",
+      "EndDate": "6/2013",
+      "Category": "Industry",
+      "Company": "Electronic Arts",
+      "Location": "Redwood City, Ca - OCCO",
+      "Position": "Game Service Engineer",
+      "Link": "http://ea.com",
+      "Projects": [
+        {
+          "StartDate": "1/2012",
+          "EndDate": "4/2012",
+          "Title": "Scalable Structured Data Solutions",
+          "Labels": [
+            "Cassandra",
+            "Riak",
+            "MongoDB",
+            "AWS"
+          ],
+          "Points": [
+            "MapReduce: Hive, Pig, Riak (Javascript)",
+            "Reviewed technology, created basic cluster, tested performance, stability and map reduction."
+          ]
+        },
+        {
+          "StartDate": "10/2011",
+          "EndDate": "1/2012",
+          "Title": "Monitoring Tool",
+          "Labels": [
+            "PHP",
+            "Bash",
+            "Javascript",
+            "JSON",
+            "JQuary",
+            "API",
+            "Oracle 11",
+            "Drupal 7",
+            "LDAP",
+            "Perforce"
+          ],
+          "Version": "Release 1.0",
+          "Points": [
+            "Lead Developer",
+            "Server setup, pack and deploy scripts.",
+            "Developed API, backend PHP scripts, client side Javascript and some HTML/CSS."
+          ],
+          "Links": {}
+        },
+        {
+          "StartDate": "8/2011",
+          "EndDate": "10/2011",
+          "Title": "Web/Mobile SecondScreen",
+          "Archive": true,
+          "Labels": [
+            "Java",
+            "HTML",
+            "CSS",
+            "Javascript",
+            "XMPP",
+            "jabberd",
+            "Maven",
+            "Perforce"
+          ],
+          "Version": "pre Alpha",
+          "Points": [
+            "Lead Developer",
+            "Dynamic widget system",
+            "XMPP based chat"
+          ],
+          "Links": {}
+        },
+        {
+          "StartDate": "7/2012",
+          "EndDate": "6/2013",
+          "Title": "Xfinity Games",
+          "Description": "TODO",
+          "Showcase": true,
+          "links": [
+            {
+              "name": "Video",
+              "type": "video",
+              "image": "/projects/ea/xfinity_games/video.png",
+              "url": "https://www.youtube.com/watch?v=_s0Aw0QwjTs"
+            },
+            {
+              "name": "Article",
+              "type": "link",
+              "image": "/projects/ea/xfinity_games/article.png",
+              "url": "http://www.polygon.com/2015/7/14/8958867/xfinity-games-powered-by-ea"
+            },
+            {
+              "name": "Announcement",
+              "type": "link",
+              "image": "/projects/ea/xfinity_games/announcement.png",
+              "url": "http://corporate.comcast.com/comcast-voices/game-on-experience-a-whole-new-way-to-play-on-your-tv"
+            }
+          ],
+          "Labels": [
+            "Cloud Computing",
+            "Video Streaming",
+            "NodeJS",
+            "Custom NodeJS Module (C++)",
+            "HTML5",
+            "WebSockets",
+            "Canvas",
+            "MySQL5",
+            "AWS",
+            "iOS",
+            "PhantomJS",
+            "OSX",
+            "Windows",
+            "Linux"
+          ],
+          "Version": "Beta v1.0",
+          "Points": [
+            "Using: Video Streaming, NodeJS, HTML5, iOS, PhantomJS, MySQL5, Riak, AWS",
+            "Lead Architect, Technical Director, and Server Engineer.",
+            "Defined & Documented API’s, network architect and created code samples for developers to use the backend services.",
+            "Developed all backend services and deployment system.",
+            "Developed monitoring, command & control system with frontend."
+          ]
+        },
+        {
+          "StartDate": "3/2012",
+          "EndDate": "9/2012",
+          "Title": "R & D HTML5 Game (Strike Fortress)",
+          "Showcase": false,
+          "Labels": [
+            "HTML5",
+            "WebSockets",
+            "NodeJS",
+            "JSON",
+            "Javascript",
+            "AWS",
+            "MySQL5",
+            "Perforce"
+          ],
+          "Version": "Beta 1.0",
+          "Points": [
+            "Used: NodeJS, HTML5, JSON, Javascript",
+            "Client and server side framework for multi-browser using WebSockets.",
+            "Command and control system to monitor, manage and configure servers in realtime.",
+            "Documented development process and Network system."
+          ],
+          "Links": {
+            "Strike Fortress Google I/O HD": "http://www.youtube.com/watch?v=awsiJ9jxHIY",
+            "Spectator View": "http://www.youtube.com/watch?v=5ghM03kErsI",
+            "NY Times": "http://bits.blogs.nytimes.com/2012/06/27/e-a-and-google-got-game/",
+            "Inside Social Games": "http://www.insidesocialgames.com/2012/07/03/eas-strike-fortress-proves-html5-can-deliver-a-social-cross-platform-action-game/"
+          },
+          "Images": [
+            "projects/ea/sf_io/play1.png",
+            "projects/ea/sf_io/play2.png"
+          ]
+        }
+      ],
+      "Patents": [
+        {
+          "Title": "Delivering and consuming interactive video gaming content",
+          "Authors": "Boswell; Colin; (Millbrae, CA); Cronce; Scott; (Pacifica, CA); Grace; Owen; (Asheville, NC); Hilleman; Richard; (San Mateo, CA); Li; Lily; (Millbrae, CA) ; Liu; Qian; (Foster City, CA); McCabe; Joe; (Napa, CA); Medler; Ben; (San Francisco, CA); Sutton; Joseph; (Hayward, CA)",
+          "Number": "US 20140274384 A1",
+          "PublicationDate": "2016-12-08",
+          "FilingDate": "2016-06-03",
+          "PriorityDate": "2015-06-05",
+          "Abstract": "Delivering and consuming interactive video gaming content is described. An operation for such may include transmitting, over a network to a video content decoding appliance, one or more video frames of a video content item associated with a session related to an interactive video game; receiving, over the network, a game control input from a client computing device associated with the session; and modifying, in view of the game control input, a state of the session.",
+          "Link": "http://appft1.uspto.gov/netacgi/nph-Parser?Sect1=PTO1&Sect2=HITOFF&d=PG01&p=1&u=/netahtml/PTO/srchnum.html&r=1&f=G&l=50&s1=20140274384.PGNR."
+        }
+      ]
+    },
+    {
+      "__COMMENT__": "DIVR Systems Inc."
+    },
+    {
+      "StartDate": "6/2005",
+      "EndDate": "10/2005",
+      "Category": "Industry",
+      "Company": "DIVR Systems Inc.",
+      "Location": "Bakersfield, Ca",
+      "Position": "Software Engineer",
+      "Projects": [
+        {
+          "Title": "DIVR Advanced Playback Software",
+          "Labels": [
+            "C/C++",
+            "FFMPEG",
+            "MS VS 2003",
+            "CVS",
+            "wxWidgets",
+            "Windows XP",
+            "MPEG4",
+            "MJPEG",
+            "AVI"
+          ],
+          "Version": "Release 3.1",
+          "Points": [
+            "Sole Developer",
+            "Developed simultaneous multiple digital video playback software",
+            "Play each video at defined playback rate, forwards and backwards",
+            "Supported a dozen video formats, OpenGL/DirectX hardware acceleration, and various frame image export formats",
+            "Created user instruction manual, installer application and CD"
+          ],
+          "Links": {
+            "Installer": "My Files/Apps/DIVR Systems/Installer.zip",
+            "Help PDF": "My Files/Apps/DIVR Systems/help.pdf"
+          },
+          "Images": [
+            "projects/divr/player1.jpg"
+          ]
+        },
+        {
+          "Title": "DIVR Web Client and Server",
+          "Labels": [
+            "PHP4",
+            "C/C++",
+            "FFMPEG",
+            "libJPEG",
+            "POSIX",
+            "CVS",
+            "MPEG4",
+            "H.264",
+            "MJPEG",
+            "AVI",
+            "Red Hat Linux"
+          ],
+          "Version": "Release 3.1",
+          "Points": [
+            "Sole Developer",
+            "Realtime video transcoding from MJPEG to MPEG4(H.264) daemon.",
+            "Wrote/updated a dozen PT[Z] IP camera drives.",
+            "Created HTTP parser for standard HTTP 1.0/1.1 and non standard http server.",
+            "MPEG4(H.264) to AVI converter.",
+            "Optimized server-side software.",
+            "Updated and maintained code base.",
+            "Optimized browser COM object and Java applet.",
+            "Tested/debugged all backend and frontend software"
+          ],
+          "Links": {}
+        }
+      ]
+    },
+    {
+      "__COMMENT__": "CiSMS"
+    },
+    {
+      "StartDate": "9/1999",
+      "EndDate": "7/2004",
+      "Category": "Industry",
+      "Company": "CiSMS",
+      "Location": "Fresno, Ca",
+      "Position": "Co-Founder - CTO",
+      "Projects": [
+        {
+          "Title": "CMP Composer",
+          "Labels": [
+            "C/C++",
+            "MS VS v6.0",
+            "Win32",
+            "MFC",
+            "Windows 95/XP",
+            "Drag n' Drop",
+            "Javascript",
+            "HTML",
+            "CSS"
+          ],
+          "Version": "Release 2.5",
+          "Points": [
+            "Sole Developer",
+            "Created a user friendly e-learning/presentation development and customized presentation viewing software",
+            "Drag n' Drop content into compose window.",
+            "Gather, organize, and validate user content.",
+            "Multi target Export: browser and Windows application.",
+            "Multi video payback: Windows Media or Real Media."
+          ],
+          "Links": {
+            "Demo Installer": "My Files/Apps/CiSMS/cmpdev20_demo.exe",
+            "Tutorial Guide": "My Files/Apps/CiSMS/tutorial_guide20.pdf",
+            "Users Guide": "My Files/Apps/CiSMS/users_guide20.pdf"
+          },
+          "Images": [
+            "projects/cisms/cmp_dev1.jpg",
+            "projects/cisms/cmp_dev2.jpg",
+            "projects/cisms/cmp_dev3.jpg"
+          ]
+        },
+        {
+          "Title": "CMP Player",
+          "Labels": [
+            "C/C++",
+            "MS VS v6.0",
+            "Win32",
+            "MFC",
+            "Windows 95/XP",
+            "Javascript",
+            "HTML",
+            "CSS"
+          ],
+          "Version": "Release 2.5",
+          "Points": [
+            "Sole Developer",
+            "Multi platforms: browser and Windows application",
+            "Windows version used IE browsers integration for theme-able user developed content"
+          ],
+          "Links": {
+            "Windows Demo": "My Files/Apps/CiSMS/win_demo_both.zip",
+            "Web Demo": "My Files/Apps/CiSMS/web_demo_both.zip"
+          },
+          "Images": [
+            "projects/cisms/cmp_player1.jpg"
+          ]
+        },
+        {
+          "Title": "Website Demo CD",
+          "Archive": true,
+          "Labels": [
+            "Apache",
+            "MySQL",
+            "PHP",
+            "Windows 95/XP"
+          ],
+          "Version": "Beta 1.0",
+          "Points": [
+            "Sole Developer",
+            "Auto start Apache, MySQL and open an embedded browser in an application to showcase a Website on a local machine"
+          ]
+        },
+        {
+          "Title": "Florestone.com",
+          "Archive": true,
+          "Labels": [
+            "PHP 4",
+            "MySQL 3",
+            "Javascript",
+            "HTML",
+            "CSS"
+          ],
+          "Version": "Release",
+          "Points": [
+            "Sole Developer",
+            "Database driven product site with thousands of products",
+            "Full text product search",
+            "Simple admin system"
+          ],
+          "Links": {
+            "Site": "http://florestone.com"
+          },
+          "Images": [
+            "projects/cisms/florestone1.jpg",
+            "projects/cisms/florestone2.jpg"
+          ]
+        }
+      ]
+    },
+    {
+      "__COMMENT__": "Goliath Software"
+    },
+    {
+      "StartDate": "8/2003",
+      "EndDate": "5/2004",
+      "Category": "Industry",
+      "Company": "Goliath Software",
+      "Location": "Fresno, Ca",
+      "Position": "Co-Founder - CTO",
+      "Projects": [
+        {
+          "Title": "Content Management System",
+          "Labels": [
+            "PHP",
+            "MySQL",
+            "Javascript",
+            "HTML",
+            "CSS"
+          ],
+          "Points": [
+            "Sole Developer",
+            "WYSIWYG Editor",
+            "Custom site templates, newsletters, product listings and contest forms",
+            "Mass newsletter emailing system",
+            "Appointment scheduler"
+          ]
+        }
+      ]
+    },
+    {
+      "__COMMENT__": "Education"
+    },
+    {
+      "StartDate": "9/2009",
+      "EndDate": "5/2011",
+      "Category": "Education",
+      "University": "University of Southern California",
+      "Location": "Los Angeles, Ca",
+      "Degree": "M.S. in Computer Science - General",
+      "Honors": "Cum Laude",
+      "GPA": "3.6/4.0"
+    },
+    {
+      "StartDate": "9/2004",
+      "EndDate": "9/2007",
+      "Category": "Education",
+      "University": "California State University of Bakersfield",
+      "Location": "Bakersfield, Ca",
+      "Degree": "B.S. in Computer Science",
+      "Honors": "Magna Cum Laude",
+      "Award": "Computer Science - Outstanding Graduating Senior of 2007",
+      "MajorGPA": "4.0/4.0",
+      "OverallGPA": "3.6/4.0"
+    },
+    {
+      "__COMMENT__": "Research"
+    },
+    {
+      "StartDate": "3/2010",
+      "EndDate": "7/2011",
+      "Category": "Research",
+      "Company": "ISI-USC",
+      "University": "ISI-USC",
+      "Location": "Marina del Rey, Ca",
+      "Position": "Research Assistant",
+      "Projects": [
+        {
+          "Title": "Intelligent Agents for Large Scale Security Simulation",
+          "Labels": [
+            "Java",
+            "C/C++",
+            "Python",
+            "Bash",
+            "Eclipse",
+            "XML-RPC",
+            "MySQL",
+            "SVN",
+            "ANT",
+            "Linux",
+            "OS X",
+            "Windows",
+            "API"
+          ],
+          "Version": "Release 1.0",
+          "Points": [
+            "Sole Server Developer",
+            "Assisted with development of the National Cyber Range, part of DARPA’s contribution to the Comprehensive National Cyber Initiative.",
+            "System APIs for Agents",
+            "Virtual communication and workplace tools (online websheet, phone, email, webpage)",
+            "Command and control system to manage Agents and services",
+            "Integrated source from vendor",
+            "Nightly builds, server unit tests, end to end system tests",
+            "Maintained documentation"
+          ],
+          "Links": {
+            "Research Paper": "My Files/School/Research/Papers/11_IAAI/IAAI2011.pdf"
+          },
+          "Images": [
+            "projects/ncr/ncr1.jpg",
+            "projects/ncr/ncr2.jpg"
+          ]
+        }
+      ],
+      "Publications": [
+        {
+          "Title": "Testing Cyber Security with Simulated Humans that Plan",
+          "Authors": "Jim Blythe and Aaron Botello and Joseph Sutton and David Mazzocco and Jerry Lin and Marc Spraragen and Mike Zyda",
+          "Publisher": "23rd Innovative Applications of Artificial Intelligence, (IAAI ’11)",
+          "Link": "My Files/School/Research/Papers/11_IAAI/IAAI2011.pdf"
+        }
+      ]
+    },
+    {
+      "StartDate": "1/2007",
+      "EndDate": "9/2009",
+      "Category": "Research",
+      "Showcase": true,
+      "Company": "CSUB Research",
+      "University": "California State University of Bakersfield",
+      "Location": "Bakersfield, Ca",
+      "Position": "Research Assistant",
+      "Projects": [
+        {
+          "Title": "Chemical Plume Tracing System",
+          "Showcase": true,
+          "Labels": [
+            "C/C++",
+            "OpenGL",
+            "Win32",
+            "Webots",
+            "MS VS v6",
+            "Xcode",
+            "OS X",
+            "Windows"
+          ],
+          "Points": [
+            "Sole Developer",
+            "Converted simulation system from Win32 2D to OpenGL 3D",
+            "Supports multi-platforms (OS X and Windows tested)",
+            "Redesigned application to be dynamic and scalable",
+            "Allow for multiple plume, vehicle, and different exec modes (sim or controller)"
+          ],
+          "Links": {
+            "Research Paper": "My Files/School/Research/Papers/08_ICMLA/08_ICMLA_dev_CPT_M3D_3495a470.pdf"
+          },
+          "Images": [
+            "projects/cpts/cpt1.jpg",
+            "projects/cpts/cpt2.jpg",
+            "projects/cpts/cpt3.jpg",
+            "projects/cpts/cpt4.jpg"
+          ]
+        },
+        {
+          "Title": "Digital Video Watermarking and Attacks",
+          "Showcase": true,
+          "Labels": [
+            "C/C++",
+            "FFTW",
+            "libPNG",
+            "GSL",
+            "R",
+            "LaTeX",
+            "Eclipse",
+            "Xcode",
+            "OS X",
+            "Linux",
+            "Windows"
+          ],
+          "Points": [
+            "Lead Developer",
+            "Batch processes PNG images, converts discrete pixel values to continuous coefficient values (DCT using FFT)",
+            "Converts continuous coefficient values to discrete pixel values (CDT using FFT), writes PNG image",
+            "Adds watermarks to a series of images using various methods (Gaussian, Uniform, or Orthogonal normal)",
+            "Attacks watermarks in a series of images using various methods (Bootstrap, Time-Series Intra-Video Collusion)",
+            "Calculates the similarity values of the watermark and attacked images.",
+            "Creates difference images of attacked and watermarked from original, for visualization."
+          ],
+          "Links": {
+            "Research Paper": "My Files/School/Research/Papers/08_IWDW/Paper14-Camera.pdf"
+          },
+          "Images": [
+            "projects/wm/wm1.jpg",
+            "projects/wm/wm2.jpg"
+          ]
+        }
+      ],
+      "Publications": [
+        {
+          "Title": "A Time-Series Intra-Video Collusion Attack on Frame-by-Frame Video Watermarking",
+          "Authors": "S. Behseta, C. Lam, J. Sutton, R.L. Webb",
+          "Publisher": "7th International Workshop, (IWDW ’08), LNCS 5450, pp. 31-44, 2008.",
+          "Link": "My Files/School/Research/Papers/08_IWDW/Paper14-Camera.pdf"
+        },
+        {
+          "Title": "Development of CPT M3D for Multiple Chemical Plume Tracing and Source Identification",
+          "Authors": "J. Sutton and W. Li",
+          "Publisher": "Proc of the 2008 IEEE International Conference on Machine Learning and Applications (ICMLA’08), pp. 470-475, 2008.",
+          "Link": "My Files/School/Research/Papers/08_ICMLA/08_ICMLA_dev_CPT_M3D_3495a470.pdf"
+        },
+        {
+          "Title": "Integration of Chemical and Visual Sensors for Identifying an Odor Source in Near Shore Ocean Conditions",
+          "Authors": "W. Li, J. Sutton, and Y. Li",
+          "Publisher": "Proc of the 2008 IEEE Interna- tional Conference on Machine Learning and Applications (ICMLA’08), pp. 444-449, 2008.",
+          "Link": "My Files/School/Research/Papers/08_ICMLA/08_ICMLA_chem_vision_3495a444.pdf"
+        },
+        {
+          "Title": "Optimization of Source Identification Algorithm Derived from Moth-Inspired Plume Tracing Strategies",
+          "Authors": "W. Li, and J. Sutton",
+          "Publisher": "Proc of the 2007 IEEE International Symposium on Computational Intelligence in Robotics and Automation (CIRA’07), pp. 79-84, 2007.",
+          "Link": "My Files/School/Research/Papers/07_CIRA/CIRA07_09WeiLi.pdf"
+        },
+        {
+          "Title": "Design of Source Identification Zones for Declaring an Odor Source in Turbulent Fluid-Advected Environments",
+          "Authors": "Wei Li, MM Elgassier, T Rutledge, J Sutton",
+          "Publisher": "Proc of 2006 IEEE International Conference on Information Reuse and Integration (IRI’06), pp. 466-471, 2006.",
+          "Link": "My Files/School/Research/Papers/06_ICRI/ICRI_06.pdf"
+        }
+      ]
+    },
+    {
+      "__COMMENT__": "Teaching"
+    },
+    {
+      "StartDate": "9/2007",
+      "EndDate": "6/2009",
+      "Category": "Teaching",
+      "Company": "CSUB Faculty",
+      "University": "California State University of Bakersfield",
+      "Location": "Bakersfield, Ca",
+      "Position": "Lecturer",
+      "Projects": [
+        {
+          "Title": "Science 350B: Computers and Society",
+          "Points": [
+            "Edited course content"
+          ],
+          "Links": {}
+        },
+        {
+          "Title": "Computer Science 277 (Special Topic): Publishing Mathematics and Scientific Research",
+          "Labels": [
+            "LaTeX"
+          ],
+          "Points": [
+            "Developed course and content"
+          ],
+          "Links": {}
+        },
+        {
+          "Title": "Computer Science 277 (Special Topic): Advanced Internet Application Development",
+          "Labels": [
+            "PHP",
+            "MySQL",
+            "Javascript",
+            "HTML",
+            "CSS"
+          ],
+          "Points": [
+            "Developed course and content"
+          ],
+          "Links": {}
+        },
+        {
+          "Title": "Computer Science 211: Internet Programming and Web Design",
+          "Labels": [
+            "Javascript",
+            "HTML",
+            "CSS"
+          ],
+          "Points": [
+            "Redesigned course content"
+          ],
+          "Links": {}
+        },
+        {
+          "Title": "Computer Science 120: Computer Skills and Concepts I",
+          "Points": [
+            "Edited and redesigned course lab manual"
+          ],
+          "Links": {}
+        },
+        {
+          "Title": "General Studies 104a: Introduction to PC’s",
+          "Points": [
+            "Edited and redesigned course and content"
+          ],
+          "Links": {}
+        },
+        {
+          "Title": "General Studies 104b: Intermediate Intro. to PC’s",
+          "Points": [
+            "Edited and redesigned course and content"
+          ],
+          "Links": {}
+        }
+      ]
+    },
+    {
+      "__COMMENT__": "Misc Projects"
+    },
+    {
+      "StartDate": "9/2007",
+      "EndDate": "6/2009",
+      "Category": "Misc Projects",
+      "University": "California State University of Bakersfield",
+      "Location": "Bakersfield, Ca",
+      "Position": "Lecturer",
+      "Projects": [
+        {
+          "Title": "Instructor Management System",
+          "Labels": [
+            "PHP 5",
+            "HTML",
+            "CSS",
+            "Javascript",
+            "MySQL 5",
+            "Linux",
+            "Zip"
+          ],
+          "Points": [
+            "Sole Developer",
+            "Web based student and admin front-end",
+            "Database driven homework/grade management",
+            "Created a single zip file, containing all the work from each student’s zip file uploaded for a particular homework.",
+            "Used by hundreds of students over the sites lifecycle"
+          ],
+          "Links": {}
+        }
+      ]
+    },
+    {
+      "StartDate": "1/2006",
+      "EndDate": "4/2006",
+      "Category": "Misc Projects",
+      "University": "California State University of Bakersfield",
+      "Location": "Bakersfield, Ca",
+      "Position": "Student",
+      "Projects": [
+        {
+          "Title": "Instructor Assistant Grading System",
+          "Labels": [
+            "C#",
+            "MS VS 2005",
+            ".NET",
+            "Oracle 9",
+            "MySQL 5",
+            "Windows"
+          ],
+          "Version": "Release 1.0",
+          "Points": [
+            "Sole Developer",
+            "Windows GUI client Application",
+            "Student and grade management system",
+            "Created user instructional manual",
+            "Tested and debugged application",
+            "Multi-Threaded and Multi-Database support"
+          ],
+          "Links": {
+            "Project": "My Files/School/Projects/iags.zip",
+            "Report PDF": "My Files/School/Projects/IAGS/report.pdf"
+          },
+          "Images": [
+            "projects/iags/app1.jpg",
+            "projects/iags/app2.jpg",
+            "projects/iags/app3.jpg",
+            "projects/iags/app4.jpg",
+            "projects/iags/app5.jpg",
+            "projects/iags/app6.jpg",
+            "projects/iags/app7.jpg"
+          ]
+        }
+      ]
+    },
+    {
+      "__COMMENT__": "Fun!"
+    },
+    {
+      "Category": "Games",
+      "Projects": [
+        {
+          "Title": "SuperStars Wrestling",
+          "Labels": [
+            "C/C++",
+            "SpiderMonkey",
+            "Allegro",
+            "Javascript",
+            "Windows",
+            "MS VS v6"
+          ],
+          "Points": [
+            "Sole Developer",
+            "Game written in C/C++ with game logic executed in Javascript using the SpiderMonkey engine."
+          ],
+          "Links": {
+            "Download": "My Files/Games/SuperStars Wrestling.zip"
+          }
+        },
+        {
+          "Title": "Alien Mansion",
+          "Labels": [
+            "C/C++",
+            "Windows",
+            "MS VS v6"
+          ],
+          "Points": [
+            "Sole Developer"
+          ],
+          "Links": {
+            "Download": "My Files/Games/Alien Mansion.zip"
+          }
+        },
+        {
+          "Title": "Kung Fu Willy",
+          "Labels": [
+            "C/C++",
+            "Windows",
+            "MS VS v6"
+          ],
+          "Points": [
+            "Sole Developer"
+          ],
+          "Links": {
+            "Download": "My Files/Games/Kung Fu Willy.zip"
+          }
+        },
+        {
+          "Title": "Young George VS Lost Island",
+          "Labels": [
+            "C/C++",
+            "Windows",
+            "MS VS v6"
+          ],
+          "Points": [
+            "Sole Developer"
+          ],
+          "Links": {
+            "Download": "My Files/Games/Young George VS Lost Island.zip"
+          }
+        },
+        {
+          "Title": "SuperShooter",
+          "Labels": [
+            "C/C++",
+            "OpenGL",
+            "Windows",
+            "MS VS v6"
+          ],
+          "Points": [
+            "Sole Developer"
+          ],
+          "Links": {
+            "Download": "My Files/Games/SuperShooter.zip"
+          }
+        },
+        {
+          "Title": "Tankwars2005",
+          "Labels": [
+            "C/C++",
+            "Windows",
+            "MS VS v6"
+          ],
+          "Points": [
+            "Lead Developer on 4 person team",
+            "Used pop game framework"
+          ],
+          "Links": {
+            "Download": "My Files/Games/Tankwars2005.zip",
+            "User Manual": "My Files/Games/tws2005.pdf"
+          }
+        },
+        {
+          "Title": "Warpscape",
+          "Labels": [
+            "C/C++",
+            "OpenGL",
+            "OS X",
+            "Windows"
+          ],
+          "Points": [
+            "Lead Developer on 3 person team",
+            "Used Fog, Lighting and Pixel Shader"
+          ],
+          "Links": {
+            "Download": "My Files/Games/Warpscape.zip"
+          },
+          "Images": [
+            "projects/games/warpscape/hdr.jpg",
+            "projects/games/warpscape/hdr1.png",
+            "projects/games/warpscape/hdr2.png",
+            "projects/games/warpscape/hdr3.png",
+            "projects/games/warpscape/hdr4.png",
+            "projects/games/warpscape/normal1.png",
+            "projects/games/warpscape/normal2.png",
+            "projects/games/warpscape/normal3.png",
+            "projects/games/warpscape/normal4.png",
+            "projects/games/warpscape/ship.png",
+            "projects/games/warpscape/enemy.png",
+            "projects/games/warpscape/starfield.png",
+            "projects/games/warpscape/title.png",
+            "projects/games/warpscape/warppath.png"
+          ]
+        }
+      ]
+    }
+  ]
+}
