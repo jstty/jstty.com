@@ -15,13 +15,18 @@ const photos_datastore_1 = require("../datastore/photos.datastore");
 class PhotosModel {
     constructor() {
         this.logger = new common_1.Logger(PhotosModel.name);
+        const accessKeyId = process.env.AWS_ACCESS_ID;
+        const secretAccessKey = process.env.AWS_SECRET_KEY;
         this.photosDB = new photos_datastore_1.default(this.logger);
         let awsConfig = {
             aws: {
-                "accessKeyId": process.env.AWS_ACCESS_ID || "SET-IN-ENV",
-                "secretAccessKey": process.env.AWS_SECRET_KEY || "SET-IN-ENV"
+                "accessKeyId": accessKeyId || "SET-IN-ENV",
+                "secretAccessKey": secretAccessKey || "SET-IN-ENV"
             }
         };
+        console.log('awsConfig:', awsConfig);
+        console.log('AWS_ACCESS_ID:', accessKeyId);
+        console.log('AWS_SECRET_KEY:', secretAccessKey);
         this.photosDB.$init(awsConfig);
     }
     getAll() {

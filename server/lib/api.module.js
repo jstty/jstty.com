@@ -8,20 +8,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ApiModule = void 0;
 const common_1 = require("@nestjs/common");
-const config_1 = require("@nestjs/config");
 const app_controller_1 = require("./app/app.controller");
 const jstty_resume_controller_1 = require("./jstty/controllers/jstty.resume.controller");
 const jstty_profile_controller_1 = require("./jstty/controllers/jstty.profile.controller");
 const photos_controller_1 = require("./photos/controllers/photos.controller");
 const jstty_model_1 = require("./jstty/model/jstty.model");
 const photos_model_1 = require("./photos/model/photos.model");
+const ENV = process.env.NODE_ENV;
 let ApiModule = class ApiModule {
 };
 ApiModule = __decorate([
     common_1.Module({
-        imports: [config_1.ConfigModule.forRoot({
-                envFilePath: ['.env.dev.local', '.env.dev'],
-            })],
+        imports: [],
         controllers: [
             app_controller_1.AppController,
             jstty_resume_controller_1.JsttyResumeController,

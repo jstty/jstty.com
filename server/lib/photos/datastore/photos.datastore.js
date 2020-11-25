@@ -163,19 +163,19 @@ DataStore.prototype._getAllFiles = function (s3, batchSize) {
     });
 };
 DataStore.prototype._getBatchFiles = function (s3, batchSize, continuationToken) {
-    var deferred = Promise.defer();
-    s3.listObjectsV2({
-        MaxKeys: batchSize,
-        ContinuationToken: continuationToken
-    }, function (err, data) {
-        if (err) {
-            this.L.error("Error:", err, err.stack);
-            deferred.reject(err);
-            return;
-        }
-        deferred.resolve(data);
+    return new Promise(function (resolve, reject) {
+        s3.listObjectsV2({
+            MaxKeys: batchSize,
+            ContinuationToken: continuationToken
+        }, function (err, data) {
+            if (err) {
+                this.L.error("Error:", err, err.stack);
+                reject(err);
+                return;
+            }
+            resolve(data);
+        }.bind(this));
     }.bind(this));
-    return deferred.promise;
 };
 exports.default = DataStore;
 //# sourceMappingURL=photos.datastore.js.map

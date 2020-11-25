@@ -25,8 +25,17 @@
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
 
-## Firebase Config
+## Local Server Config
+copy the example config
+```shell
+cp .env/example
+```
+replace AWS_ACCESS_ID with AWS Access ID
+replace AWS_SECRET_KEY with AWS Secret Key
+obtained from AWS IAM
 
+
+## Firebase Config
 [Make sure to set ENV](https://firebase.google.com/docs/functions/config-env) 
 ```shell
 firebase functions:config:set aws.accessid="ACCESS ID" aws.secretkey="SECRET KEY"

@@ -1,6 +1,7 @@
 # firebase configs certs
 .cert
 .firebase
+**/.env/dev
 
 # OS files
 .DS_Store
@@ -30,3 +31,6 @@ forever.log
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml
 !.elasticbeanstalk/*.global.yml
+
+# Firebase Logs
+**/firebase-debug.log

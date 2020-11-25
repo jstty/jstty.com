@@ -6,13 +6,21 @@ export class PhotosModel {
     private photosDB;
 
     constructor() {
+        // const accessKeyId     = config.get('AWS_ACCESS_ID');
+        // const secretAccessKey = config.get('AWS_SECRET_KEY');
+        const accessKeyId     = process.env.AWS_ACCESS_ID;
+        const secretAccessKey = process.env.AWS_SECRET_KEY;
+
         this.photosDB = new PhotosDataStore(this.logger);
         let awsConfig = {
             aws: {
-                "accessKeyId":     process.env.AWS_ACCESS_ID  || "SET-IN-ENV",
-                "secretAccessKey": process.env.AWS_SECRET_KEY || "SET-IN-ENV"
+                "accessKeyId":     accessKeyId  || "SET-IN-ENV",
+                "secretAccessKey": secretAccessKey || "SET-IN-ENV"
             }
         };
+        // console.log('awsConfig:', awsConfig);
+        // console.log('AWS_ACCESS_ID:', accessKeyId);
+        // console.log('AWS_SECRET_KEY:', secretAccessKey);
 
         this.photosDB.$init(awsConfig);
     }
