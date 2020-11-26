@@ -1,12 +1,10 @@
 import $ from 'jquery';
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { Parallax } from 'react-parallax';
 import Scroll from 'react-scroll';
 
 import LinearProgress from 'material-ui/lib/linear-progress';
 var Carousel = require('nuka-carousel');
-
 
 var ScrollElement = Scroll.Element;
 

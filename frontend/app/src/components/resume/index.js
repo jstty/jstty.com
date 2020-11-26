@@ -3,7 +3,7 @@ import RaisedButton from 'material-ui/lib/raised-button';
 import SingleIcon from 'material-ui/lib/svg-icons/image/center-focus-strong';
 import MultiIcon from 'material-ui/lib/svg-icons/image/blur-on';
 
-import ReactDOM from 'react-dom';
+// import ReactDOM from 'react-dom';
 import { Parallax } from 'react-parallax';
 import Scroll from 'react-scroll';
 var ScrollElement = Scroll.Element;

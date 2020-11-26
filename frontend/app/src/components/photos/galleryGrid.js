@@ -10,17 +10,17 @@ import numeral from 'numeral';
  no errors, nothing
  it just doesn't work
  */
-import 'justifiedGallery/dist/css/justifiedGallery.css';
+// import 'justifiedGallery/dist/css/justifiedGallery.css';
 //import justifiedLib from 'imports?jQuery=jquery!justifiedGallery/dist/js/jquery.justifiedGallery.js';
 //import justifiedLib from 'imports?jQuery=jquery!justifiedGallery/src/js/justifiedGallery.js';
-import 'justifiedGallery/src/js/justifiedGallery.js';
+// import 'justifiedGallery/src/js/justifiedGallery.js';
 
 //import justifiedLib from 'imports?jQuery=jquery!justifiedGallery';
 //import 'justifiedGallery/src/less/justifiedGallery.less';
 
 //import magnificLib from 'imports?jQuery=jquery!magnific-popup';
-import 'magnific-popup/dist/magnific-popup.css';
-import 'magnific-popup';
+// import 'magnific-popup/dist/magnific-popup.css';
+// import 'magnific-popup';
 
 
 import './galleryGrid.scss';

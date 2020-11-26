@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import Welcome from '../welcome'
 import Resume from '../resume'

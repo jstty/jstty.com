@@ -4,8 +4,8 @@ import ThemeManager from 'material-ui/lib/styles/theme-manager';
 //import MyRawTheme from 'material-ui/lib/styles/raw-themes/light-raw-theme';
 import MyRawTheme from './theme';
 
-import NavBar from './components/navBar';
-import Body from './components/body';
+// import NavBar from './components/navBar';
+// import Body from './components/body';
 
 import './app.scss';
 
@@ -24,8 +24,8 @@ const App = React.createClass({
   render() {
     return (
         <div className="app-root">
-          <NavBar />
-          <Body />
+          {/* <NavBar /> */}
+          {/* <Body /> */}
         </div>
     )
   }

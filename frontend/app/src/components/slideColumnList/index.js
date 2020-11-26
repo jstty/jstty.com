@@ -7,9 +7,6 @@ import ActionInfo from 'material-ui/lib/svg-icons/action/info';
 import Avatar from 'material-ui/lib/avatar';
 import FileFolder from 'material-ui/lib/svg-icons/file/folder';
 
-import Scroll from 'react-scroll';
-var ScrollLink = Scroll.Link;
-var ScrollElement = Scroll.Element;
 
 import './style.scss';
 
