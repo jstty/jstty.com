@@ -13,16 +13,7 @@
     }
   ],
   "license": "MIT",
-  "dependencies": {
-    "aws-sdk": "^2.3.11",
-    "co": "^4.6.0",
-    "ejs": "^2.3.4",
-    "hyper.io": "^0.6.0",
-    "lodash": "^3.10.1",
-    "moment": "^2.11.1",
-    "pdfmake": "^0.1.18",
-    "request-promise": "^3.0.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "firebase-tools": "^8.16.2",
     "gulp": "^3.9.0"
@@ -34,15 +25,14 @@
     "build.server": "cd server && npm run build",
     "build": "npm run build.frontend && npm run build.server",
     "frontend": "cd frontend && npm run start",
-    "predeploy": "npm run init && npm run build",
-    "_deploy": "eb deploy",
     "predeploy": "npm run build",
+    "_deploy": "eb deploy",
     "deploy": "firebase deploy",
     "fb.login": "firebase logout && firebase login && gcloud auth login && npm run fb.select-project",
     "fb.select-project": "gcloud config set project jstty-com-8aff9",
     "start": "node app"
   },
   "engines": {
-    "node": ">=4.0"
+    "node": ">=10.0"
   }
 }
